@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img  class="page-header__logo-image" src="img/logo-mobile.svg" width="100" height="100" alt="Логотип сайта PINK">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a href="index.html">главная</a></li>
+            <li class="site-list__item"><a href="gallery.html">фотографии</a></li>
+            <li class="site-list__item"><a href="#">конкурс</a></li>
+            <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="gallery-page">
+      <div class="promo-block">
+        <h1 class="promo-block__title">Фотографии пользователей</h1>
+      </div>
+      <div class="gallery-page__block">
+        <p class="gallery-page__description">
+          Взгляните на фотографии, которые выкладывают пользователи! Видите как не хватает ваших?
+        </p>
+      <ul class="gallery-page__users-gallery">
+        <li class="users-gallery__item">
+          <a  class="users-gallery__link" href="#">
+            <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+          </a>
+          <h3 class="users-gallery__title">Анна</h3>
+          <p class="users-gallery__message">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
+          <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+
+        <li class="users-gallery__item">
+          <a  class="users-gallery__link" href="#">
+            <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+          </a>
+          <h3 class="users-gallery__title">Левон</h3>
+          <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
+              <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+        <li class="users-gallery__item">
+            <a  class="users-gallery__link" href="#">
+              <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+            </a>
+          <h3 class="users-gallery__title">Антон</h3>
+          <p class="users-gallery__message">Соседи будут рады!</p>
+            <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+        <li class="users-gallery__item">
+          <a  class="users-gallery__link" href="#">
+            <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+          </a>
+          <h3 class="users-gallery__title">Борис</h3>
+          <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+        <li class="users-gallery__item">
+          <a  class="users-gallery__link" href="#">
+            <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+          </a>
+          <h3 class="users-gallery__title">Сергей</h3>
+          <p class="users-gallery__message">Самая кубанская в мире!</p>
+            <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+        <li class="users-gallery__item">
+          <a  class="users-gallery__link" href="#">
+            <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+          </a>
+          <h3 class="users-gallery__title">Максим</h3>
+          <p class="users-gallery__message">Где снег-то?</p>
+            <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+        <li class="users-gallery__item">
+          <a  class="users-gallery__link" href="#">
+            <img src="img/gallery/photo.jpeg" alt="Фотография пользователя" width="100" height="100">
+          </a>
+          <h3 class="users-gallery__title">Надежда</h3>
+          <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
+            <button class="users-gallery__like" type="button">Нравится</button>
+        </li>
+      </ul>
+      <p class="gallery-page__description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+      </div>
+
+      <section class="gallery-page__post">
+        <img class="gallery-page__photo-for-post" src="img/gallery/post/photo.jpeg" alt="Картинка для публикации" width="100" height="500">
+        <form action="https://echo.htmlacademy.ru" method="post" class="gallery-page__publication-form">
+          <fieldset class="post-radio">
+            <label class="post-radio__label">
+              <input class="post-radio__input" type="radio" name="" value="1">
+            </label>
+            <label class="post-radio__label">
+              <input class="post-radio__input" type="radio" name="" value="2">
+            </label>
+            <label class="post-radio__label">
+              <input class="post-radio__input" type="radio" name="" value="3">
+            </label>
+          </fieldset>
+
+          <div class="range">
+            <div class="range-controls">
+              <div class="scale"><div class="bar"></div></div>
+              <div class="toggle min-toggle"></div>
+              <div class="toggle max-toggle"></div>
+            </div>
+          </div>
+
+          <button class="" type="submit" value="Запостить"></button>
+          <button class="" type="reset" value="Отмена"></button>
+        </form>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <img class="footer__logo" src="img/logo-mobile.svg" alt="Логотип сайта PINK" width="100" height="100">
+
+      <ul class="footer__list">
+        <li class="footer__item"><a class="footer__twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+        <li class="footer__item"><a class="footer__facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li class="footer__item"><a class="footer__youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
+      </ul>
+
+      <article class="footer__copyright">
+        <p>Разработано
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img class="logo-academy" src="img/logo-html-academy.svg" alt="Логотип академии" width="50" height="50" title="HTML академия">
+          </a>
+        </p>
+      </article>
+    </footer>
+  </body>
+</html>
