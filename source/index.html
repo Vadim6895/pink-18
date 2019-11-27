@@ -8,14 +8,14 @@
   <body>
 
     <header class="page-header">
-      <img  class="page-header__logo-image" src="blocks/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+      <img  class="page-header__logo-image" src="blocks/page-header/img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item"><a href="index.html">главная</a></li>
             <li class="site-list__item"><a href="gallery.html">фотографии</a></li>
-            <li class="site-list__item"><a href="#">конкурс</a></li>
+            <li class="site-list__item"><a href="form.html">конкурс</a></li>
             <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
           </ul>
         </div>
@@ -28,9 +28,9 @@
         <p class="promo-block__title">Взгляните на жизнь иначе!</p>
         <a  class="promo-block__link" href="#">Cкачать приложение</a>
         <ul class="promo-block__download-list link-list">
-          <li class="link-list__item"><a class="link-list__item--apple" href="#"><span class="visually-hidden">apple</span></a></li>
-          <li class="link-list__item"><a class="link-list__item--android" href="#"><span class="visually-hidden">android</span></a></li>
-          <li class="link-list__item"><a class="link-list__item--winphone" href="#"><span class="visually-hidden">windows-phone</span></a></li>
+          <li class="link-list__item"><a class="link-list__link link-list__link--apple" href="#"><span class="visually-hidden">apple</span></a></li>
+          <li class="link-list__item"><a class="link-list__link link-list__link--android" href="#"><span class="visually-hidden">android</span></a></li>
+          <li class="link-list__item"><a class="link-list__link link-list__link--winphone" href="#"><span class="visually-hidden">windows-phone</span></a></li>
         </ul>
         <p class="promo-block__description">
           Доступно для iPhone, iPad, Android,
@@ -62,7 +62,7 @@
           </li>
       </section>
 
-      <section class="review">
+      <!--<section class="review">
         <ul class="review__list">
           <li class="review__item">
             <h3 class="review__title">Николай Петров</h3>
@@ -80,7 +80,6 @@
           <li class="review__item">
             <h3 class="review__title"></h3>
             <p class="review__description">
-
             </p>
           </li>
         </ul>
@@ -89,13 +88,51 @@
           <button class="slider__toggle" type="button">2</button>
           <button class="slider__toggle" type="button">3</button>
         </p>
+      </section> -->
+
+      <section class="review">
+
+        <input type="radio" name="slides" id="point1" checked>
+        <input type="radio" name="slides" id="point2">
+        <input type="radio" name="slides" id="point3">
+
+        <ul class="review__slider">
+          <li class="review__slides slide-1">
+            <h3 class="review__title">Николай Петров</h3>
+            <p class="review__description">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </li>
+          <li class="review__slides slide-2">
+            <h3 class="review__title">????  ????</h3>
+            <p class="review__description">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </li>
+          <li class="review__slides slide-3">
+            <h3 class="review__title">????  ????</h3>
+            <p class="review__description">
+              «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+              А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </li>
+        </ul>
+
+        <div class="review__control">
+          <label class="review__element" for="point1"></label>
+          <label class="review__element" for="point2"></label>
+          <label class="review__element" for="point3"></label>
+        </div>
+
       </section>
 
       <section class="price">
         <div class="price__wrapper">
           <ul class="price__list">
-            <li class="price__item">
-              <p class="price__econom">Эконом 1,99 USD</p>
+            <li class="price__item visually-hidden">
+              <p class="price__econom">ЭКОНОМ<br> 1,99 USD</p>
               <ul class="price__differences">
                 <li class="price__differences--item">розовый фильтр</li>
                 <li class="price__differences--item">смайлики</li>
@@ -103,15 +140,15 @@
               </ul>
             </li>
             <li class="price__item">
-              <p class="price__standart">Стандарт 3,99 USD</p>
+              <p class="price__standart">СТАНДАРТ<br> 3,99 USD</p>
               <ul class="price__differences">
                 <li class="price__differences--item">розовый фильтр</li>
                 <li class="price__differences--item">смайлики</li>
                 <li class="price__differences--item">комментарии</li>
               </ul>
             </li>
-            <li class="price__item">
-              <p class="price__premium">Премиум 5,99 USD</p>
+            <li class="price__item visually-hidden">
+              <p class="price__premium">ПРЕМИУМ<br> 5,99 USD</p>
               <ul class="price__differences">
                 <li class="price__differences--item">розовый фильтр</li>
                 <li class="price__differences--item">смайлики</li>
@@ -126,6 +163,7 @@
           </p>
         </div>
       </section>
+
     </main>
 
     <footer class="page-footer">
@@ -151,7 +189,7 @@
           <span class="page-footer__adress">ул. Большая Конюшенная, 19/8</span>
         </li>
       </ul>
-      <iframe class="page-footer__map" src=""></iframe>
+      <!--<iframe class="page-footer__map" src=""></iframe> -->
     </footer>
   </body>
 </html>

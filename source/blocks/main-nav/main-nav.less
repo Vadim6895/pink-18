@@ -1,37 +1,31 @@
-.page-header {
-  width: 320px;
-  background-color: #283645;
-}
-
 .main-nav__toggle {
   display: none;
-}
-
-@font-face {
- font-family: "Open Sans";
- src: url("../fonts/opensansbold.woff2") format("woff2"),
-        url("../fonts/opensansbold.woff") format("woff");
 }
 
 .main-nav__list {
   list-style: none;
   font-size: 18px;
   font-family: "Open Sans";
-  box-sizing: border-box;
+  font-weight: bold;
   background-color: #283645;
   padding: 0;
-  border: 1px solid #000000;
+  margin: 0;
 }
 
 .main-nav__list li {
   text-align: center;
+  &:hover {
+    background-color: #35485c;
+  }
+}
+.main-nav__list li:nth-child(1) {
+  border-top: 1px solid #000000;
+  box-shadow: 0 -1px 0 #485461;
 }
 
-.main-nav__list li:hover {
-  background-color: #35485c;
-}
 
 .main-nav__list a {
+  box-sizing: border-box;
   text-decoration: none;
   color: #ffffff;
   width: 318px;
