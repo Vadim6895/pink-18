@@ -14,11 +14,11 @@
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="index.html">главная</a></li>
-            <li class="site-list__item"><a href="gallery.html">фотографии</a></li>
-            <li class="site-list__item"><a href="#">конкурс</a></li>
-            <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
           </ul>
         </div>
       </nav>
@@ -47,7 +47,7 @@
 
           <fieldset class="contest__group-checkbox">
             <label class="contest__description">
-              ваше безбашенные достижения в путешествии
+              ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ
             </label>
             <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked>
             <label class="contest__check-description" for="check-1" >Cделал селфи с акулой</label>
@@ -69,16 +69,16 @@
           </fieldset>
 
           <fieldset class="contest__adress-data">
-            <label class="contest__text" for="telephone">номер телефона</label>
+            <label class="contest__text" for="telephone">НОМЕР ТЕЛЕФОНА</label>
             <input class="contest__input" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
 
-            <label class="contest__text" for="mail">адрес почты</label>
+            <label class="contest__text" for="mail">АДРЕС ПОЧТЫ</label>
             <input class="contest__input" type="text" name="mail" id="mail" placeholder="Введите почту *" value="">
           </fieldset>
 
           <fieldset class="contest__group-radio">
             <label class="contest__description">
-              с каким приложением путешествовали?
+              С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?
             </label>
             <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked>
             <label class="contest__radio-description" for="radio-1">Pink для IOS</label>
@@ -89,11 +89,11 @@
 
           </fieldset>
 
-          <label class="contest__description" for="user-data">опишите свои эмоции</label>
+          <label class="contest__description" for="user-data">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
           <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
 
-          <button class="contest__button" type="submit">отправить форму</button>
-          <p class="contest__required-fields">* — обязательные поля</p>
+          <button class="contest__button" type="submit">ОТПРАВИТЬ ФОРМУ</button>
+          <p class="contest__required-fields">* — ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
         </form>
       </div>
     </main>
@@ -107,10 +107,10 @@
         <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
       </ul>
 
-      <article class="footer__copyright copyright">
-        <p class="copyright__description">Разработано
+      <article class="footer__copyright">
+        <p class="footer__copyright-description">Разработано
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="copyright__logo-academy" src="blocks/footer/img/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+            <img class="footer__copyright-logo" src="blocks/footer/img/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
           </a>
         </p>
       </article>

@@ -9,14 +9,17 @@
   font-family: "Open Sans";
   color: #d53661;
   display: block;
-  margin: 15px 0;
+  margin: 35px 0px 10px 20px;
 }
 .contest__input {
+  font-size: 18px;
+
   box-sizing: border-box;
   width: 280px;
   height: 60px;
-  padding-left: 20px;
-  font-size: 18px;
+  padding-left: 15px;
+  margin-left: 5px;
+  border: 2px solid #e5e5e5;
 }
 .contest__input::-webkit-input-placeholder {
   color:#283645;
@@ -33,8 +36,14 @@
 }
 
 .contest__description {
-  color: #d53661;
+  font-family: "Open Sans";
   font-size: 14px;
+  color: #dc003b;
+
+  display: block;
+  width: 250px;
+  text-align: center;
+  margin: 40px 20px 0;
 }
 
 .contest__checkbox {
@@ -47,9 +56,10 @@
 }
 
 .contest__check-description {
+  font-family: "Open Sans";
+  font-size: 18px;
+
   display: block;
-  font-size: 20px;
-  /*height: 70px;*/
   padding-left: 50px;
   cursor: pointer;
   position: relative;
@@ -95,9 +105,11 @@
 .contest__adress-data {
   border:none;
 }
-/* Radio */
+
+/* Radio --------- */
 .contest__group-radio {
   border:none;
+  background-color: #f2f2f2;
 }
 
 .contest__radio {
@@ -110,7 +122,7 @@
 .contest__radio-description {
   cursor: pointer;
   position:relative;
-  display: inline-block;
+  display: block;
   margin-left: 80px;
   margin-top: 20px;
   font-size: 20px;
@@ -161,19 +173,31 @@
   margin-left: 20px;
   border: 2px solid #e5e5e5;
 }
-
+.contest__area::-webkit-input-placeholder {
+  font-family: "Open Sans";
+  font-size: 18px;
+  color: #535e6a;
+  padding: 20px;
+}
 .contest__button {
+  font-family: "Open Sans Bold";
+  font-size: 18px;
+  color: #ffffff;
+
   box-sizing:border-box;
   width: 280px;
   height: 60px;
   margin-top: 50px;
   margin-left: 20px;
-
   background-color:#2aab6d;
   border:none;
   border-radius:5px;
 }
 .contest__required-fields {
-  margin-bottom: 0;
+  font-family: "Open Sans";
+  font-size: 14px;
+
+  padding: 30px;
+  margin-bottom: 0px;
   text-align: center;
 }

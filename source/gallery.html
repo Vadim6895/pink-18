@@ -14,11 +14,11 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="index.html">главная</a></li>
-            <li class="site-list__item"><a href="gallery.html">фотографии</a></li>
-            <li class="site-list__item"><a href="form.html">конкурс</a></li>
-            <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
           </ul>
         </div>
       </nav>
@@ -32,14 +32,14 @@
         <p class="gallery-page__description">
           Взгляните на фотографии, которые выкладывают пользователи! Видите как не хватает ваших?
         </p>
-      <ul class="gallery-page__users-gallery">
+      <ul class="gallery-page users-gallery">
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
             <img src="blocks/gallery-page/img/panorama-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Анна</h3>
           <p class="users-gallery__message">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
-          <button class="users-gallery__like" type="button">Нравится</button>
+          <button class="users-gallery__like" type="button">НРАВИТСЯ: 215</button>
         </li>
 
         <li class="users-gallery__item">
@@ -48,7 +48,7 @@
           </a>
           <h3 class="users-gallery__title">Левон</h3>
           <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
-              <button class="users-gallery__like" type="button">Нравится</button>
+              <button class="users-gallery__like" type="button">НРАВИТСЯ: 356</button>
         </li>
         <li class="users-gallery__item">
             <a  class="users-gallery__link" href="#">
@@ -56,7 +56,7 @@
             </a>
           <h3 class="users-gallery__title">Антон</h3>
           <p class="users-gallery__message">Соседи будут рады!</p>
-            <button class="users-gallery__like" type="button">Нравится</button>
+            <button class="users-gallery__like" type="button">НРАВИТСЯ: 666</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -64,7 +64,7 @@
           </a>
           <h3 class="users-gallery__title">Борис</h3>
           <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="users-gallery__like" type="button">Нравится</button>
+            <button class="users-gallery__like" type="button">НРАВИТСЯ: 215</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -72,7 +72,7 @@
           </a>
           <h3 class="users-gallery__title">Сергей</h3>
           <p class="users-gallery__message">Самая кубанская в мире!</p>
-            <button class="users-gallery__like" type="button">Нравится</button>
+            <button class="users-gallery__like" type="button">НРАВИТСЯ: 4</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -80,7 +80,7 @@
           </a>
           <h3 class="users-gallery__title">Максим</h3>
           <p class="users-gallery__message">Где снег-то?</p>
-            <button class="users-gallery__like" type="button">Нравится</button>
+            <button class="users-gallery__like" type="button">НРАВИТСЯ: 150</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -88,7 +88,7 @@
           </a>
           <h3 class="users-gallery__title">Надежда</h3>
           <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
-            <button class="users-gallery__like" type="button">Нравится</button>
+            <button class="users-gallery__like" type="button">НРАВИТСЯ: 2560</button>
         </li>
       </ul>
       <p class="gallery-page__description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
@@ -96,29 +96,29 @@
 
       <section class="gallery-post">
         <img class="gallery-post__photo-for-post" src="blocks/gallery-post/img/photo-road-mobile@1x.jpg" alt="Картинка для публикации" width="280" height="375">
-        <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication publication">
-          <fieldset class="publication__item-group">
-            <label class="publication__label">
-              <input class="publication__input" type="radio" name="" value="1">
+        <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication">
+          <fieldset class="gallery-post__publication-group">
+            <label class="gallery__label">
+              <input class="gallery__input" type="radio" name="" value="1">
             </label>
-            <label class="publication__label">
-              <input class="publication__input" type="radio" name="" value="2">
+            <label class="gallery__label">
+              <input class="gallery__input" type="radio" name="" value="2">
             </label>
-            <label class="publication__label">
-              <input class="publication__input" type="radio" name="" value="3">
+            <label class="gallery__label">
+              <input class="gallery__input" type="radio" name="" value="3">
             </label>
           </fieldset>
 
-          <div class="publication__controls">
-            <div class="publication__wrap-controls">
+          <div class="gallery-post__controls">
+            <div class="gallery-post__wrap-controls">
               <div class="scale"><div class="bar"></div></div>
               <div class="toggle min-toggle"></div>
               <div class="toggle max-toggle"></div> <!--по бэм будет вместе с реализацией -->
             </div>
           </div>
 
-          <button class="publication__btn publication__btn--submit" type="submit" value="Запостить">Запостить</button>
-          <button class="publication__btn publication__btn--cancel" type="reset" value="Отмена">Отмена</button>
+          <button class="gallery-post__btn gallery-post__btn--submit" type="submit" value="Запостить">Запостить</button>
+          <button class="gallery-post__btn gallery-post__btn--cancel" type="reset" value="Отмена">Отмена</button>
         </form>
 
       </section>
