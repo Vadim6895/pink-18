@@ -4,10 +4,12 @@
   background-color: #ffffff;
   border: 1px solid black;
 }
+
 .footer__logo {
   margin-left: 80px;
   margin-top: 30px;
 }
+
 .footer__list {
   list-style: none;
   display: flex;
@@ -17,11 +19,11 @@
   padding: 0;
   border: 1px solid black;
 }
+
 .footer__link {
   box-sizing: border-box;
   border: 3px solid #e9ebec;
   border-radius: 50px;
-  display: block;
   width: 50px;
   height: 50px;   /* поскольку внутри ссылок svg разных размеров, padding работает некорректно*/
   /*position: relative;*/
@@ -29,30 +31,33 @@
   justify-content: center;
   align-items: center;
 
-
   &:hover {
     border-color: #283645;
   }
+
   &:active {
     border-color: #e9ebec;
   }
 }
-.footer__link--twitter:before,
-.footer__link--facebook:before,
-.footer__link--youtube:before {
+
+.footer__link--twitter::before,
+.footer__link--facebook::before,
+.footer__link--youtube::before {
   /*position: absolute;
   left: 15px;
   top: 15px;*/
 }
 
-.footer__link--twitter:before {
+.footer__link--twitter::before {
   content: url("../img/footer/icon-twitter.svg");
 }
-.footer__link--facebook:before {
+
+.footer__link--facebook::before {
   content: url("../img/footer/icon-facebook.svg");
   /*top: 12px;*/
 }
-.footer__link--youtube:before {
+
+.footer__link--youtube::before {
   content: url("../img/footer/icon-youtube.svg");
 }
 
@@ -61,8 +66,9 @@
   margin-bottom: 40px;
   border: 1px solid black;
 }
+
 .footer__copyright-description {
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #283645;
@@ -76,10 +82,10 @@
   margin-left: 80px;
   margin-right: 80px;
 }
+
 .footer__copyright-logo {
   /*position: relative;
   top: 14px;
   left: 10px;*/
   border: 1px solid black;
-
 }
