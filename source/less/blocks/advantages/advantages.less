@@ -11,6 +11,8 @@
   color: #283645;
   font-weight: 300;
   font-size: 24px;
+  border: 1px solid black;
+  margin: 0;
 }
 
 .advantages__main-title:nth-child(3) {
@@ -42,4 +44,41 @@
   font-size: 14px;
   line-height: 25px;
   color: #283645;
+}
+/*for adaptive*/
+@media (min-width: @tablet-width) {
+  .advantages {
+    min-width: @tablet-width;
+    background: url("../img/advantages/iphone-screen-3-tablet@1x.png"), url("../img/advantages/gray-bg-tablet.png"), #ffffff;
+    background-repeat: no-repeat;
+    background-position: 25px 240px, 0 200px;
+  }
+
+  .advantages__main-title {
+    font-size: 40px;
+
+    &:nth-child(2) {
+      margin-top: 50px;
+      border: 1px solid red;
+    }
+
+    &:nth-child(3) {
+      padding-left: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  .advantages__list {
+    border: 3px solid black;
+    margin-left: 290px;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .advantages__item {
+    &:nth-child(3) {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  }
 }

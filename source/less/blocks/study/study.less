@@ -1,0 +1,41 @@
+.study {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .study {
+    width: @tablet-width;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .study__title {
+    font-size: 30px;
+    margin-top: 80px;
+    max-width: 175px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+
+  .study__icon {
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  .study__description {
+    font-size: 14px;
+    width: 340px;
+    margin-top: 0;
+    margin-left: 40px;
+  }
+
+  .study__link {
+    font-size: 14px;
+    color: #d22856;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+}

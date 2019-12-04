@@ -1,6 +1,7 @@
 .promo-block {
   width: 320px;
   background: url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
+  background-position: 0 -70px;
 }
 
 .promo-block__title {
@@ -8,11 +9,10 @@
   font-size: 24px;
   color: #ffffff;
   text-align: center;
-
   margin-left: 25px;
   margin-top: 0;
+  margin-bottom: 0;
   padding-top: 20px;
-  padding-bottom: 80px;
 }
 
 /* promo-lead*/
@@ -38,7 +38,7 @@
   padding-top: 10px;
   padding-bottom: 15px;
   margin-left: 20px;
-  margin-top: 260px;
+  margin-top: 350px;
 
   &:hover {
     color: #d22856;
@@ -86,4 +86,50 @@
 
 .promo-block__link--winphone::before {
   content: url("../img/promo-block/logo-microsoft.svg");
+}
+/* for adaptive promo-block*/
+@media (min-width: @tablet-width) {
+  .promo-block {
+
+    min-width: @tablet-width;
+    background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
+    background-position: -300px -100px;
+  }
+
+  .promo-block__title {
+    padding-left: 30px;
+  }
+}
+/* for adaptive promo--lead*/
+@media (min-width: @tablet-width) {
+  .promo-block--lead {
+    min-width: @tablet-width;
+    background: url("../img/promo-block/iphone-hand-tablet@1x.png"), url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
+    background-repeat: no-repeat;
+    background-position: -60px 100px, -270px -100px;
+  }
+
+  .promo-block__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid white;
+    margin-top: 100px;
+  }
+
+  .promo-block__title {
+    font-size: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .promo-block__main-link {
+    margin-top: 20px;
+  }
+
+  .promo-block__description {
+    font-size: 18px;
+    margin-left: 0;
+    margin-bottom: 75px;
+  }
 }

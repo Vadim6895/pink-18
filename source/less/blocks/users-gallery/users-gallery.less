@@ -41,3 +41,36 @@
   content: url("../img/users-gallery/icon-heart.svg");
   margin-right: 10px;
 }
+
+@media (min-width: @tablet-width) {
+  .users-gallery {
+    width: @tablet-width;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .users-gallery__item {
+    width: 300px;
+    margin-right: 0;
+
+    &:nth-child(1) {
+      width: @tablet-width;
+    }
+  }
+
+  .users-gallery__img {
+    width: 300px;
+  }
+
+  .users-gallery__like {
+    padding-left: 15px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+
+
+    &::before {
+      margin-left: 130px;
+    }
+  }
+}

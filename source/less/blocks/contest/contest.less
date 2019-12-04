@@ -18,7 +18,6 @@
   font-size: 18px;
   box-sizing: border-box;
   width: 280px;
-  /*height: 60px;*/
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 15px;
@@ -45,6 +44,10 @@
   width: 250px;
   text-align: center;
   margin: 40px 20px 0;
+}
+
+.contest__description-tablet {
+  display: none;
 }
 
 .contest__checkbox {
@@ -98,6 +101,10 @@
   opacity: 1;
 }
 
+.contest__legend {
+  display: none;
+}
+
 .contest__adress-data {
   border: none;
 }
@@ -109,7 +116,6 @@
 
 .contest__radio {
   appearance: none;
-  /*position: relative;*/
 }
 
 .contest__radio-description {
@@ -178,7 +184,6 @@
   color: #ffffff;
   box-sizing: border-box;
   width: 280px;
-  /*height: 60px;*/
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 50px;
@@ -203,4 +208,76 @@
   padding: 30px;
   margin-bottom: 0;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .contest {
+    min-width: @tablet-width;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contest__legend {
+    display: block;
+    color: #d22856;
+    margin-left: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contest__adress-data {
+    border: 1px solid #e5e5e5;
+    margin-top: 50px;
+    order: -2;
+  }
+
+  .contest__input {
+    width: 80%;
+  }
+
+  .contest__main-data {
+    order: -5;
+  }
+
+  .contest__group-radio {
+    order: -3;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+  }
+
+  .contest__description-tablet {
+    display: inline;
+    color: #d22856;
+    margin-left: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contest__description {
+    display: none;
+  }
+
+  .contest__group-checkbox {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    margin-top: 40px;
+  }
+
+  .contest__group-area {
+    border: 1px solid #e5e5e5;
+    margin-top: 40px;
+  }
+
+  .contest__area {
+    width: 500px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+  }
+
+  .contest__required-fields {
+    align-self: flex-end;
+    width: 300px;
+    margin-top: -70px;
+  }
 }

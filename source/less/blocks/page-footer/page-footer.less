@@ -46,5 +46,32 @@
 
 .page-footer__iframe {
   width: 320px;
-  height: 200px; /*это фрейм, видимых причин не указывать высоту не вижу, по крайней мере сейчас*/
+  height: 200px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    min-width: @tablet-width;
+  }
+
+  .page-footer__title {
+    font-size: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .page-footer__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-footer__item:nth-child(1) {
+    margin-right: 120px;
+  }
+
+  .page-footer__iframe {
+    min-width: @tablet-width;
+    height: 375px;
+  }
 }

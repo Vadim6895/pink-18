@@ -15,3 +15,27 @@
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.form-page__contest-description-tablet {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form-page {
+    min-width: @tablet-width;
+  }
+
+  .form-page__contest-description {
+    font-size: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 0;
+  }
+
+  .form-page__contest-description-tablet {
+    display: block;
+    padding-left: 190px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}

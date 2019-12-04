@@ -35,7 +35,7 @@
       <ul class="gallery-page users-gallery">
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/panorama-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/panorama-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Анна</h3>
           <p class="users-gallery__message">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
@@ -44,7 +44,7 @@
 
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-car-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Левон</h3>
           <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
@@ -52,7 +52,7 @@
         </li>
         <li class="users-gallery__item">
             <a  class="users-gallery__link" href="#">
-              <img src="img/gallery-page/photo-drumset-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+              <img class="users-gallery__img" src="img/gallery-page/photo-drumset-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
             </a>
           <h3 class="users-gallery__title">Антон</h3>
           <p class="users-gallery__message">Соседи будут рады!</p>
@@ -60,7 +60,7 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-window-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Борис</h3>
           <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -68,7 +68,7 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-fair-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Сергей</h3>
           <p class="users-gallery__message">Самая кубанская в мире!</p>
@@ -76,7 +76,7 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-pov-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Максим</h3>
           <p class="users-gallery__message">Где снег-то?</p>
@@ -84,7 +84,7 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-wing-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Надежда</h3>
           <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
@@ -95,7 +95,7 @@
       </div>
 
       <section class="gallery-post">
-        <img class="gallery-post__photo-for-post" src="img/gallery-post/photo-road-mobile@1x.jpg" alt="Картинка для публикации" width="280" height="375">
+        <!--<img class="gallery-post__photo-for-post" src="img/gallery-post/photo-road-mobile@1x.jpg" alt="Картинка для публикации" width="280" height="375"> -->
         <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication">
           <!--<fieldset class="gallery-post__publication-group">
             <label class="gallery__label">
@@ -109,7 +109,7 @@
             </label>
           </fieldset>-->
 
-          <fieldset class="gallery__group-radio">
+          <!--<fieldset class="gallery__group-radio">
 
             <input class="gallery-post__radio gallery-post__radio--crop" type="radio" name="editor" id="editor-1" value="1" checked>
             <label class="gallery-post__radio-label" for="editor-1"></label>
@@ -118,8 +118,50 @@
             <input class="gallery-post__radio gallery-post__radio--contrast" type="radio" name="editor" id="editor-3" value="3">
             <label class="gallery-post__radio-label" for="editor-3"></label>
 
-          </fieldset>
+          </fieldset> -->
+          <div class="gallery-post__controls">
 
+            <svg class="gallery-post__option" version="1.0" id="Layer_1" fill="#b5b9be" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+              <path fill="none" d="M0,0h48v48H0V0z"/>
+              <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+            </svg>
+
+            <svg  class="gallery-post__option" version="1.0" id="Layer_1" fill="#b5b9be" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+              <path fill="none" d="M0,0h48v48H0V0z"/>
+              <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+              <rect y="40" width="48" height="3"/>
+            </svg>
+
+            <svg class="gallery-post__option" version="1.0" id="Layer_1" fill="#b5b9be" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+              <path fill="#b5b9be" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+              <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+            </svg>
+          </div>
+          <div class="block1">
+            <div class="gallery-post__range">
+              <div class="gallery-post__range-controls">
+                <div class="gallery-post__scale">
+                  <div class="gallery-post__bar"></div></div>
+                    <div class="gallery-post__toggle"></div>
+                </div>
+            </div>
+
+            <div class="gallery-post__range">
+              <div class="gallery-post__range-controls">
+                <div class="gallery-post__scale">
+                  <div class="gallery-post__bar"></div></div>
+                    <div class="gallery-post__toggle"></div>
+                </div>
+            </div>
+
+            <div class="gallery-post__range">
+              <div class="gallery-post__range-controls">
+                <div class="gallery-post__scale">
+                  <div class="gallery-post__bar"></div></div>
+                    <div class="gallery-post__toggle"></div>
+                </div>
+            </div>
+          </div>
           <button class="gallery-post__btn gallery-post__btn--submit" type="submit" value="Запостить">Запостить</button>
           <button class="gallery-post__btn gallery-post__btn--cancel" type="reset" value="Отмена">Отмена</button>
         </form>

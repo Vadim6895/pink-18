@@ -32,6 +32,9 @@
         <p class="form-page__contest-description">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
         </p>
+        <p class="form-page__contest-description-tablet">
+          Пожалуйста заполните форму ниже:
+        </p>
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form-page__form contest">
           <fieldset class="contest__main-data">
@@ -49,6 +52,7 @@
             <label class="contest__description">
               ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ
             </label>
+            <legend class="contest__description-tablet">ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</legend>
             <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked>
             <label class="contest__check-description" for="check-1" >Cделал селфи с акулой</label>
 
@@ -69,6 +73,7 @@
           </fieldset>
 
           <fieldset class="contest__adress-data">
+            <legend class="contest__legend">КОНТАКТНАЯ ИНФОРМАЦИЯ</legend>
             <label class="contest__text" for="telephone">НОМЕР ТЕЛЕФОНА</label>
             <input class="contest__input" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
 
@@ -80,6 +85,7 @@
             <label class="contest__description">
               С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?
             </label>
+            <legend class="contest__description-tablet">С КАКИМ ПРИЛОЕЖНИЕМ ПУТЕШЕСТВОВАЛИ</legend>
             <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked>
             <label class="contest__radio-description" for="radio-1">Pink для IOS</label>
             <input class="contest__radio" type="radio" name="OS" id="radio-2" value="2">
@@ -88,9 +94,11 @@
             <label class="contest__radio-description" for="radio-3">Windows Phone</label>
 
           </fieldset>
-
-          <label class="contest__description" for="user-data">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
-          <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
+          <fieldset class="contest__group-area">
+            <label class="contest__description" for="user-data">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
+            <legend class="contest__description-tablet">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
+            <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
+          </fieldset>
 
           <button class="contest__button" type="submit">ОТПРАВИТЬ ФОРМУ</button>
           <p class="contest__required-fields">* — ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
