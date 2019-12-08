@@ -1,7 +1,9 @@
 .promo-block {
-  width: 320px;
+  /*width: 320px;*/
   background: url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
   background-position: 0 -70px;
+
+  border: 2px solid red;
 }
 
 .promo-block__title {
@@ -11,6 +13,7 @@
   text-align: center;
   margin-top: 10px;
   padding: 0 30px;
+  border: 1px solid green;
 }
 
 /* promo-lead*/
@@ -35,7 +38,6 @@
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 15px;
-  margin-left: 20px;
   margin-top: 350px;
 
   &:hover {
@@ -84,10 +86,27 @@
   content: url("../img/promo-block/logo-microsoft.svg");
 }
 
+.promo-block__wrapper {   /*стили для обертки по умолчанию в моб версии*/
+  border: 3px solid green;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .promo-block__description {
+    width: auto;
+  }
+
+  .promo-block__download-list {
+    width: 80%;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .promo-block {
 
-    min-width: @tablet-width;
+    /*width: @tablet-width;*/
     background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
     background-position: -300px -100px;
   }
@@ -99,9 +118,9 @@
 
 @media (min-width: @tablet-width) {
   .promo-block__wrapper {
-    border: 3px solid green;
     width: 320px;
-    margin: 100px 5%;
+    margin: 100px 5%;  /* в целом марджин слева в процентах вроде работает,
+    опять же можно сделать центровщик внутри которго разместить контейнер по левому краю и менять ширину центровщика таким образом перемещая содержимое по левому краю*/
   }
 
   .promo-block__main-link {

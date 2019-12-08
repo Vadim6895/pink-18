@@ -1,9 +1,11 @@
 .contest {
-  width: 320px;
+  /*width: 320px;*/
+  border: 2px solid red;
 }
 
 .contest__main-data {
   border: none;
+  width: 80%; /* для сетки*/
 }
 
 .contest__text {
@@ -17,13 +19,14 @@
 .contest__input {
   font-size: 18px;
   box-sizing: border-box;
-  width: 280px;
+  min-width: 280px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 15px;
   margin-left: 5px;
   border: 2px solid #e5e5e5;
   color: #283645;
+  width: 90%;
 }
 
 .contest__input:nth-child(6) {
@@ -32,7 +35,6 @@
 
 .contest__group-checkbox {
   border: none;
-  /*position: relative;*/
   background-color: #f2f2f2;
 }
 
@@ -210,72 +212,50 @@
 
 @media (min-width: @tablet-width) {
   .contest {
-    min-width: @tablet-width;
-    border: 5px solid black;
     display: flex;
     flex-direction: column;
   }
 
-  .contest__legend {
-    display: block;
-    color: #d22856;
-    margin-left: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .contest__data-wrapper {  /*-- for main-data --*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 3px solid black;
+    order: 1;
   }
 
-  .contest__adress-data {
-    border: 1px solid #e5e5e5;
-    margin-top: 50px;
-    order: -2;
+  .contest__text {
+    margin-top: 70px;
   }
 
   .contest__input {
     width: 80%;
-  }
-
-  .contest__main-data {
-    order: -5;
+    margin-top: 50px;   /*-- /for main-data --*/
   }
 
   .contest__group-radio {
-    order: -3;
-    border: 1px solid #e5e5e5;
-    background-color: #ffffff;
-  }
-
-  .contest__description-tablet {
-    display: inline;
-    color: #d22856;
-    margin-left: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .contest__description {
-    display: none;
+    order: 2;
   }
 
   .contest__group-checkbox {
-    background-color: #ffffff;
-    border: 1px solid #e5e5e5;
-    margin-top: 40px;
+    order: 3;
   }
 
   .contest__group-area {
-    border: 1px solid #e5e5e5;
-    margin-top: 40px;
+    order: 4;
   }
 
-  .contest__area {
+  .contest__adress-data {
+    order: 5;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest__data-wrapper {
     width: 500px;
-    margin-left: 60px;
-    margin-bottom: 40px;
   }
 
-  .contest__required-fields {
-    align-self: flex-end;
-    width: 300px;
-    margin-top: -70px;
+  .contest__main-data {
+    width: 500px;
   }
 }

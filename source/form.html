@@ -38,14 +38,16 @@
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form-page__form contest">
           <fieldset class="contest__main-data">
-            <label class="contest__text" for="surname">фамилия:</label>
-            <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required>
+            <div class="contest__data-wrapper">
+              <label class="contest__text" for="surname">фамилия:</label>
+              <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required>
 
-            <label class="contest__text" for="name">имя:</label>
-            <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required>
+              <label class="contest__text" for="name">имя:</label>
+              <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required>
 
-            <label class="contest__text" for="patronymic">отчество:</label>
-            <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required>
+              <label class="contest__text" for="patronymic">отчество:</label>
+              <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required>
+            </div>
           </fieldset>
 
           <fieldset class="contest__group-checkbox">
@@ -107,21 +109,23 @@
     </main>
 
     <footer class="footer">
-      <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+      <div class="footer__wrapper">
+        <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
 
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
-      </ul>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
+        </ul>
 
-      <article class="footer__copyright">
-        <p class="footer__copyright-description">Разработано
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
-          </a>
-        </p>
-      </article>
+        <article class="footer__copyright">
+          <p class="footer__copyright-description">Разработано
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+            </a>
+          </p>
+        </article>
+      </div>
     </footer>
   </body>
 </html>

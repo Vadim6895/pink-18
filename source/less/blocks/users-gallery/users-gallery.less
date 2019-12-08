@@ -1,6 +1,7 @@
 .users-gallery {
   list-style: none;
   padding: 0;
+  min-width: 320px;
 }
 
 .users-gallery__item {
@@ -21,7 +22,8 @@
   font-size: 14px;
 
   margin-top: 0;
-  padding-left: 15px;
+  padding: 0 15px;
+  text-align: center;
 }
 
 .users-gallery__like {
@@ -34,7 +36,8 @@
   cursor: pointer;
   color: #d22856;
   background-color: transparent;
-  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 
 .users-gallery__like::before {
@@ -44,14 +47,17 @@
 
 @media (min-width: @tablet-width) {
   .users-gallery {
-    width: @tablet-width;
+    /*width: @tablet-width;*/
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
   }
 
   .users-gallery__item {
     width: 300px;
     margin-right: 0;
+    flex-grow: 1;
 
     &:nth-child(1) {
       width: @tablet-width; /*ширина первого поста*/
@@ -72,11 +78,14 @@
 
 @media (min-width: @desktop-width) {
   .users-gallery {
-    width: @desktop-width;
+    /*width: @desktop-width;*/
+    width: 100%;
+    max-width: 1200px; /*примерная максимальная ширина галереи, для ограничения сетки*/
   }
 
   .users-gallery__item {
     width: 290px;
+    flex-grow: 1;
 
     &:nth-child(1) {
       width: @desktop-width;
