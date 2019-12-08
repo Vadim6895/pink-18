@@ -65,10 +65,19 @@
 .gallery-post__option {
   &:hover {
     cursor: pointer;
+
     fill: #8d949b;
   }
 
   &:active {
+    path {
+      fill: #d22856;
+    }
+  }
+}
+
+.gallery-post__option-color {
+  &:hover {
     fill: #d22856;
   }
 }
@@ -106,13 +115,6 @@
   background: #000000;
   width: 245px;
 }
-
-/*.gallery-post__bar {
-    margin-left: 30px;
-    width: 100px;
-    height: 2px;
-    background: #000000;
-}*/
 
 .gallery-post__toggle {
   position: absolute;

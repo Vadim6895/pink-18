@@ -2,26 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">ГЛАВНАЯ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">ФОТОГРАФИИ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">КОНКУРС</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML ACADEMY</a></li>
-          </ul>
-        </div>
-      </nav>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="form-page">
@@ -30,29 +33,26 @@
       </div>
       <div class="form-page__block">
         <p class="form-page__contest-description">
-          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
-        </p>
-        <p class="form-page__contest-description-tablet">
-          Пожалуйста заполните форму ниже:
+          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!<span class="form-page__contest-description-tablet">Пожалуйста заполните форму ниже:</span>
         </p>
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form-page__form contest">
           <fieldset class="contest__main-data">
-            <label class="contest__text" for="surname">ФАМИЛИЯ:</label>
+            <label class="contest__text" for="surname">фамилия:</label>
             <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required>
 
-            <label class="contest__text" for="name">ИМЯ:</label>
+            <label class="contest__text" for="name">имя:</label>
             <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required>
 
-            <label class="contest__text" for="patronymic">ОТЧЕСТВО:</label>
+            <label class="contest__text" for="patronymic">отчество:</label>
             <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required>
           </fieldset>
 
           <fieldset class="contest__group-checkbox">
             <label class="contest__description">
-              ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ
+              Ваши безбашенные достижения в путешествии
             </label>
-            <legend class="contest__description-tablet">ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ</legend>
+            <legend class="contest__description-tablet">Ваши безбашенные достижения в путешествии</legend>
             <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked>
             <label class="contest__check-description" for="check-1" >Cделал селфи с акулой</label>
 
@@ -73,19 +73,19 @@
           </fieldset>
 
           <fieldset class="contest__adress-data">
-            <legend class="contest__legend">КОНТАКТНАЯ ИНФОРМАЦИЯ</legend>
-            <label class="contest__text" for="telephone">НОМЕР ТЕЛЕФОНА</label>
+            <legend class="contest__legend">Контактная информация</legend>
+            <label class="contest__text" for="telephone">Номер телефона</label>
             <input class="contest__input" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
 
-            <label class="contest__text" for="mail">АДРЕС ПОЧТЫ</label>
+            <label class="contest__text" for="mail">Адрес почты</label>
             <input class="contest__input" type="text" name="mail" id="mail" placeholder="Введите почту *" value="">
           </fieldset>
 
           <fieldset class="contest__group-radio">
             <label class="contest__description">
-              С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?
+              С каким приложением путешествовали
             </label>
-            <legend class="contest__description-tablet">С КАКИМ ПРИЛОЕЖНИЕМ ПУТЕШЕСТВОВАЛИ</legend>
+            <legend class="contest__description-tablet">С каким приложением путешествовали</legend>
             <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked>
             <label class="contest__radio-description" for="radio-1">Pink для IOS</label>
             <input class="contest__radio" type="radio" name="OS" id="radio-2" value="2">
@@ -95,13 +95,13 @@
 
           </fieldset>
           <fieldset class="contest__group-area">
-            <label class="contest__description" for="user-data">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
-            <legend class="contest__description-tablet">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
+            <legend class="contest__description-tablet">Опишите свои эмоции</legend>
+            <label class="contest__description" for="user-data">Опишите свои эмоции</label>
             <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
           </fieldset>
 
-          <button class="contest__button" type="submit">ОТПРАВИТЬ ФОРМУ</button>
-          <p class="contest__required-fields">* — ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+          <button class="contest__button" type="submit">Отправить форму</button>
+          <p class="contest__required-fields">* — Обязательные поля</p>
         </form>
       </div>
     </main>

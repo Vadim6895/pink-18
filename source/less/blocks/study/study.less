@@ -15,7 +15,7 @@
   .study__title {
     font-size: 30px;
     margin-top: 80px;
-    max-width: 175px;
+    width: 175px;
     margin-bottom: 20px;
     margin-left: 40px;
   }
@@ -37,5 +37,19 @@
     color: #d22856;
     margin-top: 20px;
     margin-left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .study {
+    width: auto;
+  }
+
+  .study__description {
+    width: 460px;
+  }
+
+  .study__title {
+    width: auto;
   }
 }

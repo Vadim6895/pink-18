@@ -43,30 +43,25 @@
   .review {
     min-width: @tablet-width;
   }
+}
 
-  .review__item {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .review__title {
-    font-size: 20px;
-    margin-bottom: 0;
-    order: 1;
+@media (min-width: @desktop-width) {
+  .review {
+    width: 400px;
+    margin: 0 auto;
   }
 
   .review__title-description-tablet {
-    display: block;
-    font-size: 14px;
-    margin-left: 240px;
-    color: #283645;
-    order: 2;
+    display: block; /* отображает ранее скрытый спан*/
+    text-align: center;
+  }
+
+  .review__item {
+    display: flex;
+    flex-direction: column-reverse; /*меняем местами элементы списка */
   }
 
   .review__description {
-    font-size: 18px;
-    margin-top: 70px;
     margin-bottom: 0;
-    order: 0;
   }
 }

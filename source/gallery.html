@@ -2,26 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">ГЛАВНАЯ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">ФОТОГРАФИИ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">КОНКУРС</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML ACADEMY</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="gallery-page">
@@ -39,7 +42,7 @@
           </a>
           <h3 class="users-gallery__title">Анна</h3>
           <p class="users-gallery__message">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
-          <button class="users-gallery__like" type="button">НРАВИТСЯ: 215</button>
+          <button class="users-gallery__like" type="button">нравится: 215</button>
         </li>
 
         <li class="users-gallery__item">
@@ -56,7 +59,7 @@
             </a>
           <h3 class="users-gallery__title">Антон</h3>
           <p class="users-gallery__message">Соседи будут рады!</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 666</button>
+            <button class="users-gallery__like" type="button">нравится: 666</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -64,7 +67,7 @@
           </a>
           <h3 class="users-gallery__title">Борис</h3>
           <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 215</button>
+            <button class="users-gallery__like" type="button">нравится: 215</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -72,7 +75,7 @@
           </a>
           <h3 class="users-gallery__title">Сергей</h3>
           <p class="users-gallery__message">Самая кубанская в мире!</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 4</button>
+            <button class="users-gallery__like" type="button">нравится: 4</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -80,7 +83,7 @@
           </a>
           <h3 class="users-gallery__title">Максим</h3>
           <p class="users-gallery__message">Где снег-то?</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 150</button>
+            <button class="users-gallery__like" type="button">нравится: 150</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
@@ -88,7 +91,7 @@
           </a>
           <h3 class="users-gallery__title">Надежда</h3>
           <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 2560</button>
+            <button class="users-gallery__like" type="button">нравится: 2560</button>
         </li>
       </ul>
       <p class="gallery-page__description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
@@ -121,45 +124,45 @@
           </fieldset> -->
           <div class="gallery-post__controls">
 
-            <svg class="gallery-post__option" version="1.0" id="Layer_1" fill="#b5b9be" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-              <path fill="none" d="M0,0h48v48H0V0z"/>
-              <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+            <svg class="gallery-post__option" version="1.0" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><path fill="none" d="M0 0h48v48H0V0z"/><path class="gallery-post__option-color" d="M34 30h4V14c0-2.21-1.79-4-4-4H18v4h16v16zm-20 4V2h-4v8H2v4h8v20c0 2.21 1.79 4 4 4h20v8h4v-8h8v-4H14z" fill="#b5b9be"/>
             </svg>
 
-            <svg  class="gallery-post__option" version="1.0" id="Layer_1" fill="#b5b9be" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-              <path fill="none" d="M0,0h48v48H0V0z"/>
-              <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
-              <rect y="40" width="48" height="3"/>
-            </svg>
+            <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#d22856" version="1.0"><path fill="none" d="M0 0h48v48H0V0z"/><path d="M33 18L15 0l-3 3 5 5L7 18v4l11 11 2 1 2-1 11-11v-4zm-23 2l10-10 10 10H10zm28 3s-4 4-4 7a4 4 0 108 0c0-3-4-7-4-7zM0 40h48v3H0z"/></svg>
 
-            <svg class="gallery-post__option" version="1.0" id="Layer_1" fill="#b5b9be" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
-              <path fill="#b5b9be" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
-              <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
-            </svg>
+            <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="31.9" height="31.9" version="1.0" viewBox="-35.4 -8 31.9 31.9"><path fill="#231F20" d="M-19-4a12 12 0 110 24 12 12 0 010-24m0-4a16 16 0 100 32 16 16 0 000-32z"/><path d="M-19 16a9 9 0 008-8 9 9 0 00-8-9"/></svg>
           </div>
-          <div class="block1">
+          <div class="gallery-post__wrapper">
             <div class="gallery-post__range">
               <div class="gallery-post__range-controls">
                 <div class="gallery-post__scale">
-                  <div class="gallery-post__bar"></div></div>
-                    <div class="gallery-post__toggle"></div>
+                  <div class="gallery-post__bar">
+                  </div>
                 </div>
+                  <div class="gallery-post__toggle">
+                  </div>
+              </div>
             </div>
 
             <div class="gallery-post__range">
               <div class="gallery-post__range-controls">
                 <div class="gallery-post__scale">
-                  <div class="gallery-post__bar"></div></div>
-                    <div class="gallery-post__toggle"></div>
+                  <div class="gallery-post__bar">
+                  </div>
                 </div>
+                <div class="gallery-post__toggle">
+                </div>
+              </div>
             </div>
 
             <div class="gallery-post__range">
               <div class="gallery-post__range-controls">
                 <div class="gallery-post__scale">
-                  <div class="gallery-post__bar"></div></div>
-                    <div class="gallery-post__toggle"></div>
+                  <div class="gallery-post__bar">
+                  </div>
                 </div>
+                  <div class="gallery-post__toggle">
+                  </div>
+              </div>
             </div>
           </div>
           <button class="gallery-post__btn gallery-post__btn--submit" type="submit" value="Запостить">Запостить</button>
@@ -171,21 +174,23 @@
     </main>
 
     <footer class="footer">
-      <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+      <div class="footer__wrapper">
+        <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
 
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
-      </ul>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
+        </ul>
 
-      <article class="footer__copyright">
-        <p class="footer__copyright-description">Разработано
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
-          </a>
-        </p>
-      </article>
+        <article class="footer__copyright">
+          <p class="footer__copyright-description">Разработано
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+            </a>
+          </p>
+        </article>
+      </div>
     </footer>
   </body>
 </html>

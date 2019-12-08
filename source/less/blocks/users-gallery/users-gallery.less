@@ -54,12 +54,8 @@
     margin-right: 0;
 
     &:nth-child(1) {
-      width: @tablet-width;
+      width: @tablet-width; /*ширина первого поста*/
     }
-  }
-
-  .users-gallery__img {
-    width: 300px;
   }
 
   .users-gallery__like {
@@ -68,9 +64,22 @@
     display: flex;
     flex-direction: row-reverse;
 
-
     &::before {
       margin-left: 130px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .users-gallery {
+    width: @desktop-width;
+  }
+
+  .users-gallery__item {
+    width: 290px;
+
+    &:nth-child(1) {
+      width: @desktop-width;
     }
   }
 }
