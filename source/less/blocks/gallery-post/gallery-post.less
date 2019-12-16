@@ -12,7 +12,6 @@
   width: 280px;
   padding: 12px 0;
   margin-bottom: 15px;
-  margin-left: 20px;
 
   border: 3px solid black;
   border-radius: 30px;
@@ -22,7 +21,6 @@
 .gallery-post__btn--submit {
   border-color: #d22856;
   color: #d22856;
-  margin-top: 40px;
 
   &:hover {
     background-color: #d22856;
@@ -54,7 +52,6 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  /*margin-top: 400px;*/
   padding: 0 30px;
 }
 
@@ -127,27 +124,60 @@
 .gallery-post__publication {
   border: 4px solid black;
   width: 320px;
-  margin: 400px auto 0 auto; /*стили по умолчанию для моб*/
+  margin: 400px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-post__wrapper-range {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
   .gallery-post {
     display: flex;
-    justify-content: flex-end; /*флекс с одним дивом внутри*/
+    justify-content: flex-end;
   }
 
   .gallery-post__publication {
-    margin: 0;
     width: 50%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 400px;
+    flex-direction: row;
+  }
+
+  .gallery-post__wrapper-range {
+    margin-bottom: 100px;
   }
 
   .gallery-post__range:nth-of-type(2n+1) {
     display: block;
   }
+
+  .gallery-post__controls {
+    .container(@container-mob);
+    width: auto;
+    margin-bottom: 100px;
+  }
+
+  .gallery-post__btn {
+    margin: 20px auto 0 auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .gallery-post__publication {
-    width: 70%;
+    margin: 0 auto;
+    width: 450px;
+    justify-content: space-between;
+    min-height: 400px;
+    align-items: center;
+  }
+
+  .gallery-post__btn {
+    width: 200px;
   }
 }

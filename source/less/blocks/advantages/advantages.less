@@ -1,5 +1,4 @@
 .advantages {
-  /*width: 320px;*/
   border: 1px solid green;
   background: url("../img/advantages/iphone-screen-mobile1x.png"), url("../img/advantages/gray-bg.png"), #ffffff;
   background-repeat: no-repeat;
@@ -48,14 +47,18 @@
 /*for adaptive*/
 @media (min-width: @tablet-width) {
   .advantages {
-    width: auto;
+    .container();
+    align-items: flex-end;
+  }
+
+  .advantages__main-title {
+    .container(@container-mob);
   }
 
   .advantages__list {
     width: 380px;
     text-align: left;
     border: 1px solid black;
-    margin-left: 40%; /*лучшего решения я не нешаел, flex из двух элементов будет работать не везде */
   }
 
   .advantages__item:nth-child(3) {
@@ -65,9 +68,7 @@
 
 @media (min-width: @desktop-width) {
   .advantages__list {
-    display: flex;
-    width: 700px;
-    text-align: center;
-    margin: 0 auto;
+    .container(@container-tablet);
+    flex-direction: row;
   }
 }

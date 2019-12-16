@@ -1,5 +1,4 @@
 .review {
-  /*width: 320px;*/
   width: 100%;
 }
 
@@ -48,18 +47,17 @@
 
 @media (min-width: @desktop-width) {
   .review {
-    width: 400px;
-    margin: 0 auto;
+    .container(@container-tablet);
   }
 
   .review__title-description-tablet {
-    display: block; /* отображает ранее скрытый спан*/
+    display: block;
     text-align: center;
   }
 
   .review__item {
     display: flex;
-    flex-direction: column-reverse; /*меняем местами элементы списка */
+    flex-direction: column-reverse;
   }
 
   .review__description {

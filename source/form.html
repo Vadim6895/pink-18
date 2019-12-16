@@ -13,8 +13,8 @@
         <a class="page-header__logo">
           <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <nav class="main-nav main-nav--closed main-nav--no-js">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
@@ -145,14 +145,30 @@
           <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
         </ul>
 
-        <article class="footer__copyright">
+        <div class="footer__copyright">
           <p class="footer__copyright-description">Разработано
             <a href="https://htmlacademy.ru/intensive/htmlcss">
               <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
             </a>
           </p>
-        </article>
+        </div>
       </div>
     </footer>
+    <script type="text/javascript">
+      var mainnav = document.querySelector('.main-nav');
+      var navtoggle = document.querySelector('.main-nav__toggle');
+
+      mainnav.classList.remove('main-nav--no-js');
+
+      navtoggle.addEventListener('click', function() {
+        if (mainnav.classList.contains('main-nav--closed')) {
+          mainnav.classList.remove('main-nav--closed');
+          mainnav.classList.add('main-nav--opened');
+        } else {
+          mainnav.classList.add('main-nav--closed');
+          mainnav.classList.remove('main-nav--opened');
+          }
+      });
+    </script>
   </body>
 </html>

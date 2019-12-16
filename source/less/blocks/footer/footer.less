@@ -1,5 +1,4 @@
 .footer {
-  /*width: 320px;*/
   background-color: #ffffff;
   border: 3px solid black;
 }
@@ -19,12 +18,10 @@
 }
 
 .footer__link {
-  box-sizing: border-box;
   border: 3px solid #e9ebec;
   border-radius: 50px;
   width: 50px;
   height: 50px;
-  /*position: relative;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +49,8 @@
 
 .footer__copyright {
   text-align: center;
-  margin-bottom: 40px;
   border: 1px solid black;
+  margin-top: 20px;
 }
 
 .footer__copyright-description {
@@ -87,17 +84,16 @@
   }
 
   .footer__wrapper {
-    width: 500px; /*примерная ширина визуально подходящая*/
+    .container(@container-tablet);
     border: 1px solid red;
-    display: flex;
-    justify-content: space-between;
     flex-direction: row;
-    margin: 0 auto;
+    align-items: stretch;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer__wrapper {
-    width: @desktop-width;
+    .container(@container-desktop);
+    flex-direction: row;
   }
 }

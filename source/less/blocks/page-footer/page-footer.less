@@ -1,5 +1,4 @@
 .page-footer {
-  /*width: 320px;*/
   background: url("../img/page-footer/triangle-white-footer2.png"), url("../img/page-footer/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0% 0%, 0% 100%;
@@ -11,6 +10,7 @@
   font-size: 24px;
   padding-top: 50px;
   margin-top: 0;
+  .container(@container-mob);
 }
 
 .page-footer__contacts {
@@ -52,6 +52,10 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     min-width: @tablet-width;
+  }
+
+  .page-footer__title {
+    .container(@container-tablet);
   }
 
   .page-footer__contacts {

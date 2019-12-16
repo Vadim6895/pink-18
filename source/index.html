@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -13,7 +13,7 @@
         <a class="page-header__logo" href="#">
           <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
         </a>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-nav">
         <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
           <div class="main-nav__wrapper">
@@ -70,13 +70,14 @@
           </li>
       </section>
       <section class="study">
-        <img class="study__icon" src="img/study/icon-timer.svg" width="240" height="275">
-        <h2 class="study__title">Эффект на 24 часа!</h2>
-        <p class="study__description">
-          Британские ученые провели исследования и доказали, что положительный эффект от
-          использования приложения длится<br> целые сутки!
-        </p>
-        <a class="study__link" href="#">Узнать больше об исследовании</a>
+        <div class="study__wrapper">
+          <h2 class="study__title">Эффект на 25 часа!</h2>
+          <p class="study__description">
+            Британские ученые провели исследования и доказали, что положительный эффект от
+            использования приложения длится<br> целые сутки!
+          </p>
+          <a class="study__link" href="#">Узнать больше об исследовании</a>
+        <div>
       </section>
 
       <section class="review">
@@ -111,41 +112,6 @@
         </p>
       </section>
 
-      <!--<section class="price">
-        <div class="price__wrapper">
-          <ul class="price__list">
-            <li class="price__item visually-hidden">
-              <p class="price__econom">ЭКОНОМ<br><span class="price__value">1,99 USD<span></p>
-              <ul class="price__differences">
-                <li class="price__differences-item">розовый фильтр</li>
-                <li class="price__differences-item">смайлики</li>
-                <li class="price__differences-item">комментарии</li>
-              </ul>
-            </li>
-            <li class="price__item">
-              <p class="price__standart">СТАНДАРТ<br><span class="price__value">3,99 USD</span></p>
-              <ul class="price__differences">
-                <li class="price__differences-item">розовый фильтр</li>
-                <li class="price__differences-item">смайлики</li>
-                <li class="price__differences-item">комментарии</li>
-              </ul>
-            </li>
-            <li class="price__item visually-hidden">
-              <p class="price__premium">ПРЕМИУМ<br><span class="price__value">5,99 USD</span></p>
-              <ul class="price__differences">
-                <li class="price__differences-item">розовый фильтр</li>
-                <li class="price__differences-item">смайлики</li>
-                <li class="price__differences-item">комментарии</li>
-              </ul>
-            </li>
-          </ul>
-          <p class="price__toggles">
-            <button class="price__toggle" type="button">1</button>
-            <button class="price__toggle" type="button">2</button>
-            <button class="price__toggle" type="button">3</button>
-          </p>
-        </div>
-      </section> -->
       <section class="price">
         <table class="price__table">
           <caption class="visually-hidden">Наши цены</caption>
@@ -168,7 +134,7 @@
             <td class="price__cell"></td>
           </tr>
           <tr class="price__stroke">
-            <td class="price__main-cell">Коментарии</td>
+            <td class="price__main-cell price__main-cell--no">Коментарии</td>
             <td class="price__cell price__cell--no"></td>
             <td class="price__cell price__cell--no"></td>
             <td class="price__cell"></td>
@@ -213,13 +179,13 @@
             <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
           </ul>
 
-          <article class="footer__copyright">
+          <div class="footer__copyright">
             <p class="footer__copyright-description">Разработано
               <a href="https://htmlacademy.ru/intensive/htmlcss">
                 <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
               </a>
             </p>
-          </article>
+          </div>
         </div>
       </section>
     </footer>

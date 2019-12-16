@@ -4,7 +4,7 @@
   text-transform: uppercase;
   text-align: center;
   padding: 0 40px;
-}                   /*-----//// mix for <legend>------*/
+}
 
 .contest__text {
   font-size: 14px;
@@ -35,7 +35,7 @@
   margin: 0;
   padding: 0;
   border: none;
-  .container-mob();
+  .container(@container-mob);
 }
 
 .contest__main-list {
@@ -54,7 +54,7 @@
 }
 
 .contest__checkbox-list {
-  .container-mob();
+  .container(@container-mob);
   padding-top: 80px;
   padding-bottom: 40px;
 }
@@ -142,7 +142,7 @@
 }
 
 .contest__radio-list {
-  .container-mob();
+  .container(@container-mob);
   padding: 0;
   margin: 30px auto 0 auto;
 }
@@ -215,7 +215,7 @@
 }
 
 .contest__group-area {
-  .container-mob();
+  .container(@container-mob);
   border: none;
   margin-top: 40px;
   padding: 0;
@@ -283,7 +283,7 @@
 }
 
 .contest__adress-list {
-  .container-mob();
+  .container(@container-mob);
   padding: 0;
   margin-bottom: 20px;
 }
@@ -292,11 +292,11 @@
 @media (min-width: @tablet-width) {
   .contest {
     display: flex;
-    flex-direction: column; /* используется для order*/
+    flex-direction: column;
   }
 
   .contest__main-data {  /*-----------main data--------*/
-    .container-tablet();
+    .container(@container-tablet);
   }
 
   .contest__main-item {
@@ -305,12 +305,12 @@
     margin-top: 40px;
   }                     /*-------------////main data--------*/
 
-  .contest__radio-tile {
+  .contest__radio-tile { /*----------radio-------------*/
     display: block;
   }
 
-  .contest__group-radio {  /*----------radio-------------*/
-    .container-tablet();
+  .contest__group-radio {
+    .container(@container-tablet);
     order: 2;
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
@@ -321,12 +321,12 @@
     }
   }                     /*------------///radio---------*/
 
-  .contest__checkbox-list {
+  .contest__checkbox-list {   /*-------------checkbox---------*/
     padding-top: 0;
   }
 
-  .contest__group-checkbox {   /*-------------checkbox---------*/
-    .container-tablet();
+  .contest__group-checkbox {
+    .container(@container-tablet);
     order: 4;
     background-color: #ffffff;
     position: static;
@@ -338,7 +338,7 @@
   }                             /*----------/// checkbox---------*/
 
   .contest__group-area {  /*-------------group area-------*/
-    .container-tablet();
+    .container(@container-tablet);
     border: 2px solid #e5e5e5;
     order: 6;
   }                     /*-------------/// group area------------*/
@@ -348,7 +348,7 @@
   }
 
   .contest__adress-data {
-    .container-tablet();
+    .container(@container-tablet);
     order: 3;
     border: 2px solid #e5e5e5;
 
@@ -367,7 +367,7 @@
       background-repeat: no-repeat;
       background-size: 25px 25px;
       background-position: center;
-      position: absolute; /* другого решения не нашел*/
+      position: absolute;
       width: 62px;
       height: 65px;
       right: 50px;
@@ -399,13 +399,13 @@
 
 @media (min-width: @desktop-width) {
   .contest {
-    .container-desktop();
+    .container(@container-desktop);
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .contest__main-data {
-    .container-mob();
+    .container(@container-mob);
     margin: 0;
 
     .contest__main-item:nth-child(1) {
@@ -414,7 +414,7 @@
   }
 
   .contest__group-radio {
-    .container-mob();
+    .container(@container-mob);
     margin: 0;
   }
 
@@ -428,7 +428,7 @@
   }
 
   .contest__adress-data {
-    .container-desktop();
+    .container(@container-desktop);
     margin: 0;
 
     .contest__adress-list {
@@ -438,11 +438,11 @@
   }
 
   .contest__group-checkbox {
-    .container-desktop();
+    .container(@container-desktop);
   }
 
   .contest__checkbox-list {
-    .container-desktop();
+    .container(@container-desktop);
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -452,7 +452,7 @@
   }
 
   .contest__group-area {
-    .container-desktop();
+    .container(@container-desktop);
     padding: 20px 40px 40px 40px;
   }
 }
