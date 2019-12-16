@@ -1,5 +1,4 @@
 .gallery-page {
-  width: 320px;
   background-color: #ffffff;
 }
 
@@ -12,4 +11,15 @@
 
   margin-top: 50px;
   padding: 10px 30px 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery-page {
+    min-width: @tablet-width;
+  }
+
+  .gallery-page__description {
+    font-size: 18px;
+    padding-left: 60px;
+  }
 }

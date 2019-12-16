@@ -2,26 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">ГЛАВНАЯ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">ФОТОГРАФИИ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">КОНКУРС</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML ACADEMY</a></li>
-          </ul>
-        </div>
-      </nav>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--no-js">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="form-page">
@@ -30,90 +33,142 @@
       </div>
       <div class="form-page__block">
         <p class="form-page__contest-description">
-          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!<span class="form-page__contest-description-tablet">Пожалуйста заполните форму ниже:</span>
         </p>
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form-page__form contest">
           <fieldset class="contest__main-data">
-            <label class="contest__text" for="surname">ФАМИЛИЯ:</label>
-            <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required>
-
-            <label class="contest__text" for="name">ИМЯ:</label>
-            <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required>
-
-            <label class="contest__text" for="patronymic">ОТЧЕСТВО:</label>
-            <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required>
+            <ul class="contest__main-list">
+              <li class="contest__main-item">
+                <label class="contest__text" for="surname">фамилия:</label>
+                <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required>
+              </li>
+              <li class="contest__main-item">
+                <label class="contest__text" for="name">имя:</label>
+                <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required>
+              </li>
+              <li class="contest__main-item">
+                <label class="contest__text" for="patronymic">отчество:</label>
+                <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="contest__group-checkbox">
-            <label class="contest__description">
-              ВАШИ БЕЗБАШЕННЫЕ ДОСТИЖЕНИЯ В ПУТЕШЕСТВИИ
+            <label class="contest__description visually-hidden">
+              Ваши безбашенные достижения в путешествии
             </label>
-            <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked>
-            <label class="contest__check-description" for="check-1" >Cделал селфи с акулой</label>
-
-            <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-2" checked>
-            <label class="contest__check-description" for="check-2" >Обгорел на пляже</label>
-
-            <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-3">
-            <label class="contest__check-description" for="check-3" >Видел Чака Норриса</label>
-
-            <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-4">
-            <label class="contest__check-description" for="check-4" >Накупил сувениров</label>
-
-            <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-5" checked>
-            <label class="contest__check-description" for="check-5" >Удержал башню</label>
-
-            <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-6">
-            <label class="contest__check-description" for="check-6" >Разгромил отель</label>
+            <legend class="contest__checkbox-title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="contest__checkbox-list">
+              <li class="contest__checkbox-item">
+                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked>
+                <label class="contest__check-description" for="check-1" >Cделал селфи с акулой</label>
+              </li>
+              <li class="contest__checkbox-item">
+                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-2" checked>
+                <label class="contest__check-description" for="check-2" >Обгорел на пляже</label>
+              </li>
+              <li class="contest__checkbox-item">
+                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-3">
+                <label class="contest__check-description" for="check-3" >Видел Чака Норриса</label>
+              </li>
+              <li class="contest__checkbox-item">
+                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-4">
+                <label class="contest__check-description" for="check-4" >Накупил сувениров</label>
+              </li>
+              <li class="contest__checkbox-item">
+                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-5" checked>
+                <label class="contest__check-description" for="check-5" >Удержал башню</label>
+              </li>
+              <li class="contest__checkbox-item">
+                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-6">
+                <label class="contest__check-description" for="check-6" >Разгромил отель</label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="contest__adress-data">
-            <label class="contest__text" for="telephone">НОМЕР ТЕЛЕФОНА</label>
-            <input class="contest__input" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
-
-            <label class="contest__text" for="mail">АДРЕС ПОЧТЫ</label>
-            <input class="contest__input" type="text" name="mail" id="mail" placeholder="Введите почту *" value="">
+            <legend class="contest__adress-title">Контактная информация</legend>
+            <ul class="contest__adress-list">
+              <li class="contest__adress-item contest__adress-item--tel">
+                <label class="contest__text" for="telephone">Номер телефона</label>
+                <input class="contest__input" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
+              </li>
+              <li class="contest__adress-item contest__adress-item--email">
+                <label class="contest__text" for="mail">Адрес почты</label>
+                <input class="contest__input" type="text" name="mail" id="mail" placeholder="Введите почту *" value="">
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="contest__group-radio">
-            <label class="contest__description">
-              С КАКИМ ПРИЛОЖЕНИЕМ ПУТЕШЕСТВОВАЛИ?
+            <label class="visually-hidden">
+              С каким приложением путешествовали
             </label>
-            <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked>
-            <label class="contest__radio-description" for="radio-1">Pink для IOS</label>
-            <input class="contest__radio" type="radio" name="OS" id="radio-2" value="2">
-            <label class="contest__radio-description" for="radio-2">Pink на Android</label>
-            <input class="contest__radio" type="radio" name="OS" id="radio-3" value="3">
-            <label class="contest__radio-description" for="radio-3">Windows Phone</label>
-
+            <legend class="contest__radio-tile">С каким приложением путешествовали</legend>
+            <ul class="contest__radio-list">
+              <li class="contest__radio-item">
+                <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked>
+                <label class="contest__radio-description" for="radio-1">Pink для IOS</label>
+              </li>
+              <li class="contest__radio-item">
+                <input class="contest__radio" type="radio" name="OS" id="radio-2" value="2">
+                <label class="contest__radio-description" for="radio-2">Pink на Android</label>
+              </li>
+              <li class="contest__radio-item">
+                <input class="contest__radio" type="radio" name="OS" id="radio-3" value="3">
+                <label class="contest__radio-description" for="radio-3">Windows Phone</label>
+              </li>
           </fieldset>
 
-          <label class="contest__description" for="user-data">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
-          <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
+          <fieldset class="contest__group-area">
+            <legend class="contest__area-title">Опишите свои эмоции</legend>
+            <label class="visually-hidden" for="user-data">Опишите свои эмоции</label>
+            <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
+          </fieldset>
 
-          <button class="contest__button" type="submit">ОТПРАВИТЬ ФОРМУ</button>
-          <p class="contest__required-fields">* — ОБЯЗАТЕЛЬНЫЕ ПОЛЯ</p>
+          <div class="contest__submit">
+            <button class="contest__button" type="submit">Отправить форму</button>
+            <p class="contest__required-fields">* — Обязательные поля</p>
+          </div>
         </form>
       </div>
     </main>
 
     <footer class="footer">
-      <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+      <div class="footer__wrapper">
+        <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
 
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
-      </ul>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
+        </ul>
 
-      <article class="footer__copyright">
-        <p class="footer__copyright-description">Разработано
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
-          </a>
-        </p>
-      </article>
+        <div class="footer__copyright">
+          <p class="footer__copyright-description">Разработано
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
+    <script type="text/javascript">
+      var mainnav = document.querySelector('.main-nav');
+      var navtoggle = document.querySelector('.main-nav__toggle');
+
+      mainnav.classList.remove('main-nav--no-js');
+
+      navtoggle.addEventListener('click', function() {
+        if (mainnav.classList.contains('main-nav--closed')) {
+          mainnav.classList.remove('main-nav--closed');
+          mainnav.classList.add('main-nav--opened');
+        } else {
+          mainnav.classList.add('main-nav--closed');
+          mainnav.classList.remove('main-nav--opened');
+          }
+      });
+    </script>
   </body>
 </html>

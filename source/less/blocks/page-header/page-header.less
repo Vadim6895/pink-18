@@ -1,8 +1,18 @@
 .page-header {
-  width: 320px;
   background-color: #283645;
 }
 
 .page-header__logo-image {
   margin: 15px;
+  border: 3px solid green;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    border: 1px solid white;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
 }

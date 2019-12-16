@@ -1,51 +1,95 @@
 .price {
-  width: 320px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-
-  background: url("../img/price/Shape-2-copy.png") #ffffff;
+  border: 1px solid black;
+  padding: 80px 0;
+  background: url("../img/price/bg-triangle-white.svg") #f2f2f2;
   background-repeat: no-repeat;
-  background-position: 0% 10%;
+  background-position: 0% -10%;
 
-  border: 1px solid blue;
-}
 
-.price__list {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-.price__standart {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 30px;
-
-  background-color: #283645;
-  padding: 30px 10px;
-  margin: 0;
-  color: #ffffff;
-  border-left: 1px solid white;
+  width: auto;
+  overflow: hidden;
 }
 
 .price__value {
   font-weight: 300;
-  font-size: 24px;
-}
-
-.price__differences {
-  list-style: none;
-  text-align: left;
-  background-color: #ffffff;
-}
-
-.price__differences-item {
-  font-weight: 300;
   font-size: 18px;
-  margin-bottom: 20px;
 }
 
-.price__toggle {
+.price__title-cell {
+  border: 2px solid #e5e5e5;
+  padding: 10px 0;
+  background-color: #283645;
+  color: #ffffff;
+}
+
+.price__main-cell {
+  font-size: 14px;
+
+  border: 2px solid #e5e5e5;
+  min-width: 155px;
+  min-height: 45px;
+
+  padding: 20px 20px;
+  width: @container-tablet;
+
+  background: url("../img/price/icon-yes.svg") no-repeat #ffffff;
+  background-position: center right 5%;
+}
+
+.price__cell {
+  border: 2px solid #e5e5e5;
+  width: 155px;
+  height: 45px;
   display: none;
+
+  background: url("../img/price/icon-yes.svg") no-repeat #ffffff;
+  background-position: center center;
+}
+
+.price__cell--no {
+  background: url("../img/price/icon-no.svg") no-repeat #ffffff;
+  background-position: center center;
+}
+
+.price__title-cell:nth-of-type(1),
+.price__title-cell:nth-of-type(2n) {
+  display: none;
+}
+
+.price__main-cell--no {
+  background: url("../img/price/icon-no.svg") no-repeat #ffffff;
+  background-position: center right 5%;
+}
+
+.price__table {
+  border-collapse: collapse;
+  margin: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .price__title-cell:nth-of-type(1),
+  .price__title-cell:nth-of-type(2n) {
+    display: table-cell;
+  }
+
+  .price__cell {
+    display: table-cell;
+    width: @desktop-width;
+  }
+
+  .price__main-cell {
+    padding: 20px;
+    background: #ffffff;
+  }
+
+  .price__table {
+    width: 100%;
+    max-width: @desktop-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__table {
+    .container(@container-desktop);
+  }
 }

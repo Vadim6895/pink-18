@@ -1,0 +1,55 @@
+.study {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .study {
+    border: 1px solid black;
+    display: block;
+  }
+
+  .study__wrapper {
+    .container(@container-mob);
+  }
+
+  .study__title {
+    font-size: 30px;
+    width: 175px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+
+  .study__icon {
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+
+  .study__description {
+    font-size: 14px;
+    width: 340px;
+    margin-top: 0;
+    margin-left: 40px;
+  }
+
+  .study__link {
+    font-size: 14px;
+    color: #d22856;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .study {
+    .container();
+    flex-direction: row;
+  }
+
+  .study__description {
+    width: 460px;
+  }
+
+  .study__title {
+    width: auto;
+  }
+}

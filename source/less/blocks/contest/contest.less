@@ -1,9 +1,9 @@
-.contest {
-  width: 320px;
-}
-
-.contest__main-data {
-  border: none;
+.legend-text() {
+  font-size: 14px;
+  color: #d22856;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 40px;
 }
 
 .contest__text {
@@ -11,42 +11,65 @@
   font-weight: 400;
   color: #d53661;
   display: block;
-  margin: 35px 0 10px 20px;
+  margin: 0 0 10px 10px; /*35px*/
+  text-align: left;
+  text-transform: uppercase;   /* общее описание для всех label */
 }
 
 .contest__input {
   font-size: 18px;
   box-sizing: border-box;
-  width: 280px;
-  /*height: 60px;*/
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 15px;
+  min-width: 280px;
+  padding: 20px 0 20px 15px;
   margin-left: 5px;
   border: 2px solid #e5e5e5;
   color: #283645;
+  width: 100%;            /*общий стиль для инпутов на стр*/
 }
 
 .contest__input:nth-child(6) {
   margin-bottom: 45px;
 }
+/*------------------------container main data------------*/
+.contest__main-data {
+  margin: 0;
+  padding: 0;
+  border: none;
+  .container(@container-mob);
+}
 
+.contest__main-list {
+  padding: 0;
+}
+
+.contest__main-item {
+  margin-top: 20px;
+}
+/*------------------------/// container main data------------*/
+/*----------------------container checkbox------------------------*/
 .contest__group-checkbox {
   border: none;
-  /*position: relative;*/
   background-color: #f2f2f2;
+  position: relative;
 }
 
-.contest__description {
-  font-weight: 400;
-  font-size: 14px;
-  color: #dc003b;
-  display: block;
-  width: 250px;
-  text-align: center;
-  margin: 40px 20px 0;
+.contest__checkbox-list {
+  .container(@container-mob);
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
+.contest__checkbox-title {
+  .legend-text();
+  position: absolute;  /* здесь это используется из за странного поведения fieldset,
+   если обернуть этот тег в див то рамка тега исчезает поэтому див не был использован
+   для позиционирования*/
+  top: 40px;
+  margin-left: 20px;
+  padding: 0 20px;
+}
+/*---------------------------/// container-checkbox ----------------*/
+/*---------------------custom-checkbox mechanism-----------------*/
 .contest__checkbox {
   appearance: none;
   position: relative;
@@ -97,26 +120,47 @@
 .contest__checkbox:checked + .contest__check-description::after {
   opacity: 1;
 }
-
-.contest__adress-data {
-  border: none;
+/*------------------------/// custom checkbox mechanism-------------------------*/
+/*------------------------ container radio---------------------------*/
+.contest__radio {
+  appearance: none;
 }
 
 .contest__group-radio {
   border: none;
   background-color: #f2f2f2;
+  position: relative;
 }
 
-.contest__radio {
-  appearance: none;
-  /*position: relative;*/
+.contest__radio-tile {
+  .legend-text();
+  position: absolute;  /* здесь это используется из за странного поведения fieldset,
+   если обернуть этот тег в див то рамка тега исчезает поэтому див не был использован
+   для позиционирования*/
+  top: 20px;
+  padding: 0 20px;
 }
 
+.contest__radio-list {
+  .container(@container-mob);
+  padding: 0;
+  margin: 30px auto 0 auto;
+}
+
+.contest__radio-item {
+  margin-top: 10px;
+
+  &:nth-child(3) {
+    margin-bottom: 30px;
+  }
+}
+/*------------------------//// container radio---------------------------*/
+/*------------custom-radio mechanism -----------------------------*/
 .contest__radio-description {
   cursor: pointer;
   position: relative;
   display: block;
-  margin-left: 80px;
+  margin-left: 50px;
   margin-top: 20px;
   font-size: 20px;
 }
@@ -151,15 +195,14 @@
 .contest__radio:checked + .contest__radio-description::after {
   opacity: 1;
 }
-
-/*text-area*/
+/* --------------------///custom-radio mechanism---------------------------*/
+/* ----------------- container text-area ------------------*/
 .contest__area {
   box-sizing: border-box;
-  width: 280px;
+  width: 100%;
   min-height: 200px;
   resize: none;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin: 20px auto 0 auto;
   border: 2px solid #e5e5e5;
 
   &::-webkit-input-placeholder {
@@ -171,18 +214,36 @@
   }
 }
 
+.contest__group-area {
+  .container(@container-mob);
+  border: none;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.contest__area-title {
+  .legend-text();
+  margin-top: 20px;
+}
+/*-----------------------///text-area----------------*/
+/*------------------------container button submit---------------*/
+.contest__submit {
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contest__button {
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
+
   box-sizing: border-box;
   width: 280px;
-  /*height: 60px;*/
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 50px;
-  margin-left: 20px;
   background-color: #2aab6d;
   border: none;
   border-radius: 3px;
@@ -196,11 +257,202 @@
     color: #61b98f;
   }
 }
+/*---------------------- /// container button------------------*/
 
 .contest__required-fields {
-  font-weight: 400;
-  font-size: 14px;
+  .legend-text();
+  color: #283645;
   padding: 30px;
   margin-bottom: 0;
-  text-align: center;
+}
+/*---------------------------container adress data-----------------*/
+.contest__adress-title {
+  .legend-text();
+  display: none;
+}
+
+.contest__adress-item {
+  padding-right: 70px;
+  margin-top: 30px;
+}
+
+.contest__adress-data {
+  .legend-text();
+  border: none;
+  margin: 0;
+}
+
+.contest__adress-list {
+  .container(@container-mob);
+  padding: 0;
+  margin-bottom: 20px;
+}
+/*---------------------------/// container adress data--------------*/
+
+@media (min-width: @tablet-width) {
+  .contest {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contest__main-data {  /*-----------main data--------*/
+    .container(@container-tablet);
+  }
+
+  .contest__main-item {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }                     /*-------------////main data--------*/
+
+  .contest__radio-tile { /*----------radio-------------*/
+    display: block;
+  }
+
+  .contest__group-radio {
+    .container(@container-tablet);
+    order: 2;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    position: static;
+
+    .contest__radio-tile {
+      position: static;
+    }
+  }                     /*------------///radio---------*/
+
+  .contest__checkbox-list {   /*-------------checkbox---------*/
+    padding-top: 0;
+  }
+
+  .contest__group-checkbox {
+    .container(@container-tablet);
+    order: 4;
+    background-color: #ffffff;
+    position: static;
+    border: 2px solid #e5e5e5;
+  }
+
+  .contest__checkbox-title {
+    position: static;
+  }                             /*----------/// checkbox---------*/
+
+  .contest__group-area {  /*-------------group area-------*/
+    .container(@container-tablet);
+    border: 2px solid #e5e5e5;
+    order: 6;
+  }                     /*-------------/// group area------------*/
+
+  .contest__adress-title {   /*------------ adress-data---------*/
+    display: block;
+  }
+
+  .contest__adress-data {
+    .container(@container-tablet);
+    order: 3;
+    border: 2px solid #e5e5e5;
+
+    .contest__adress-item {
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      margin-top: 0;
+    }
+
+    .contest__adress-item--tel::after,
+    .contest__adress-item--email::after {
+      content: "";
+      background-image: url("../img/contest/icon-phone.svg");
+      background-color: #e5e5e5;
+      background-repeat: no-repeat;
+      background-size: 25px 25px;
+      background-position: center;
+      position: absolute;
+      width: 62px;
+      height: 65px;
+      right: 50px;
+      top: 30px;
+    }
+
+    .contest__adress-item--email::after {
+      background-image: url("../img/contest/icon-mail.svg");
+    }
+
+    .contest__text {
+      margin-top: 10px;
+    }
+
+    .contest__input {
+      margin-top: 30px;
+    }
+  }                   /*--------------------///-adress-data--------------------*/
+
+  .contest__submit {
+    order: 6;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contest {
+    .container(@container-desktop);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contest__main-data {
+    .container(@container-mob);
+    margin: 0;
+
+    .contest__main-item:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  .contest__group-radio {
+    .container(@container-mob);
+    margin: 0;
+  }
+
+  .contest__radio-list {
+    width: 300px;
+    margin-top: 0;
+  }
+
+  .contest__radio-description {
+    margin-top: 15px;
+  }
+
+  .contest__adress-data {
+    .container(@container-desktop);
+    margin: 0;
+
+    .contest__adress-list {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .contest__group-checkbox {
+    .container(@container-desktop);
+  }
+
+  .contest__checkbox-list {
+    .container(@container-desktop);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contest__checkbox-item {
+    width: 250px;
+  }
+
+  .contest__group-area {
+    .container(@container-desktop);
+    padding: 20px 40px 40px 40px;
+  }
 }

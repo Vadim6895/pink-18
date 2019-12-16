@@ -2,40 +2,48 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
-      <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">ГЛАВНАЯ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">ФОТОГРАФИИ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">КОНКУРС</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML ACADEMY</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="#">
+          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="main-nav">
+        <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">
       <div class="promo-block promo-block--lead">
-        <h1 class="visually-hidden">Скачайте наше приложение!</h1>
-        <p class="promo-block__title">Взгляните на жизнь иначе!</p>
-        <a  class="promo-block__main-link" href="#">Cкачать приложение</a>
-        <ul class="promo-block__download-list">
-          <li class="promo-block__item"><a class="promo-block__link promo-block__link--apple" href="#"><span class="visually-hidden">apple</span></a></li>
-          <li class="promo-block__item"><a class="promo-block__link promo-block__link--android" href="#"><span class="visually-hidden">android</span></a></li>
-          <li class="promo-block__item"><a class="promo-block__link promo-block__link--winphone" href="#"><span class="visually-hidden">windows-phone</span></a></li>
-        </ul>
-        <p class="promo-block__description">
-          Доступно для iPhone, iPad, Android,
-          Windows Phone, OS X, Windows 8
-        </p>
+        <div class="promo-block__wrapper">
+          <h1 class="visually-hidden">Скачайте наше приложение!</h1>
+          <p class="promo-block__title">Взгляните на жизнь иначе!</p>
+          <a  class="promo-block__main-link" href="#">Cкачать приложение</a>
+          <ul class="promo-block__download-list">
+            <li class="promo-block__item"><a class="promo-block__link promo-block__link--apple" href="#"><span class="visually-hidden">apple</span></a></li>
+            <li class="promo-block__item"><a class="promo-block__link promo-block__link--android" href="#"><span class="visually-hidden">android</span></a></li>
+            <li class="promo-block__item"><a class="promo-block__link promo-block__link--winphone" href="#"><span class="visually-hidden">windows-phone</span></a></li>
+          </ul>
+          <p class="promo-block__description">
+            Доступно для iPhone, iPad, Android,
+            Windows Phone, OS X, Windows 8
+          </p>
+        </div>
       </div>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества нашего приложения</h2>
@@ -61,11 +69,22 @@
             </p>
           </li>
       </section>
+      <section class="study">
+        <div class="study__wrapper">
+          <h2 class="study__title">Эффект на 25 часа!</h2>
+          <p class="study__description">
+            Британские ученые провели исследования и доказали, что положительный эффект от
+            использования приложения длится<br> целые сутки!
+          </p>
+          <a class="study__link" href="#">Узнать больше об исследовании</a>
+        <div>
+      </section>
 
       <section class="review">
         <ul class="review__list">
           <li class="review__item">
             <h3 class="review__title">Николай Петров</h3>
+            <span class="review__title-description-tablet">25 лет, водитель трамвая</span>
             <p class="review__description">
               «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
               А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
@@ -93,42 +112,35 @@
         </p>
       </section>
 
-      </section>
-
       <section class="price">
-        <div class="price__wrapper">
-          <ul class="price__list">
-            <li class="price__item visually-hidden">
-              <p class="price__econom">ЭКОНОМ<br><span class="price__value">1,99 USD<span></p>
-              <ul class="price__differences">
-                <li class="price__differences-item">розовый фильтр</li>
-                <li class="price__differences-item">смайлики</li>
-                <li class="price__differences-item">комментарии</li>
-              </ul>
-            </li>
-            <li class="price__item">
-              <p class="price__standart">СТАНДАРТ<br><span class="price__value">3,99 USD</span></p>
-              <ul class="price__differences">
-                <li class="price__differences-item">розовый фильтр</li>
-                <li class="price__differences-item">смайлики</li>
-                <li class="price__differences-item">комментарии</li>
-              </ul>
-            </li>
-            <li class="price__item visually-hidden">
-              <p class="price__premium">ПРЕМИУМ<br><span class="price__value">5,99 USD</span></p>
-              <ul class="price__differences">
-                <li class="price__differences-item">розовый фильтр</li>
-                <li class="price__differences-item">смайлики</li>
-                <li class="price__differences-item">комментарии</li>
-              </ul>
-            </li>
-          </ul>
-          <p class="price__toggles">
-            <button class="price__toggle" type="button">1</button>
-            <button class="price__toggle" type="button">2</button>
-            <button class="price__toggle" type="button">3</button>
-          </p>
-        </div>
+        <table class="price__table">
+          <caption class="visually-hidden">Наши цены</caption>
+          <tr class="price__stroke">
+            <th class="price__title-cell"></th>
+            <th class="price__title-cell">база<br><span class="price__value">1,99 USD</span></th>
+            <th class="price__title-cell price__title-cell--hit">стандарт<br><span class="price__value">3,99 USD</span></th>
+            <th class="price__title-cell">анлим<br><span class="price__value">9,99 USD</span></th>
+          </tr>
+          <tr class="price__stroke">
+            <td class="price__main-cell">Розовый фильтр</td>
+            <td class="price__cell"></td>
+            <td class="price__cell"></td>
+            <td class="price__cell"></td>
+          </tr>
+          <tr class="price__stroke">
+            <td class="price__main-cell">Смайлики</td>
+            <td class="price__cell price__cell--no"></td>
+            <td class="price__cell"></td>
+            <td class="price__cell"></td>
+          </tr>
+          <tr class="price__stroke">
+            <td class="price__main-cell price__main-cell--no">Коментарии</td>
+            <td class="price__cell price__cell--no"></td>
+            <td class="price__cell price__cell--no"></td>
+            <td class="price__cell"></td>
+          </tr>
+        </table>
+
       </section>
 
     </main>
@@ -157,6 +169,25 @@
         </li>
       </ul>
       <iframe class="page-footer__iframe" src="https://yandex.ru/map-widget/v1/-/CGdemB6s" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+      <section class="footer footer--index-page">
+        <div class="footer__wrapper">
+          <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+
+          <ul class="footer__list">
+            <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+            <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+            <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
+          </ul>
+
+          <div class="footer__copyright">
+            <p class="footer__copyright-description">Разработано
+              <a href="https://htmlacademy.ru/intensive/htmlcss">
+                <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
 </html>

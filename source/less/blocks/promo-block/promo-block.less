@@ -1,6 +1,8 @@
 .promo-block {
-  width: 320px;
   background: url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
+  background-position: 0 -70px;
+
+  border: 2px solid red;
 }
 
 .promo-block__title {
@@ -8,11 +10,9 @@
   font-size: 24px;
   color: #ffffff;
   text-align: center;
-
-  margin-left: 25px;
-  margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 80px;
+  margin-top: 10px;
+  padding: 0 30px;
+  border: 1px solid green;
 }
 
 /* promo-lead*/
@@ -37,8 +37,7 @@
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 15px;
-  margin-left: 20px;
-  margin-top: 260px;
+  margin-top: 350px;
 
   &:hover {
     color: #d22856;
@@ -57,9 +56,7 @@
 
   display: block;
   width: 300px;
-  margin-left: 10px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin: 20px 0 30px 10px;
   border: 1px solid black;
 }
 
@@ -86,4 +83,53 @@
 
 .promo-block__link--winphone::before {
   content: url("../img/promo-block/logo-microsoft.svg");
+}
+
+.promo-block__wrapper {   /*стили для обертки по умолчанию в моб версии*/
+  border: 3px solid green;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .promo-block__description {
+    width: auto;
+  }
+
+  .promo-block__download-list {
+    width: 80%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo-block {
+    background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
+    background-position: -300px -100px;
+  }
+
+  .promo-block__title {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo-block__wrapper {
+    width: 320px;
+    margin: 100px 5%;
+  }
+
+  .promo-block__main-link {
+    margin-top: 50px;
+  }
+
+  .promo-block--lead {
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo-block__wrapper {
+    margin-left: 25%;
+  }
 }

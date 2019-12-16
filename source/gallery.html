@@ -2,31 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">ГЛАВНАЯ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">ФОТОГРАФИИ</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">КОНКУРС</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML ACADEMY</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo">
+          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main class="gallery-page">
       <div class="promo-block">
-        <h1 class="promo-block__title">Фотографии пользователей</h1>
+        <h1 class="promo-block__title">Фотографии<br>пользователей</h1>
       </div>
       <div class="gallery-page__block">
         <p class="gallery-page__description">
@@ -35,16 +38,16 @@
       <ul class="gallery-page users-gallery">
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/panorama-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/panorama-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Анна</h3>
           <p class="users-gallery__message">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
-          <button class="users-gallery__like" type="button">НРАВИТСЯ: 215</button>
+          <button class="users-gallery__like" type="button">нравится: 215</button>
         </li>
 
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-car-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Левон</h3>
           <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
@@ -52,74 +55,95 @@
         </li>
         <li class="users-gallery__item">
             <a  class="users-gallery__link" href="#">
-              <img src="img/gallery-page/photo-drumset-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+              <img class="users-gallery__img" src="img/gallery-page/photo-drumset-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
             </a>
           <h3 class="users-gallery__title">Антон</h3>
           <p class="users-gallery__message">Соседи будут рады!</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 666</button>
+            <button class="users-gallery__like" type="button">нравится: 666</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-window-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Борис</h3>
           <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 215</button>
+            <button class="users-gallery__like" type="button">нравится: 215</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-fair-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Сергей</h3>
           <p class="users-gallery__message">Самая кубанская в мире!</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 4</button>
+            <button class="users-gallery__like" type="button">нравится: 4</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-pov-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Максим</h3>
           <p class="users-gallery__message">Где снег-то?</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 150</button>
+            <button class="users-gallery__like" type="button">нравится: 150</button>
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img src="img/gallery-page/photo-wing-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
           </a>
           <h3 class="users-gallery__title">Надежда</h3>
           <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
-            <button class="users-gallery__like" type="button">НРАВИТСЯ: 2560</button>
+            <button class="users-gallery__like" type="button">нравится: 2560</button>
         </li>
       </ul>
       <p class="gallery-page__description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
       </div>
 
       <section class="gallery-post">
-        <img class="gallery-post__photo-for-post" src="img/gallery-post/photo-road-mobile@1x.jpg" alt="Картинка для публикации" width="280" height="375">
         <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication">
-          <!--<fieldset class="gallery-post__publication-group">
-            <label class="gallery__label">
-              <input class="gallery__input" type="radio" name="" value="1">
-            </label>
-            <label class="gallery__label">
-              <input class="gallery__input" type="radio" name="" value="2">
-            </label>
-            <label class="gallery__label">
-              <input class="gallery__input" type="radio" name="" value="3">
-            </label>
-          </fieldset>-->
+          <ul class="gallery-post__controls">
+            <li class="gallery-post__control-item">
+              <svg class="gallery-post__option" version="1.0" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><path fill="none" d="M0 0h48v48H0V0z"/><path class="gallery-post__option-color" d="M34 30h4V14c0-2.21-1.79-4-4-4H18v4h16v16zm-20 4V2h-4v8H2v4h8v20c0 2.21 1.79 4 4 4h20v8h4v-8h8v-4H14z" fill="#b5b9be"/></svg>
+            </li>
+            <li class="gallery-post__control-item">
+              <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#d22856" version="1.0"><path fill="none" d="M0 0h48v48H0V0z"/><path d="M33 18L15 0l-3 3 5 5L7 18v4l11 11 2 1 2-1 11-11v-4zm-23 2l10-10 10 10H10zm28 3s-4 4-4 7a4 4 0 108 0c0-3-4-7-4-7zM0 40h48v3H0z"/></svg>
+            </li>
+            <li class="gallery-post__control-item">
+              <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="31.9" height="31.9" version="1.0" viewBox="-35.4 -8 31.9 31.9"><path fill="#231F20" d="M-19-4a12 12 0 110 24 12 12 0 010-24m0-4a16 16 0 100 32 16 16 0 000-32z"/><path d="M-19 16a9 9 0 008-8 9 9 0 00-8-9"/></svg>
+            </li>
+          </ul>
+          <div class="gallery-post__wrapper-range">
+            <div class="gallery-post__range">
+              <div class="gallery-post__range-controls">
+                <div class="gallery-post__scale">
+                  <div class="gallery-post__bar">
+                  </div>
+                </div>
+                  <div class="gallery-post__toggle">
+                  </div>
+              </div>
+            </div>
 
-          <fieldset class="gallery__group-radio">
+            <div class="gallery-post__range">
+              <div class="gallery-post__range-controls">
+                <div class="gallery-post__scale">
+                  <div class="gallery-post__bar">
+                  </div>
+                </div>
+                <div class="gallery-post__toggle">
+                </div>
+              </div>
+            </div>
 
-            <input class="gallery-post__radio gallery-post__radio--crop" type="radio" name="editor" id="editor-1" value="1" checked>
-            <label class="gallery-post__radio-label" for="editor-1"></label>
-            <input class="gallery-post__radio gallery-post__radio--fill" type="radio" name="editor" id="editor-2" value="2">
-            <label class="gallery-post__radio-label" for="editor-2"></label>
-            <input class="gallery-post__radio gallery-post__radio--contrast" type="radio" name="editor" id="editor-3" value="3">
-            <label class="gallery-post__radio-label" for="editor-3"></label>
-
-          </fieldset>
-
+            <div class="gallery-post__range">
+              <div class="gallery-post__range-controls">
+                <div class="gallery-post__scale">
+                  <div class="gallery-post__bar">
+                  </div>
+                </div>
+                  <div class="gallery-post__toggle">
+                  </div>
+              </div>
+            </div>
+          </div>
           <button class="gallery-post__btn gallery-post__btn--submit" type="submit" value="Запостить">Запостить</button>
           <button class="gallery-post__btn gallery-post__btn--cancel" type="reset" value="Отмена">Отмена</button>
         </form>
@@ -129,21 +153,23 @@
     </main>
 
     <footer class="footer">
-      <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+      <div class="footer__wrapper">
+        <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
 
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
-      </ul>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--youtube" href="#"><span class="visually-hidden">Ютуб</span></a></li>
+        </ul>
 
-      <article class="footer__copyright">
-        <p class="footer__copyright-description">Разработано
-          <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
-          </a>
-        </p>
-      </article>
+        <div class="footer__copyright">
+          <p class="footer__copyright-description">Разработано
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
