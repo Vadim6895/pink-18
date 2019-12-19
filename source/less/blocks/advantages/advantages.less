@@ -1,8 +1,10 @@
 .advantages {
   border: 1px solid green;
-  background: url("../img/advantages/iphone-screen-mobile1x.png"), url("../img/advantages/gray-bg.png"), #ffffff;
+  /*background: url("../img/advantages/iphone-screen-mobile1x.png"), url("../img/advantages/gray-bg.png"), #ffffff;
   background-repeat: no-repeat;
-  background-position: 50% 110%, 50% 100%;
+  background-position: 50% 110%, 50% 100%;*/
+  background-image: linear-gradient(174deg, #fff 240px, #f2f2f2 241px);
+  background: url("../img/advantages/iphone-screen-mobile1x.png") no-repeat #fff;
 }
 
 .advantages__main-title {
@@ -12,6 +14,7 @@
   font-size: 24px;
   border: 1px solid black;
   margin: 0;
+  margin-top: 40px;
 }
 
 .advantages__main-title:nth-child(3) {
@@ -52,7 +55,18 @@
   }
 
   .advantages__main-title {
-    .container(@container-mob);
+    .container(@container-tablet);
+    margin-top: 0;
+    font-size: 40px;
+
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+
+    &:nth-child(3) {
+      padding-right: 80px;
+      padding-left: 80px; /*сомнительная конструкция получилась, больше походит на г**но код =)), попробую переделать*/
+    }
   }
 
   .advantages__list {
