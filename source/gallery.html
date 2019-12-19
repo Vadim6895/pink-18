@@ -14,7 +14,7 @@
           <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
@@ -29,7 +29,7 @@
 
     <main class="gallery-page">
       <div class="promo-block">
-        <h1 class="promo-block__title">Фотографии<br>пользователей</h1>
+        <h1 class="promo-block__title promo-block__title--inner">Фотографии<br>пользователей</h1>
       </div>
       <div class="gallery-page__block">
         <p class="gallery-page__description">
@@ -38,7 +38,11 @@
       <ul class="gallery-page users-gallery">
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img class="users-gallery__img" src="img/gallery-page/panorama-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/gallery-page/panorama-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="img/gallery-page/panorama-tablet@1x.jpg">
+              <img class="users-gallery__img" src="img/gallery-page/panorama-mobile@1x.jpg" srcset="img/gallery-page/panorama-tablet@1x.jpg 2х" alt="Фотография пользователя">
+            </picture>
           </a>
           <h3 class="users-gallery__title">Анна</h3>
           <p class="users-gallery__message">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои</p>
@@ -47,7 +51,11 @@
 
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/gallery-page/photo-car-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-car-tablet@1x.jpg">
+              <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" alt="Фотография пользователя">
+            </picture>
           </a>
           <h3 class="users-gallery__title">Левон</h3>
           <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
@@ -55,7 +63,11 @@
         </li>
         <li class="users-gallery__item">
             <a  class="users-gallery__link" href="#">
-              <img class="users-gallery__img" src="img/gallery-page/photo-drumset-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/gallery-page/photo-drumset-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/gallery-page/photo-drumset-tablet@1x.jpg">
+                <img class="users-gallery__img" src="img/gallery-page/photo-drumset-mobile@1x.jpg" alt="Фотография пользователя">
+              </picture>
             </a>
           <h3 class="users-gallery__title">Антон</h3>
           <p class="users-gallery__message">Соседи будут рады!</p>
@@ -63,7 +75,11 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/gallery-page/photo-window-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-window-tablet@1x.jpg">
+              <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" alt="Фотография пользователя">
+            </picture>
           </a>
           <h3 class="users-gallery__title">Борис</h3>
           <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -71,7 +87,11 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/gallery-page/photo-fair-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-fair-tablet@1x.jpg">
+              <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" alt="Фотография пользователя">
+            </picture>
           </a>
           <h3 class="users-gallery__title">Сергей</h3>
           <p class="users-gallery__message">Самая кубанская в мире!</p>
@@ -79,7 +99,11 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/gallery-page/photo-pov-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-pov-tablet@1x.jpg">
+              <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" alt="Фотография пользователя">
+            </picture>
           </a>
           <h3 class="users-gallery__title">Максим</h3>
           <p class="users-gallery__message">Где снег-то?</p>
@@ -87,7 +111,11 @@
         </li>
         <li class="users-gallery__item">
           <a  class="users-gallery__link" href="#">
-            <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" alt="Фотография пользователя" width="280" height="180">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/gallery-page/photo-wing-desktop@1x.jpg">
+              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-wing-tablet@1x.jpg">
+              <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" alt="Фотография пользователя">
+            </picture>
           </a>
           <h3 class="users-gallery__title">Надежда</h3>
           <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
@@ -171,5 +199,21 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript">
+      var mainnav = document.querySelector('.main-nav');
+      var navtoggle = document.querySelector('.main-nav__toggle');
+
+      mainnav.classList.remove('main-nav--no-js');
+
+      navtoggle.addEventListener('click', function() {
+        if (mainnav.classList.contains('main-nav--closed')) {
+          mainnav.classList.remove('main-nav--closed');
+          mainnav.classList.add('main-nav--opened');
+        } else {
+          mainnav.classList.add('main-nav--closed');
+          mainnav.classList.remove('main-nav--opened');
+          }
+      });
+    </script>
   </body>
 </html>

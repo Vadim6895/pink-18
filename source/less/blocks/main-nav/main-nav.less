@@ -69,17 +69,13 @@
   list-style: none;
   font-size: 18px;
   font-weight: 700;
-  background-color: #283645;
+  background-color: rgba(0, 0, 0, 0,3);
   padding: 0;
   margin: 0;
 }
 
 .main-nav__item {
   text-align: center;
-
-  &:hover {
-    background-color: #35485c;
-  }
 }
 
 .main-nav__item:nth-child(1) {
@@ -96,8 +92,15 @@
   padding-top: 20px;
   border-bottom: 1px solid #000000;
   box-shadow: 0 1px 0 #485461;
-}
 
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: #6a757f;
+  }
+}
 
 @media (max-width: @max-width-tablet) {
   .main-nav--closed .main-nav__list {
@@ -118,7 +121,6 @@
   .main-nav__list {
     display: flex;
     justify-content: space-around;
-    border: 4px solid red;
     width: 640px;
   }
 

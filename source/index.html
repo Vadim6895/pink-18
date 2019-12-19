@@ -13,9 +13,8 @@
         <a class="page-header__logo" href="#">
           <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
         </a>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <nav class="main-nav">
-        <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
@@ -189,5 +188,21 @@
         </div>
       </section>
     </footer>
+    <script type="text/javascript">
+      var mainnav = document.querySelector('.main-nav');
+      var navtoggle = document.querySelector('.main-nav__toggle');
+
+      mainnav.classList.remove('main-nav--no-js');
+
+      navtoggle.addEventListener('click', function() {
+        if (mainnav.classList.contains('main-nav--closed')) {
+          mainnav.classList.remove('main-nav--closed');
+          mainnav.classList.add('main-nav--opened');
+        } else {
+          mainnav.classList.add('main-nav--closed');
+          mainnav.classList.remove('main-nav--opened');
+          }
+      });
+    </script>
   </body>
 </html>

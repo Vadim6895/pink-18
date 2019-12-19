@@ -10,17 +10,32 @@
   font-size: 24px;
   color: #ffffff;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 60px;
   padding: 0 30px;
   border: 1px solid green;
+  min-width: 300px;
+}
+
+.promo-block__title--inner { /*для внутренних страниц*/
+  margin-top: 55px;
+  margin-bottom: 85px;
 }
 
 /* promo-lead*/
 .promo-block--lead {
   border: 1px solid red;
-  background: url("../img/promo-block/iphone-hand-mobile@1x.png"), url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
+  background: url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
   background-repeat: no-repeat;
-  background-position: 0 115px, 0 -60px;
+  background-position: center 0;
+}
+
+@media (min-width: 320px) {
+  .promo-block--lead {
+     background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
+     background-position: center 0;
+     background-repeat: no-repeat;
+     background-size: 100vh 60%;
+  }
 }
 
 .promo-block__main-link {
@@ -105,15 +120,20 @@
 @media (min-width: @tablet-width) {
   .promo-block {
     background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
-    background-position: -300px -100px;
+    background-repeat: no-repeat;
+    background-position: center -60px;
   }
 
   .promo-block__title {
     padding-left: 30px;
   }
-}
 
-@media (min-width: @tablet-width) {
+  .promo-block__title--inner {
+    margin-top: 80px;
+    margin-bottom: 150px;
+    font-size: 50px;
+  }
+
   .promo-block__wrapper {
     width: 320px;
     margin: 100px 5%;
@@ -129,7 +149,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .promo-block {
+    background: url("../img/promo-block/bg-back-desktop@1x.jpg") #1d2631;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+  }
   .promo-block__wrapper {
     margin-left: 25%;
+  }
+
+  .promo-block__title--inner {
+    margin-top: 60px;
+    margin-bottom: 120px;
   }
 }
