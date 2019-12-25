@@ -1,8 +1,14 @@
 .gallery-post {
-  border: 3px solid green;
+  background-color: #f2f2f2;
+  padding: 30px 0;
+}
+
+.gallery-post__wrapper {
   background: url("../img/gallery-post/photo-road-mobile@1x.jpg") #f2f2f2;
   background-repeat: no-repeat;
-  background-position: 17px 10px;
+  background-position: top;
+
+  padding-top: 380px;
 }
 
 .gallery-post__btn {
@@ -11,7 +17,7 @@
   font-weight: 700;
   width: 280px;
   padding: 12px 0;
-  margin-bottom: 15px;
+  margin: 0 auto 10px auto;
 
   border: 3px solid black;
   border-radius: 30px;
@@ -47,12 +53,14 @@
   }
 }
 
+.gallery-post__wrapper-range {
+  margin-bottom: 40px;
+}
+
 .gallery-post__controls {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0 30px;
+  .container(250px);
+  flex-direction: row;
+  padding: 0;
 }
 
 .gallery-post__option {
@@ -60,12 +68,6 @@
     cursor: pointer;
 
     fill: #8d949b;
-  }
-
-  &:active {
-    path {
-      fill: #d22856;
-    }
   }
 }
 
@@ -75,15 +77,20 @@
   }
 }
 
+.gallery-post__range:nth-of-type(2n+1) {
+  display: none;
+}
+
+/*--------------------custom range-------------*/
 .gallery-post__range {
   width: 280px;
   height: 40px;
   margin-left: 0;
   margin-top: 20px;
-}
 
-.gallery-post__range:nth-of-type(2n+1) {
-  display: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .gallery-post__range-controls {
@@ -120,18 +127,15 @@
     background-color: #d22856;
   }
 }
-
+/*-----------------------custom range----------*/
 .gallery-post__publication {
-  border: 4px solid black;
-  width: 320px;
-  margin: 400px auto 0 auto;
+  /*width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.gallery-post__wrapper-range {
-  margin-bottom: 40px;
+  align-items: center;*/
+  .container(280px);
+  border: 1px solid black;
 }
 
 @media (min-width: @tablet-width) {
@@ -140,13 +144,25 @@
     justify-content: flex-end;
   }
 
+  .gallery-post__wrapper {
+    .container(760px);
+    padding-left: 300px;
+    padding-top: 0;
+    background: url("../img/gallery-post/photo-road-tablet@1x.jpg") #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
   .gallery-post__publication {
-    width: 50%;
+    /*width: 50%;
     margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     min-width: 400px;
+    flex-direction: row;*/
+    .container(400px);
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .gallery-post__wrapper-range {
@@ -160,24 +176,39 @@
   .gallery-post__controls {
     .container(@container-mob);
     width: auto;
-    margin-bottom: 100px;
+    margin-bottom: 85px;
+    margin-top: 15px;
+    margin-left: 0;
+    padding-left: 0;
   }
 
-  .gallery-post__btn {
-    margin: 20px auto 0 auto;
+  .gallery-post__control-item {
+    margin-bottom: 20px;
+  }
+
+  .gallery-post__option {
+    width: 24px;
+    height: 24px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gallery-post__publication {
-    margin: 0 auto;
-    width: 450px;
+    /*margin: 0 auto;
+    width: 410px;
     justify-content: space-between;
     min-height: 400px;
-    align-items: center;
+    align-items: center;*/
+    .container(420px);
+    flex-direction: row;
   }
 
   .gallery-post__btn {
     width: 200px;
+  }
+
+  .gallery-post__option {
+    width: 38px;
+    height: 38px;
   }
 }

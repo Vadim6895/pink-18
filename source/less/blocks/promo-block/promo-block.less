@@ -1,8 +1,14 @@
 .promo-block {
-  background: url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
-  background-position: 0 -70px;
+  background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
+  background-position: center -70px;
+  background-repeat: no-repeat;
+  background-size: 80vh 500px;
+  border: 1px solid red;   /*Как эта рамка может ломать блок своим отсутствимем? */
 
-  border: 2px solid red;
+  @media (min-resolution: @retina-dppx) {
+    background: url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
+    background-repeat: no-repeat;
+  }
 }
 
 .promo-block__title {
@@ -12,7 +18,6 @@
   text-align: center;
   margin-top: 60px;
   padding: 0 30px;
-  border: 1px solid green;
   min-width: 300px;
 }
 
@@ -21,20 +26,17 @@
   margin-bottom: 85px;
 }
 
-/* promo-lead*/
 .promo-block--lead {
-  border: 1px solid red;
-  background: url("../img/promo-block/bg-back-mobile@1x.jpg") #1d2631;
+  background: url("../img/promo-block/iphone-hand-mobile@1x.png"), url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
+  background-position: center 35%, center 0;
   background-repeat: no-repeat;
-  background-position: center 0;
-}
+  background-size: 258px 286px, 100vh 60%;
 
-@media (min-width: 320px) {
-  .promo-block--lead {
-     background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
-     background-position: center 0;
-     background-repeat: no-repeat;
-     background-size: 100vh 60%;
+  @media (min-resolution: @retina-dppx) {
+    background: url("../img/promo-block/iphone-hand-mobile@2x.png"), url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
+    background-repeat: no-repeat;
+    background-size: 258px 286px, 1000px 600px;
+    background-position: center 220px, top -100px center;
   }
 }
 
@@ -70,9 +72,8 @@
   color: #c3c5c8;
 
   display: block;
-  width: 300px;
+  min-width: 300px;
   margin: 20px 0 30px 10px;
-  border: 1px solid black;
 }
 
 .promo-block__download-list {
@@ -85,7 +86,6 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  border: 1px solid white;
 }
 
 .promo-block__link--apple::before {
@@ -122,10 +122,19 @@
     background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
     background-repeat: no-repeat;
     background-position: center -60px;
+
+    @media (min-resolution: @retina-dppx) {
+      background: url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
+      background-repeat: no-repeat;
+      background-size: 1200px 729px;
+      background-position: center;
+    }
   }
 
   .promo-block__title {
     padding-left: 30px;
+    font-size: 40px;
+    margin-top: 30px;
   }
 
   .promo-block__title--inner {
@@ -135,8 +144,19 @@
   }
 
   .promo-block__wrapper {
-    width: 320px;
-    margin: 100px 5%;
+    .container(@tablet-width);
+    padding: 0 360px 100px 0;
+
+    background: url("../img/promo-block/iphone-hand-tablet@1x.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dppx) {
+      background: url("../img/promo-block/iphone-hand-tablet@2x.png");
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 700px 545px;
+    }
   }
 
   .promo-block__main-link {
@@ -152,14 +172,37 @@
   .promo-block {
     background: url("../img/promo-block/bg-back-desktop@1x.jpg") #1d2631;
     background-repeat: no-repeat;
-    background-position: center 0px;
+    background-position: center 0;
+
+    @media (min-resolution: @retina-dppx) {
+      background: url("../img/promo-block/bg-back-desktop@2x.jpg") #1d2631;
+      background-size: 2560px 853px;
+      background-position: center 0;
+    }
   }
+
   .promo-block__wrapper {
-    margin-left: 25%;
+    .container(@desktop-width);
+    padding: 100px 600px 100px 0;
+
+    background: url("../img/promo-block/iphone-hand-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50px 200px;
+
+    @media (min-resolution: @retina-dppx) {
+      background: url("../img/promo-block/iphone-hand-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: 50px 200px;
+      background-size: 1050px 645px;
+    }
   }
 
   .promo-block__title--inner {
     margin-top: 60px;
     margin-bottom: 120px;
+  }
+
+  .promo-block__title {
+    font-size: 50px;
   }
 }

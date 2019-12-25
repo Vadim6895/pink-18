@@ -11,7 +11,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/page-header/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/page-header/logo-pink-white-tablet.svg">
+            <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--no-js">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -29,7 +33,7 @@
 
     <main class="form-page">
       <div class="promo-block">
-        <h1 class="promo-block__title promo-block__title--inner">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="promo-block__title promo-block__title--inner">Конкурс на самое безбашенное<br> путешествие с Пинк</h1>
       </div>
       <div class="form-page__block">
         <p class="form-page__contest-description">
@@ -137,7 +141,10 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+        <picture>
+          <source media="(min-width: 940px)" srcset="img/footer/logo-pink-blue-desktop.svg">
+          <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+        </picture>
 
         <ul class="footer__list">
           <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>

@@ -1,5 +1,5 @@
 .page-header {
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
   border: 1px solid green;
@@ -14,11 +14,19 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .page-header__logo-image {
+    height: 50px;
+    width: 150px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     width: 1000px;
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
+    align-items: center;
   }
 }

@@ -6,15 +6,24 @@
   .study {
     border: 1px solid black;
     display: block;
+    background-color: #f2f2f2;
+    margin: 0 auto;
   }
 
   .study__wrapper {
-    .container(@container-mob);
+    .container(@container-desktop);
+    padding-left: 320px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    background: url("../img/study/timer.png") #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: 0 60px;
   }
 
   .study__title {
     font-size: 30px;
-    width: 175px;
+    /*width: 175px;*/
     margin-bottom: 20px;
     margin-left: 40px;
   }
@@ -26,9 +35,11 @@
 
   .study__description {
     font-size: 14px;
-    width: 340px;
+    /*width: 340px;*/
     margin-top: 0;
-    margin-left: 40px;
+    margin-left: 0;
+    padding-left: 40px;
+    padding-right: 60px;
   }
 
   .study__link {
@@ -40,7 +51,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .study {
+  /*.study {
     .container();
     flex-direction: row;
   }
@@ -51,5 +62,15 @@
 
   .study__title {
     width: auto;
+  }*/
+  /*.study__wrapper {
+    padding-left: 320px;
+  }*/
+  .study__description {
+    font-size: 18px;
+  }
+
+  .study__link {
+    font-size: 18px;
   }
 }

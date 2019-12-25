@@ -1,5 +1,8 @@
 .review {
   width: 100%;
+  background-color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .review__list {
@@ -47,7 +50,14 @@
 
 @media (min-width: @desktop-width) {
   .review {
+    background: url("../img/review/icon-quotes.svg"), #ffffff;
+    background-repeat: no-repeat;
+    background-position: 50% 50px;
+  }
+
+  .review__list {
     .container(@container-tablet);
+    padding-top: 140px;
   }
 
   .review__title-description-tablet {
@@ -58,6 +68,16 @@
   .review__item {
     display: flex;
     flex-direction: column-reverse;
+
+    .review__title {
+      order: 2;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .review__description {
+      order: 3;
+    }
   }
 
   .review__description {

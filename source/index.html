@@ -11,7 +11,11 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="#">
-          <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/page-header/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/page-header/logo-pink-white-tablet.svg">
+            <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -48,25 +52,28 @@
         <h2 class="visually-hidden">Преимущества нашего приложения</h2>
         <p class="advantages__main-title">Устали от серости мегаполиса?</p>
         <p class="advantages__main-title">Нам есть, что вам предложить!</p>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">
-              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+        <div class="advantages__wrapper">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__description">
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              </p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <p class="advantages__description">
+                Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
             </p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">
-              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-            </p>
-          </li>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">
+                Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="study">
         <div class="study__wrapper">
@@ -164,13 +171,18 @@
           <p class="page-footer__item-description">
             Приезжайте в гости:
           </p>
-          <span class="page-footer__adress">ул. Большая<br> Конюшенная, 19/8</span>
+          <a class="page-footer__link" href="#">ул. Большая<br> Конюшенная, 19/8</a>
         </li>
       </ul>
-      <iframe class="page-footer__iframe" src="https://yandex.ru/map-widget/v1/-/CGdemB6s" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>
+      <div class="page-footer__map">
+        <!--<iframe class="page-footer__iframe" src="https://yandex.ru/map-widget/v1/-/CGdemB6s" width="560" height="400" frameborder="0" allowfullscreen="true"></iframe>-->
+      </div>
       <section class="footer footer--index-page">
         <div class="footer__wrapper">
-          <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+          <picture>
+            <source media="(min-width: 940px)" srcset="img/footer/logo-pink-blue-desktop.svg">
+            <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
+          </picture>
 
           <ul class="footer__list">
             <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
