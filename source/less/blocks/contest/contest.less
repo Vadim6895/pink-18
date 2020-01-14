@@ -11,20 +11,28 @@
   font-weight: 400;
   color: #d53661;
   display: block;
-  margin: 0 0 10px 10px; /*35px*/
+  margin: 0 0 10px 40px;
   text-align: left;
-  text-transform: uppercase;   /* общее описание для всех label */
+  text-transform: uppercase;
 }
 
 .contest__input {
   font-size: 18px;
-  box-sizing: border-box;
   min-width: 280px;
-  padding: 20px 0 20px 15px;
-  margin-left: 5px;
+  padding: 21px 0 20px 15px;
+  margin-right: 0px;
   border: 2px solid #e5e5e5;
   color: #283645;
-  width: 100%;            /*общий стиль для инпутов на стр*/
+  width: 85%;
+
+  &:hover {
+    border: 2px solid #283645;
+  }
+
+  &:focus {
+    border-color: #d22856;
+    outline: none;
+  }
 }
 
 .contest__input:nth-child(6) {
@@ -35,11 +43,14 @@
   margin: 0;
   padding: 0;
   border: none;
+  text-align: center;
   .container(@container-mob);
 }
 
 .contest__main-list {
   padding: 0;
+  margin-top: 25px;
+  margin-bottom: 40px;
 }
 
 .contest__main-item {
@@ -55,34 +66,33 @@
 
 .contest__checkbox-list {
   .container(@container-mob);
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding-top: 65px;
+  padding-bottom: 80px;
+  padding-left: 0;
 }
 
 .contest__checkbox-title {
   .legend-text();
-  position: absolute;  /* здесь это используется из за странного поведения fieldset,
-   если обернуть этот тег в див то рамка тега исчезает поэтому див не был использован
-   для позиционирования*/
+  position: absolute;
   top: 40px;
-  margin-left: 20px;
-  padding: 0 20px;
+  margin-left: 15px;
+  padding: 0 15px;
 }
 /*---------------------------/// container-checkbox ----------------*/
 /*---------------------custom-checkbox mechanism-----------------*/
 .contest__checkbox {
   appearance: none;
   position: relative;
-  top: 36px;
+  top: 32.5px; /*36*/
   width: 39px;
-  height: 39px;
+  height: 39px; outline: none; border: none;
 }
 
 .contest__check-description {
   font-weight: 400;
   font-size: 18px;
   display: block;
-  padding-left: 50px;
+  padding-left: 70px;
   cursor: pointer;
   position: relative;
 }
@@ -92,15 +102,24 @@
   position: absolute;
   width: 39px;
   height: 39px;
-  top: -7px;
-  left: 0;
+  top: -11px;
+  left: 4px;
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   z-index: 1;
 }
 
 .contest__checkbox:hover {
+  outline: 2px solid #283645;
   cursor: pointer;
+}
+
+.contest__checkbox:active {
+  outline: 2px solid #d22856;
+}
+
+.contest__checkbox:focus {
+  outline: 2px solid #d22856;
 }
 
 .contest__check-description::after {
@@ -112,8 +131,8 @@
   background-repeat: no-repeat;
   z-index: 2;
   position: absolute;
-  left: 10px;
-  top: 5px;
+  left: 12px;
+  top: 0;
   opacity: 0;
 }
 
@@ -134,24 +153,22 @@
 
 .contest__radio-tile {
   .legend-text();
-  position: absolute;  /* здесь это используется из за странного поведения fieldset,
-   если обернуть этот тег в див то рамка тега исчезает поэтому див не был использован
-   для позиционирования*/
+  position: absolute;
   top: 20px;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
 }
 
 .contest__radio-list {
   .container(@container-mob);
   padding: 0;
-  margin: 30px auto 0 auto;
+  margin: 85px auto 0 auto;
 }
 
 .contest__radio-item {
   margin-top: 10px;
 
   &:nth-child(3) {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
   }
 }
 /*------------------------//// container radio---------------------------*/
@@ -160,22 +177,34 @@
   cursor: pointer;
   position: relative;
   display: block;
-  margin-left: 50px;
+  margin-left: 60px;
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.contest__radio-description::before {
-  content: "";
-  display: block;
+.contest__radio-item {
+  position: relative;
+}
+
+.contest__radio {
+  border: 2px solid #e5e5e5;
   width: 37px;
   height: 37px;
-  border: 2px solid #e5e5e5;
-  border-radius: 30px;
-  z-index: 1;
+  border-radius: 50%;
   position: absolute;
-  left: -50px;
-  top: -5px;
+  outline: none;
+  background-color: #ffffff;
+  top: 12px;
+  left: -5px;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #323f4e;
+  }
+
+  &:focus {
+    border: 2px solid #d4305c;
+  }
 }
 
 .contest__radio-description::after {
@@ -187,7 +216,7 @@
   border-radius: 50%;
   z-index: 2;
   position: absolute;
-  left: -39px;
+  left: -49px;
   top: 6px;
   opacity: 0;
 }
@@ -199,10 +228,10 @@
 /* ----------------- container text-area ------------------*/
 .contest__area {
   box-sizing: border-box;
-  width: 100%;
+  width: 88%;
   min-height: 200px;
   resize: none;
-  margin: 20px auto 0 auto;
+  margin: 16px auto 0 auto;
   border: 2px solid #e5e5e5;
 
   &::-webkit-input-placeholder {
@@ -210,14 +239,14 @@
     font-weight: 400;
     font-size: 18px;
     color: #283645;
-    padding: 20px;
+    padding: 17px;
   }
 }
 
 .contest__group-area {
   .container(@container-mob);
   border: none;
-  margin-top: 40px;
+  margin-top: 38px;
   padding: 0;
 }
 
@@ -228,7 +257,7 @@
 /*-----------------------///text-area----------------*/
 /*------------------------container button submit---------------*/
 .contest__submit {
-  margin: 50px auto 0 auto;
+  margin: 48px auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,6 +268,7 @@
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
+  text-transform: uppercase;
 
   box-sizing: border-box;
   width: 280px;
@@ -264,6 +294,12 @@
   color: #283645;
   padding: 30px;
   margin-bottom: 0;
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+
+.contest__required-fields--tablet {
+  display: none;
 }
 /*---------------------------container adress data-----------------*/
 .contest__adress-title {
@@ -272,20 +308,36 @@
 }
 
 .contest__adress-item {
-  padding-right: 70px;
   margin-top: 30px;
 }
 
 .contest__adress-data {
   .legend-text();
   border: none;
-  margin: 0;
+  padding: 0;
+  .container(420px);
+}
+
+.contest__adress-item--tel {
+  margin-top: 35px;
+}
+
+.contest__adress-item--email {
+  margin-top: 20px;
 }
 
 .contest__adress-list {
   .container(@container-mob);
+  max-width: @tablet-width;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
+}
+
+.contest__input {
+  max-width: 800px;
+  min-width: 260px;
 }
 /*---------------------------/// container adress data--------------*/
 
@@ -303,10 +355,13 @@
     display: flex;
     align-items: center;
     margin-top: 40px;
+    margin-bottom: 50px;
   }                     /*-------------////main data--------*/
 
   .contest__radio-tile { /*----------radio-------------*/
     display: block;
+    padding-top: 5px;
+    position: static;
   }
 
   .contest__group-radio {
@@ -315,14 +370,25 @@
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
     position: static;
+    width: 95%;
+  }
 
-    .contest__radio-tile {
-      position: static;
+  .contest__radio-list {
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+
+  .contest__radio-item {
+    margin-bottom: 25px;
+
+    &:nth-child(3) {
+      margin-bottom: 50px;
     }
   }                     /*------------///radio---------*/
 
   .contest__checkbox-list {   /*-------------checkbox---------*/
     padding-top: 0;
+    margin-left: 60px;
   }
 
   .contest__group-checkbox {
@@ -331,6 +397,7 @@
     background-color: #ffffff;
     position: static;
     border: 2px solid #e5e5e5;
+    margin-top: 55px;
   }
 
   .contest__checkbox-title {
@@ -341,7 +408,13 @@
     .container(@container-tablet);
     border: 2px solid #e5e5e5;
     order: 6;
-  }                     /*-------------/// group area------------*/
+    margin-top: 60px;
+    padding: 20px 80px 45px 80px;
+  }
+
+  .contest__area {
+    width: 100%;
+  }                 /*-------------/// group area------------*/
 
   .contest__adress-title {   /*------------ adress-data---------*/
     display: block;
@@ -351,12 +424,16 @@
     .container(@container-tablet);
     order: 3;
     border: 2px solid #e5e5e5;
+    margin-top: 50px;
+    padding: 40px 50px 10px 55px;
+    margin: 50px auto 0 auto;
 
     .contest__adress-item {
       display: flex;
       flex-direction: column-reverse;
       position: relative;
       margin-top: 0;
+      margin-bottom: 20px;
     }
 
     .contest__adress-item--tel::after,
@@ -365,35 +442,53 @@
       background-image: url("../img/contest/icon-phone.svg");
       background-color: #e5e5e5;
       background-repeat: no-repeat;
-      background-size: 25px 25px;
+      background-size: 20px 20px;
       background-position: center;
       position: absolute;
       width: 62px;
-      height: 65px;
-      right: 50px;
-      top: 30px;
+      height: 62px;
+      right: 2px;
+      top: 2px;
     }
 
     .contest__adress-item--email::after {
       background-image: url("../img/contest/icon-mail.svg");
     }
+  }
 
-    .contest__text {
-      margin-top: 10px;
-    }
+  .contest__adress-list {
+    max-width: 1200px;
+    margin-left: 0px;
+    margin-bottom: 0;
+  }
 
-    .contest__input {
-      margin-top: 30px;
-    }
-  }                   /*--------------------///-adress-data--------------------*/
+  .contest__text {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .contest__input {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .contest__input--adress {
+    width: 100%;
+    margin: 0;
+  }           /*--------------------///-adress-data--------------------*/
 
   .contest__submit {
     order: 6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+  }
+
+  .contest__button {
+    width: 300px;
   }
 }
 
@@ -402,57 +497,118 @@
     .container(@container-desktop);
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 70px;
   }
 
   .contest__main-data {
     .container(@container-mob);
     margin: 0;
 
+    .contest__main-item {
+      margin-top: 51px;
+      width: 104%;
+    }
+
     .contest__main-item:nth-child(1) {
       margin-top: 0;
     }
   }
 
+  .contest__required-fields--tablet {
+    display: inline;
+  }
+
   .contest__group-radio {
     .container(@container-mob);
     margin: 0;
+    max-width: 435px;
+    max-height: 310px;
+  }
+
+  .contest__main-list {
+    margin-top: 15px;
   }
 
   .contest__radio-list {
     width: 300px;
-    margin-top: 0;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  .contest__radio-item {
+    margin-bottom: 24px;
+    margin-left: 8px;
   }
 
   .contest__radio-description {
     margin-top: 15px;
   }
 
+  .contest__radio-description::after {
+    top: 10px;
+  }
+
   .contest__adress-data {
     .container(@container-desktop);
     margin: 0;
+    margin-top: 5px;
+    padding: 0;
 
     .contest__adress-list {
-      display: flex;
+      flex-direction: row;
       justify-content: space-around;
+      max-width: 900px;
     }
+
+    .contest__adress-item {
+      margin: 35px 0 10px 50px;
+    }
+  }
+
+  .contest__input {
+    margin-right: 0;
+    width: 375px;
+  }
+
+  .contest__text {
+    margin-left: 10px;
   }
 
   .contest__group-checkbox {
     .container(@container-desktop);
+    margin-top: 55px;
   }
 
   .contest__checkbox-list {
     .container(@container-desktop);
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 55px;
   }
 
   .contest__checkbox-item {
-    width: 250px;
+    width: 270px;
+    margin-left: 30px;
   }
 
   .contest__group-area {
     .container(@container-desktop);
-    padding: 20px 40px 40px 40px;
+    padding: 25px 60px 45px 60px;
+    margin-top: 58px;
+  }
+
+  .contest__area {
+    margin-top: 10px;
+    min-height: 125px;
+  }
+
+  .contest__required-fields {
+    padding-right: 0;
+    margin-top: 5px;
+  }
+
+  .contest__submit {
+    padding-left: 0;
+    margin-bottom: 35px;
   }
 }

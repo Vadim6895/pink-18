@@ -1,36 +1,51 @@
 .promo-block {
   background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
-  background-position: center -70px;
+  background-position: center 25px;
   background-repeat: no-repeat;
   background-size: 80vh 500px;
-  border: 1px solid red;   /*Как эта рамка может ломать блок своим отсутствимем? */
 
   @media (min-resolution: @retina-dppx) {
     background: url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
     background-repeat: no-repeat;
+    background-position: center 25px;
+    background-size: 80vh 500px;
   }
 }
 
 .promo-block__title {
   font-weight: 300;
   font-size: 24px;
+  line-height: 30px;
   color: #ffffff;
   text-align: center;
   margin-top: 60px;
-  padding: 0 30px;
+  padding: 40px 30px 0 30px;
   min-width: 300px;
 }
 
-.promo-block__title--inner { /*для внутренних страниц*/
-  margin-top: 55px;
-  margin-bottom: 85px;
+.promo-block__title--gallery {
+  text-align: center;
+  width: 320px;
+  line-height: 30px;
+  padding-top: 105px;
+  padding-bottom: 80px;
+  margin: 0 auto 0 auto;
+}
+
+.promo-block__title--form {
+  text-align: center;
+  padding-top: 110px;
+  line-height: 30px;
+  padding-bottom: 50px;
+  margin: 0 auto 45px auto;
+  width: 320px;
 }
 
 .promo-block--lead {
   background: url("../img/promo-block/iphone-hand-mobile@1x.png"), url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
-  background-position: center 35%, center 0;
+  background-position: 50% 190px, center 25px;
   background-repeat: no-repeat;
-  background-size: 258px 286px, 100vh 60%;
+  background-size: 258px 286px, 85vh 440px;
 
   @media (min-resolution: @retina-dppx) {
     background: url("../img/promo-block/iphone-hand-mobile@2x.png"), url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
@@ -54,7 +69,7 @@
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 15px;
-  margin-top: 350px;
+  margin-top: 320px;
 
   &:hover {
     color: #d22856;
@@ -79,12 +94,10 @@
 .promo-block__download-list {
   list-style: none;
   padding-left: 0;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 40px;
+  margin-top: 30px;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
@@ -100,52 +113,72 @@
   content: url("../img/promo-block/logo-microsoft.svg");
 }
 
-.promo-block__wrapper {   /*стили для обертки по умолчанию в моб версии*/
-  border: 3px solid green;
+.promo-block__wrapper {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .promo-block__description {
-    width: auto;
-  }
+.promo-block__description {
+  width: auto;
+  line-height: 24px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
 
-  .promo-block__download-list {
-    width: 80%;
-  }
+.promo-block__download-list {
+  width: 80%;
 }
 
 @media (min-width: @tablet-width) {
   .promo-block {
     background: url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
     background-repeat: no-repeat;
-    background-position: center -60px;
+    background-position: center -40px;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
       background-repeat: no-repeat;
       background-size: 1200px 729px;
-      background-position: center;
+      background-position: center -100px;
     }
   }
 
   .promo-block__title {
-    padding-left: 30px;
+    padding-right: 25px;
+    padding-left: 45px;
     font-size: 40px;
-    margin-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    line-height: 50px;
   }
 
-  .promo-block__title--inner {
-    margin-top: 80px;
-    margin-bottom: 150px;
+  .promo-block__title--gallery {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    margin-top: 0;
+    margin-bottom: 80px;
     font-size: 50px;
+    width: 450px;
+    line-height: 60px;
+  }
+
+  .promo-block__title--form {
+    padding: 0;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+    width: 480px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .promo-block__wrapper {
     .container(@tablet-width);
-    padding: 0 360px 100px 0;
+    padding: 70px 360px 80px 0;
+    margin: 0 auto 0px auto;
 
     background: url("../img/promo-block/iphone-hand-tablet@1x.png");
     background-position: center bottom;
@@ -160,11 +193,26 @@
   }
 
   .promo-block__main-link {
-    margin-top: 50px;
+    margin-top: 0;
+    margin-left: 20px;
+    width: 300px;
   }
 
   .promo-block--lead {
     width: auto;
+  }
+
+  .promo-block__download-list {
+    margin-top: 45px;
+    margin-left: 20px;
+    width: 72%;
+  }
+
+  .promo-block__description {
+    margin-top: 15px;
+    font-size: 18px;
+    width: 320px;
+    margin-left: 30px;
   }
 }
 
@@ -172,37 +220,68 @@
   .promo-block {
     background: url("../img/promo-block/bg-back-desktop@1x.jpg") #1d2631;
     background-repeat: no-repeat;
-    background-position: center 0;
+    background-position: center 10px;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/promo-block/bg-back-desktop@2x.jpg") #1d2631;
       background-size: 2560px 853px;
-      background-position: center 0;
+      background-position: center 10px;
     }
   }
 
   .promo-block__wrapper {
     .container(@desktop-width);
-    padding: 100px 600px 100px 0;
+    padding: 100px 600px 125px 0;
 
     background: url("../img/promo-block/iphone-hand-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 50px 200px;
+    background-position: 20px 220px;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/promo-block/iphone-hand-desktop@2x.png");
       background-repeat: no-repeat;
-      background-position: 50px 200px;
+      background-position: 20px 220px;
       background-size: 1050px 645px;
     }
   }
 
-  .promo-block__title--inner {
-    margin-top: 60px;
-    margin-bottom: 120px;
+  .promo-block__title--gallery {
+    line-height: 60px;
+    padding-top: 185px;
+    padding-bottom: 100px;
+    margin-top: 0;
+    margin-bottom: 80px;
+    width: 550px;
+  }
+
+  .promo-block__title--form {
+    width: 850px;
+    padding-top: 175px;
+    padding-bottom: 99px;
+    line-height: 60px;
   }
 
   .promo-block__title {
     font-size: 50px;
+    margin-top: 90px;
+    padding-left: 10px;
+    line-height: 60px;
+  }
+
+  .promo-block__main-link {
+    margin: 25px 20px 0 0;
+  }
+
+  .promo-block__download-list {
+    margin: 65px 20px 0 0;
+    width: 60%;
+  }
+
+  .promo-block__description {
+    margin: 50px 5px 0 0;
+  }
+
+  .main-nav--closed {
+    margin-top: 0;
   }
 }

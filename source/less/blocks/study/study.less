@@ -4,28 +4,28 @@
 
 @media (min-width: @tablet-width) {
   .study {
-    border: 1px solid black;
     display: block;
-    background-color: #f2f2f2;
     margin: 0 auto;
   }
 
   .study__wrapper {
     .container(@container-desktop);
-    padding-left: 320px;
+    padding-left: 300px;
     padding-top: 80px;
     padding-bottom: 100px;
 
-    background: url("../img/study/timer.png") #f2f2f2;
+    background: url("../img/study/timer.png") #ffffff;
     background-repeat: no-repeat;
     background-position: 0 60px;
+    background-size: 240px 270px;
   }
 
   .study__title {
     font-size: 30px;
-    /*width: 175px;*/
-    margin-bottom: 20px;
-    margin-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 170px;
   }
 
   .study__icon {
@@ -35,39 +35,41 @@
 
   .study__description {
     font-size: 14px;
-    /*width: 340px;*/
     margin-top: 0;
     margin-left: 0;
-    padding-left: 40px;
+    padding-left: 10px;
     padding-right: 60px;
   }
 
   .study__link {
     font-size: 14px;
     color: #d22856;
-    margin-top: 20px;
-    margin-left: 40px;
+    margin-top: 0;
+    margin-left: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  /*.study {
-    .container();
-    flex-direction: row;
+  .study {
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+  }
+
+  .study__wrapper {
+    background-color: #f2f2f2;
+    background-position: 10px 50px;
+    background-size: 300px 340px;
+    padding-left: 365px;
   }
 
   .study__description {
-    width: 460px;
+    font-size: 18px;
+    margin-top: 15px;
   }
 
   .study__title {
-    width: auto;
-  }*/
-  /*.study__wrapper {
-    padding-left: 320px;
-  }*/
-  .study__description {
-    font-size: 18px;
+    width: 300px;
+    margin-top: 55px;
   }
 
   .study__link {

@@ -2,6 +2,10 @@
   background-color: #ffffff;
 }
 
+.form-page__block {
+  background-color: #ffffff;
+}
+
 .form-page__contest-description {
   font-size: 14px;
   font-weight: 400;
@@ -10,7 +14,7 @@
   line-height: 30px;
 
   background-color: #ffffff;
-  margin-top: 50px;
+  margin-top: 0px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -26,15 +30,22 @@
 
   .form-page__contest-description {
     font-size: 18px;
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-bottom: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 90px;
+    margin-bottom: 30px;
+
   }
 
   .form-page__contest-description-tablet {
     display: block;
-    padding-left: 190px;
-    margin-top: 0;
     margin-bottom: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-page__contest-description-tablet {
+    padding-left: 0;
   }
 }

@@ -3,7 +3,25 @@
 }
 
 .footer__logo {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.footer__logo-desktop {
+  display: none;
+}
+
+.footer__logo-tablet,
+.footer__logo-desktop {
+  fill: #283645;
+
+  &:hover {
+    fill: #D22856;
+  }
+
+  &:active {
+    opacity: 0.4;
+    fill: #283645;
+  }
 }
 
 .footer__list {
@@ -11,10 +29,9 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  margin: 30px 60px;
+  margin: 32px 65px 25px 67px;
   padding: 0;
-  border: 1px solid black;
-  width: 200px;
+  width: 190px;
 }
 
 .footer__link {
@@ -49,23 +66,21 @@
 
 .footer__copyright {
   text-align: center;
-  border: 1px solid black;
-  margin-top: 20px;
+}
+
+.footer__copyright-link {
+  padding-left: 12px;
 }
 
 .footer__copyright-description {
   font-size: 14px;
   font-weight: 400;
   color: #283645;
+  margin-top: 8px;
 
-  border: 1px solid green;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.footer__copyright-logo {
-  border: 1px solid black;
 }
 
 .footer--index-page {
@@ -75,19 +90,44 @@
 .footer__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;     /*стили по умолчанию для мобильного футера*/
+  align-items: center;
+}
+
+.footer__copyright-logo {
+  margin-top: 8px;
+
+  &:hover {
+    fill: #283645;
+  }
+
+  &:active {
+    fill: #bec2c7;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .footer--index-page {
-    display: block; /* для index-page*/
+    display: block;
   }
 
   .footer__wrapper {
     .container(@container-tablet);
-    border: 1px solid red;
     flex-direction: row;
     align-items: stretch;
+  }
+
+  .footer__copyright-description {
+    margin-top: 25px;
+    margin-right: 15px;
+  }
+
+  .footer__list {
+    margin-top: 25px;
+    margin-left: 40px;
+  }
+
+  .footer__logo {
+    margin-left: 0;
   }
 }
 
@@ -95,5 +135,24 @@
   .footer__wrapper {
     .container(@container-desktop);
     flex-direction: row;
+    max-width: 960px;
+    justify-content: space-between;
+  }
+
+  .footer__copyright-description {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .footer__list {
+    margin-right: 30px;
+  }
+
+  .footer__logo-tablet {
+    display: none;
+  }
+
+  .footer__logo-desktop {
+    display: inline;
   }
 }

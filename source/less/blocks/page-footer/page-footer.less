@@ -6,9 +6,9 @@
   text-align: center;
   font-weight: 300;
   font-size: 24px;
-  padding-top: 50px;
+  padding-top: 40px;
   margin-top: 0;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   .container(@container-mob);
 }
 
@@ -17,7 +17,6 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  border: 1px solid red;
 }
 
 .page-footer__link {
@@ -37,6 +36,12 @@
   }
 }
 
+.page-footer__adress {
+  font-size: 24px;
+  color: #eb003f;
+  font-weight: 300;
+}
+
 .page-footer__item-description {
   font-weight: 700;
   font-size: 18px;
@@ -47,10 +52,17 @@
 .page-footer__map {
   width: 100%;
   height: 200px;
-  background: url("../img/page-footer/bg-triangle-white-footer.svg"), url("../img/page-footer/bg-map-tablet@1x.jpg");
+  background: url("../img/page-footer/bg-map-tablet@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top, center -440px;
-  background-size: 100%, 700px 848px;
+  background-position: center -440px;
+  background-size: 700px 848px;
+}
+
+.page-footer__triangle {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: -1px;
 }
 
 .page-footer__iframe {
@@ -59,13 +71,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
-    min-width: @tablet-width;
-  }
-
   .page-footer__title {
     .container(@container-mob);
     font-size: 40px;
+    line-height: 50px;
+    padding-top: 50px;
   }
 
   .page-footer__contacts {
@@ -73,16 +83,28 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 630px;
-    border: 1px solid red;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
+    padding-bottom: 60px;
   }
 
   .page-footer__map {
-    background: url("../img/page-footer/bg-triangle-white-footer.svg"), url("../img/page-footer/bg-map-desktop@1x.jpg");
+    background: url("../img/page-footer/bg-map-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center top, center -440px;
-    background-size: 100%, 1200px 976px; /*врено ли я использовал этот svg....*/
-    height: 375px;
+    background-position: center -440px;
+    background-size: 1200px 976px;
+    height: 365px;
+    margin-bottom: 20px;
+  }
+
+  .page-footer__map:after {
+    content: "";
+    height: 0;
+    width: 0;
+    left: 0;
+    position: absolute;
+    border-left: 48vw solid transparent;
+    border-right: 48vw solid transparent;
+    border-top: 56px solid #fff;
   }
 
   .page-footer__iframe {
@@ -93,29 +115,45 @@
 
 @media (min-width: @desktop-width) {
   .page-footer__contacts {
-    width: 900px;
+    width: 870px;
     display: flex;
+    margin-top: 25px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    justify-content: space-between;
   }
 
-  .page-footer__item {
-    &:nth-child(2) {
+  .page-footer__item--two {
       order: 1;
-    }
+      margin-right: 15px;
+  }
+
+  .page-footer__item-description {
+    margin-bottom: 20px;
   }
 
   .page-footer__map {
-    background-position: center top, center -400px;
-    background-size: 100%, 100% 976px;
-    height: 500px; /*как реализовать адаптивную ширину картинки если её предел 1200px, может вырезать full hd карту самому? */
+    background-position: center -400px;
+    background-size: 100% 976px;
+    background: url("../img/page-footer/bg-triangle-white-footer.svg");
+    height: 500px;
+    margin-bottom: 50px;
   }
 
   .page-footer__iframe {
     width: 100%;
-    height: 510px;
+    height: 500px;
+  }
+
+  .page-footer__map:after {
+    border-top: 66px solid #fff;
   }
 
   .page-footer__title {
     font-size: 50px;
+    padding-top: 65px;
+    line-height: 60px;
+    padding-left: 10px;
     .container(500px);
   }
 }

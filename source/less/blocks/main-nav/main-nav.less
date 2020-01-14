@@ -4,33 +4,53 @@
 
 .main-nav__toggle {
   display: block;
-  width: 50px;
+  width: 60px;
   height: 50px;
 
   position: absolute;
-  top: -50px;
+  top: 15px;
   right: 0;
   border: none;
   cursor: pointer;
-  background-color: green;   /* базовая стилизация  области у кнопки*/
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-nav--closed {
+  position: relative;
+  margin-top: -80px;
+  z-index: 2;
+}
+
+.main-nav--opened {
+  margin-bottom:  -70px;
+  background-color: #182029;
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   z-index: 2;
   position: absolute;
-  top: 10px;
+  top: 24px;
   right: 10px;
-  width: 36px;
-  height: 2px;
+  width: 50px;
+  height: 4px;
 
   background-color: #ffffff;
-  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+  box-shadow: 0 10px 0 0 #ffffff, 0 20px 0 0 #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: #d22856;
+  box-shadow: 0 10px 0 0 #d22856, 0 20px 0 0 #d22856;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+  background-color: rgba(91, 49, 73, 1);
+  box-shadow: 0 8px 0 0 rgba(91, 49, 73, 1), 0 16px 0 0 rgba(91, 49, 73, 1);
 } /*-------------------иконка для открытого меню-----------------*/
 
 .main-nav--opened .main-nav__toggle {
@@ -42,11 +62,11 @@
     content: "";
 
     position: absolute;
-    top: 24px;
-    left: 18px;
+    top: 20px;
+    left: 6px;
 
-    width: 36px;
-    height: 2px;
+    width: 28px;
+    height: 4px;
 
     background-color: #ffffff;
   }
@@ -59,9 +79,14 @@
     transform: rotate(-45deg);
   }
 
+  &:hover::before,
+  &:hover::after {
+    background-color: #d22856;
+  }
+
   &:active::before,
   &:active::after {
-    background-color: rgba(255, 255, 255, 0.3);/* -------крестик при открытом меню-------*/
+    background-color: rgba(91, 49, 73, 1);
   }
 }
 
@@ -87,10 +112,11 @@
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
+  font-weight: 700;
 
   padding: 20px 0;
   display: block;
-  padding-top: 20px;
+  padding-top: 24px;
   border-bottom: 1px solid #000000;
   box-shadow: 0 1px 0 #485461;
 
@@ -105,7 +131,7 @@
 
 @media (max-width: @max-width-tablet) {
   .main-nav--closed .main-nav__list {
-    display: none;             /* убирает main-nav при наличии класса closed для моб и таблет*/
+    display: none;
   }
 
   .main-nav--no-js .main-nav__toggle {
@@ -113,16 +139,15 @@
   }
 
   .main-nav--no-js .main-nav__list {
-    display: block;                  /*если js нет класс не будет удален, и не будет удалено меню с кнопкой*/
+    display: block;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .main-nav__list {
     display: flex;
-    justify-content: space-around;
-    width: 640px;
+    justify-content: space-between;
+    width: 620px;
   }
 
   .main-nav__toggle {
@@ -134,10 +159,16 @@
     box-shadow: none;
     border-bottom: none;
     padding: 0;
+    font-weight: 400;
   }
 
   .main-nav__item:nth-child(1) {
     border-top: none;
     box-shadow: none;
+  }
+
+  .main-nav__item--active {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
   }
 }

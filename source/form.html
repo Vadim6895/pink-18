@@ -11,11 +11,15 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <picture>
-            <source media="(min-width: 940px)" srcset="img/page-header/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/page-header/logo-pink-white-tablet.svg">
-            <img  class="page-header__logo-image" src="img/page-header/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип сайта PINK">
-          </picture>
+          <svg width="100" height="50" class="page-header__logo--icon-mobile">
+            <use xlink:href="img/page-header/logo-pink-white-mobile.svg#logo-header-mobile"></use>
+          </svg>
+          <svg width="150" height="50" class="page-header__logo--icon-tablet">
+            <use xlink:href="img/page-header/logo-pink-white-tablet.svg#logo-header-tablet"></use>
+          </svg>
+          <svg width="150" height="50" class="page-header__logo--icon-desktop">
+            <use xlink:href="img/page-header/logo-pink-white-desktop.svg#logo-header-desktop"></use>
+          </svg>
         </a>
         <nav class="main-nav main-nav--closed main-nav--no-js">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -23,7 +27,7 @@
             <ul class="main-nav__list">
               <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
+              <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="form.html">конкурс</a></li>
               <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
             </ul>
           </div>
@@ -33,7 +37,7 @@
 
     <main class="form-page">
       <div class="promo-block">
-        <h1 class="promo-block__title promo-block__title--inner">Конкурс на самое безбашенное<br> путешествие с Пинк</h1>
+        <h1 class="promo-block__title promo-block__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
       <div class="form-page__block">
         <p class="form-page__contest-description">
@@ -45,15 +49,15 @@
             <ul class="contest__main-list">
               <li class="contest__main-item">
                 <label class="contest__text" for="surname">фамилия:</label>
-                <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required>
+                <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required="">
               </li>
               <li class="contest__main-item">
                 <label class="contest__text" for="name">имя:</label>
-                <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required>
+                <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required="">
               </li>
               <li class="contest__main-item">
                 <label class="contest__text" for="patronymic">отчество:</label>
-                <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required>
+                <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required="">
               </li>
             </ul>
           </fieldset>
@@ -65,28 +69,28 @@
             <legend class="contest__checkbox-title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="contest__checkbox-list">
               <li class="contest__checkbox-item">
-                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked>
-                <label class="contest__check-description" for="check-1" >Cделал селфи с акулой</label>
+                <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked="">
+                <label class="contest__check-description" for="check-1">Cделал селфи с акулой</label>
               </li>
               <li class="contest__checkbox-item">
-                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-2" checked>
-                <label class="contest__check-description" for="check-2" >Обгорел на пляже</label>
+                <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-2" checked="">
+                <label class="contest__check-description" for="check-2">Обгорел на пляже</label>
               </li>
               <li class="contest__checkbox-item">
-                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-3">
-                <label class="contest__check-description" for="check-3" >Видел Чака Норриса</label>
+                <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-3">
+                <label class="contest__check-description" for="check-3">Видел Чака Норриса</label>
               </li>
               <li class="contest__checkbox-item">
-                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-4">
-                <label class="contest__check-description" for="check-4" >Накупил сувениров</label>
+                <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-4">
+                <label class="contest__check-description" for="check-4">Накупил сувениров</label>
               </li>
               <li class="contest__checkbox-item">
-                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-5" checked>
-                <label class="contest__check-description" for="check-5" >Удержал башню</label>
+                <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-5" checked="">
+                <label class="contest__check-description" for="check-5">Удержал башню</label>
               </li>
               <li class="contest__checkbox-item">
-                <input  class="contest__checkbox" type="checkbox" name="ckeck" id="check-6">
-                <label class="contest__check-description" for="check-6" >Разгромил отель</label>
+                <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-6">
+                <label class="contest__check-description" for="check-6">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
@@ -96,11 +100,11 @@
             <ul class="contest__adress-list">
               <li class="contest__adress-item contest__adress-item--tel">
                 <label class="contest__text" for="telephone">Номер телефона</label>
-                <input class="contest__input" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
+                <input class="contest__input contest__input--adress" type="text" name="tel" id="telephone" placeholder="Номер, пожалуйста" value="">
               </li>
               <li class="contest__adress-item contest__adress-item--email">
                 <label class="contest__text" for="mail">Адрес почты</label>
-                <input class="contest__input" type="text" name="mail" id="mail" placeholder="Введите почту *" value="">
+                <input class="contest__input contest__input--adress" type="text" name="mail" id="mail" placeholder="Введите почту *" value="">
               </li>
             </ul>
           </fieldset>
@@ -112,7 +116,7 @@
             <legend class="contest__radio-tile">С каким приложением путешествовали</legend>
             <ul class="contest__radio-list">
               <li class="contest__radio-item">
-                <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked>
+                <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked="">
                 <label class="contest__radio-description" for="radio-1">Pink для IOS</label>
               </li>
               <li class="contest__radio-item">
@@ -123,7 +127,7 @@
                 <input class="contest__radio" type="radio" name="OS" id="radio-3" value="3">
                 <label class="contest__radio-description" for="radio-3">Windows Phone</label>
               </li>
-          </fieldset>
+          </ul></fieldset>
 
           <fieldset class="contest__group-area">
             <legend class="contest__area-title">Опишите свои эмоции</legend>
@@ -133,7 +137,7 @@
 
           <div class="contest__submit">
             <button class="contest__button" type="submit">Отправить форму</button>
-            <p class="contest__required-fields">* — Обязательные поля</p>
+            <p class="contest__required-fields">* — Обязательные <span class="contest__required-fields--tablet">для заполнения</span> поля</p>
           </div>
         </form>
       </div>
@@ -154,28 +158,13 @@
 
         <div class="footer__copyright">
           <p class="footer__copyright-description">Разработано
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <img class="footer__copyright-logo" src="img/footer/logo-htmlacademy.svg" alt="Логотип академии" width="27" height="34" title="HTML академия">
+            <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
+              <svg class="footer__copyright-logo" xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1" fill="#d22856" version="1.0"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.5l8 4.7v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z"/></svg>
             </a>
           </p>
         </div>
       </div>
     </footer>
-    <script type="text/javascript">
-      var mainnav = document.querySelector('.main-nav');
-      var navtoggle = document.querySelector('.main-nav__toggle');
-
-      mainnav.classList.remove('main-nav--no-js');
-
-      navtoggle.addEventListener('click', function() {
-        if (mainnav.classList.contains('main-nav--closed')) {
-          mainnav.classList.remove('main-nav--closed');
-          mainnav.classList.add('main-nav--opened');
-        } else {
-          mainnav.classList.add('main-nav--closed');
-          mainnav.classList.remove('main-nav--opened');
-          }
-      });
-    </script>
+    <script type="text/javascript" src="js/menu.js"></script>
   </body>
 </html>
