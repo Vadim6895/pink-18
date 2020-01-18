@@ -108,6 +108,6 @@ gulp.task("refresh", function (done) {
     done();
 });
 
-/*gulp.task("build", gulp.series("clean", "copy", "css", "images", "sprite", "html", "minhtml", "minjs"));*/ /* clean copy css sprite html minjs?*/
-gulp.task("build", gulp.series("clean", "copy", "css", "images", "sprite", "html", "minjs"));
+/*gulp.task("build", gulp.series("clean", "copy", "css", "images", "sprite", "html", "minhtml", "minjs"));*/
+gulp.task("build", gulp.series("clean", "copy", "css", "images", "sprite", "html", "minhtml", "minjs"));
 gulp.task("start", gulp.series("build", "server"));
