@@ -10,3 +10,4 @@ node_modules/
 build/
 npm-debug.*
 Thumbs.db
+gulpfile2.js

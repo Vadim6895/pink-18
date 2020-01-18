@@ -4,21 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
-
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <svg width="100" height="50" class="page-header__logo--icon-mobile">
-            <use xlink:href="img/page-header/logo-pink-white-mobile.svg#logo-header-mobile"></use>
-          </svg>
-          <svg width="150" height="50" class="page-header__logo--icon-tablet">
-            <use xlink:href="img/page-header/logo-pink-white-tablet.svg#logo-header-tablet"></use>
-          </svg>
-          <svg width="150" height="50" class="page-header__logo--icon-desktop">
-            <use xlink:href="img/page-header/logo-pink-white-desktop.svg#logo-header-desktop"></use>
+          <svg>
+            <use class="page-header__logo--icon-mobile" xlink:href="#logo--icon-mobile"></use>
+            <use class="page-header__logo--icon-tablet" xlink:href="#logo--icon-tablet"></use>
+            <use class="page-header__logo--icon-desktop" xlink:href="#logo--icon-desktop" width="146.3px" height="40.38px" ></use>
           </svg>
         </a>
         <nav class="main-nav main-nav--closed main-nav--no-js">
@@ -63,10 +61,10 @@
           </fieldset>
 
           <fieldset class="contest__group-checkbox">
+            <legend class="contest__checkbox-title">Ваши безбашенные достижения в путешествии</legend>
             <label class="contest__description visually-hidden">
               Ваши безбашенные достижения в путешествии
             </label>
-            <legend class="contest__checkbox-title">Ваши безбашенные достижения в путешествии</legend>
             <ul class="contest__checkbox-list">
               <li class="contest__checkbox-item">
                 <input class="contest__checkbox" type="checkbox" name="ckeck" id="check-1" checked="">
@@ -110,10 +108,10 @@
           </fieldset>
 
           <fieldset class="contest__group-radio">
+            <legend class="contest__radio-tile">С каким приложением путешествовали</legend>
             <label class="visually-hidden">
               С каким приложением путешествовали
             </label>
-            <legend class="contest__radio-tile">С каким приложением путешествовали</legend>
             <ul class="contest__radio-list">
               <li class="contest__radio-item">
                 <input class="contest__radio" type="radio" name="OS" id="radio-1" value="1" checked="">
@@ -127,12 +125,13 @@
                 <input class="contest__radio" type="radio" name="OS" id="radio-3" value="3">
                 <label class="contest__radio-description" for="radio-3">Windows Phone</label>
               </li>
-          </ul></fieldset>
+            </ul>
+          </fieldset>
 
           <fieldset class="contest__group-area">
             <legend class="contest__area-title">Опишите свои эмоции</legend>
             <label class="visually-hidden" for="user-data">Опишите свои эмоции</label>
-            <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях" name=""></textarea>
+            <textarea class="contest__area" id="user-data" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
 
           <div class="contest__submit">
@@ -145,10 +144,12 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <picture>
-          <source media="(min-width: 940px)" srcset="img/footer/logo-pink-blue-desktop.svg">
-          <img class="footer__logo" src="img/footer/logo-pink-blue-mobile.svg" alt="Логотип сайта PINK" width="150" height="40">
-        </picture>
+        <a class="" href="#">
+          <svg>
+            <use class="footer__logo footer__logo-tablet" xlink:href="#footer__logo-tablet"></use>
+            <use class="footer__logo footer__logo-desktop" xlink:href="#footer__logo-desktop"></use>
+          </svg>
+        </a>
 
         <ul class="footer__list">
           <li class="footer__item"><a class="footer__link footer__link--twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
@@ -159,12 +160,14 @@
         <div class="footer__copyright">
           <p class="footer__copyright-description">Разработано
             <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
-              <svg class="footer__copyright-logo" xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1" fill="#d22856" version="1.0"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8l11.5 6.7-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.5l8 4.7v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z"/></svg>
+              <svg>
+                <use class="footer__copyright-logo" xlink:href="#footer__copyright-logo"></use>
+              </svg>
             </a>
           </p>
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="js/menu.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>

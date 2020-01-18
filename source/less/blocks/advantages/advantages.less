@@ -107,7 +107,7 @@
 
   .advantages__item {
     margin-top: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -116,16 +116,9 @@
     background-color: #ffffff;
   }
 
-  .advantages__list {
-    .container(@container-desktop);
-    flex-direction: row;
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center; max-width: 940px;
-  }
-
   .advantages__title {
     font-size: 30px;
+    line-height: 30px;
   }
 
   .advantages__main-title--one {
@@ -146,10 +139,6 @@
     font-size: 50px;
   }
 
-  .advantages__title {
-    line-height: 30px;
-  }
-
   .advantages__description {
     font-size: 16px;
     line-height: 30px;
@@ -158,6 +147,12 @@
   }
 
   .advantages__list {
+    .container(@container-desktop);
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    max-width: 940px;
     padding-top: 305px;
     background: url("../img/advantages/iphone-screen-1-desktop@1x.png"), url("../img/advantages/iphone-screen-2-desktop@1x.png"), url("../img/advantages/iphone-screen-3-desktop@1x.png");
     background-repeat: no-repeat;

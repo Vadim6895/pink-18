@@ -48,5 +48,8 @@
   ],
   "engines": {
     "node": "8.16"
+  },
+  "dependencies": {
+    "gulp-uglify": "^3.0.2"
   }
 }
