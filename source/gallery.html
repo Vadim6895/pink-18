@@ -7,27 +7,37 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
   </head>
-  <body>
+  <body class="common-body">
+
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
+
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <svg class="page-header__icon" width="146.3" height="40.38">
-            <use class="page-header__logo--icon-mobile" xlink:href="#logo--icon-mobile"></use>
-            <use class="page-header__logo--icon-tablet" xlink:href="#logo--icon-tablet"></use>
-            <use class="page-header__logo--icon-desktop" xlink:href="#logo--icon-desktop" width="146.3px" height="40.38px" ></use>
+        <a class="page-header__logo" href="index.html">
+          <svg class="page-header__icon" width="146.3" height="50.38">
+            <use class="page-header__use page-header__use--icon-desktop" xlink:href="#logo--icon-desktop"></use>
           </svg>
         </a>
         <nav class="main-nav main-nav--no-js main-nav--closed">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
-              <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="form.html">конкурс</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">главная</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a class="main-nav__link" href="gallery.html">фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html">конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -44,7 +54,7 @@
         </p>
 
         <section class="users-gallery__item-main">
-          <span class="users-gallery-panorama-title">панорама дня</span>
+          <span class="users-gallery__panorama-title">панорама дня</span>
           <a class="users-gallery__link users-gallery__link--main" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/gallery-page/panorama-desktop@1x.webp 1x, img/gallery-page/panorama-desktop@2x.webp 2x">
@@ -53,35 +63,35 @@
 
               <source media="(min-width: 1200px)" srcset="img/gallery-page/panorama-desktop@1x.jpg 1x, img/gallery-page/panorama-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/gallery-page/panorama-tablet@1x.jpg 1x, img/gallery-page/panorama-tablet@2x.jpg 2x">
-              <img class="users-gallery__img" src="img/gallery-page/panorama-mobile@1x.jpg" srcset="img/gallery-page/panorama-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              <img class="users-gallery__img users-gallery__img--main" src="img/gallery-page/panorama-mobile@1x.jpg" srcset="img/gallery-page/panorama-mobile@2x.jpg 2x" alt="Фотография пользователя">
             </picture>
           </a>
           <div class="users-gallery__item--wrapper">
-            <h3 class="users-gallery__title-main">Анна</h3>
+            <h3 class="users-gallery__title-main">Анна<span class="users-gallery__timepost"> (5 минут назад)</span></h3>
             <p class="users-gallery__message-main">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <button class="users-gallery__like" type="button">нравится: 215</button>
+            <button class="users-gallery__like users-gallery__like--main" type="button">нравится: 215</button>
           </div>
         </section>
+      </div>
 
         <ul class="gallery-page users-gallery">
+          <li class="users-gallery__item">
+            <a class="users-gallery__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-car-desktop@1x.webp 1x, img/gallery-page/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-car-tablet@1x.webp 1x, img/gallery-page/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery-page/photo-car-mobile@1x.webp 1x, img/gallery-page/photo-car-mobile@2x.webp 2x">
 
-        <li class="users-gallery__item">
-          <a class="users-gallery__link" href="#">
-            <picture>
-              <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-car-desktop@1x.webp 1x, img/gallery-page/photo-car-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-car-tablet@1x.webp 1x, img/gallery-page/photo-car-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gallery-page/photo-car-mobile@1x.webp 1x, img/gallery-page/photo-car-mobile@2x.webp 2x">
-
-              <source media="(min-width: 940px)" srcset="img/gallery-page/photo-car-desktop@1x.jpg 1x, img/gallery-page/photo-car-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-car-tablet@1x.jpg 1x, img/gallery-page/photo-car-tablet@2x.jpg 2x">
-              <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" srcset="img/gallery-page/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
-            </picture>
-          </a>
-          <h3 class="users-gallery__title">Левон</h3>
-          <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
+                <source media="(min-width: 940px)" srcset="img/gallery-page/photo-car-desktop@1x.jpg 1x, img/gallery-page/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/gallery-page/photo-car-tablet@1x.jpg 1x, img/gallery-page/photo-car-tablet@2x.jpg 2x">
+                <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" srcset="img/gallery-page/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <h3 class="users-gallery__title">Левон</h3>
+            <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
               <button class="users-gallery__like" type="button">НРАВИТСЯ: 356</button>
-        </li>
-        <li class="users-gallery__item">
+          </li>
+          <li class="users-gallery__item">
             <a class="users-gallery__link" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-drumset-desktop@1x.webp 1x, img/gallery-page/photo-drumset-desktop@2x.webp 2x">
@@ -93,159 +103,157 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-drumset-mobile@1x.jpg" srcset="img/gallery-page/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-          <h3 class="users-gallery__title">Антон</h3>
-          <p class="users-gallery__message">Соседи будут рады!</p>
-            <button class="users-gallery__like" type="button">нравится: 666</button>
-        </li>
-        <li class="users-gallery__item">
-          <a class="users-gallery__link" href="#">
+            <h3 class="users-gallery__title">Антон</h3>
+            <p class="users-gallery__message">Соседи будут рады!</p>
+              <button class="users-gallery__like" type="button">нравится: 666</button>
+          </li>
+          <li class="users-gallery__item">
+            <a class="users-gallery__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-window-desktop@1x.webp 1x, img/gallery-page/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-window-tablet@1x.webp 1x, img/gallery-page/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery-page/photo-window-mobile@1x.webp 1x, img/gallery-page/photo-window-mobile@2x.webp 2x">
+
+                <source media="(min-width: 940px)" srcset="img/gallery-page/photo-window-desktop@1x.jpg 1x, img/gallery-page/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/gallery-page/photo-window-tablet@1x.jpg 1x, img/gallery-page/photo-window-tablet@2x.jpg 2x">
+                <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" srcset="img/gallery-page/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <h3 class="users-gallery__title">Борис</h3>
+            <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <button class="users-gallery__like" type="button">нравится: 215</button>
+          </li>
+          <li class="users-gallery__item">
+            <a class="users-gallery__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-fair-desktop@1x.webp 1x, img/gallery-page/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-fair-tablet@1x.webp 1x, img/gallery-page/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery-page/photo-fair-mobile@1x.webp 1x, img/gallery-page/photo-fair-mobile@2x.webp 2x">
+
+                <source media="(min-width: 940px)" srcset="img/gallery-page/photo-fair-desktop@1x.jpg 1x, img/gallery-page/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/gallery-page/photo-fair-tablet@1x.jpg 1x, img/gallery-page/photo-fair-tablet@2x.jpg 2x">
+                <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" srcset="img/gallery-page/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <h3 class="users-gallery__title">Сергей</h3>
+            <p class="users-gallery__message">Самая кубанская в мире!</p>
+              <button class="users-gallery__like" type="button">нравится: 4</button>
+          </li>
+          <li class="users-gallery__item">
+            <a class="users-gallery__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-pov-desktop@1x.webp 1x, img/gallery-page/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-pov-tablet@1x.webp 1x, img/gallery-page/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery-page/photo-pov-mobile@1x.webp 1x, img/gallery-page/photo-pov-mobile@2x.webp 2x">
+
+                <source media="(min-width: 940px)" srcset="img/gallery-page/photo-pov-desktop@1x.jpg 1x, img/gallery-page/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/gallery-page/photo-pov-tablet@1x.jpg 1x, img/gallery-page/photo-pov-tablet@2x.jpg 2x">
+                <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" srcset="img/gallery-page/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <h3 class="users-gallery__title">Максим</h3>
+            <p class="users-gallery__message">Где снег-то?</p>
+              <button class="users-gallery__like" type="button">нравится: 150</button>
+          </li>
+          <li class="users-gallery__item">
+            <a class="users-gallery__link" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-wing-desktop@1x.webp 1x, img/gallery-page/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-wing-tablet@1x.webp 1x, img/gallery-page/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gallery-page/photo-wing-mobile@1x.webp 1x, img/gallery-page/photo-wing-mobile@2x.webp 2x">
+
+                <source media="(min-width: 940px)" srcset="img/gallery-page/photo-wing-desktop@1x.jpg 1x, img/gallery-page/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/gallery-page/photo-wing-tablet@1x.jpg 1x, img/gallery-page/photo-wing-tablet@2x.jpg 2x">
+                <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" srcset="img/gallery-page/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <h3 class="users-gallery__title">Надежда</h3>
+            <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
+              <button class="users-gallery__like" type="button">нравится: 2560</button>
+          </li>
+        </ul>
+        <p class="gallery-page__last-description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+
+        <section class="gallery-post">
+          <h2 class="visually-hidden">Cделайте свой пост</h2>
+          <div class="gallery-post__photo-for-post">
             <picture>
-              <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-window-desktop@1x.webp 1x, img/gallery-page/photo-window-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-window-tablet@1x.webp 1x, img/gallery-page/photo-window-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gallery-page/photo-window-mobile@1x.webp 1x, img/gallery-page/photo-window-mobile@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-post/photo-road-desktop@1x.webp 1x, img/gallery-post/photo-road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-post/photo-road-tablet@1x.webp 1x, img/gallery-post/photo-road-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/gallery-post/photo-road-mobile@1x.webp 1x, img/gallery-post/photo-road-mobile@2x.webp 2x">
 
-              <source media="(min-width: 940px)" srcset="img/gallery-page/photo-window-desktop@1x.jpg 1x, img/gallery-page/photo-window-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-window-tablet@1x.jpg 1x, img/gallery-page/photo-window-tablet@2x.jpg 2x">
-              <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" srcset="img/gallery-page/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              <source media="(min-width: 940px)" srcset="img/gallery-post/photo-road-desktop@1x.jpg 1x, img/gallery-page/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/gallery-post/photo-road-tablet@1x.jpg 1x, img/gallery-page/photo-road-tablet@2x.jpg 2x">
+              <img class="gallery-post__photo" src="img/gallery-post/photo-road-mobile@1x.jpg" srcset="img/gallery-post/photo-road-mobile@2x.jpg 2x" alt="фото для поста">
             </picture>
-          </a>
-          <h3 class="users-gallery__title">Борис</h3>
-          <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="users-gallery__like" type="button">нравится: 215</button>
-        </li>
-        <li class="users-gallery__item">
-          <a class="users-gallery__link" href="#">
-            <picture>
-              <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-fair-desktop@1x.webp 1x, img/gallery-page/photo-fair-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-fair-tablet@1x.webp 1x, img/gallery-page/photo-fair-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gallery-page/photo-fair-mobile@1x.webp 1x, img/gallery-page/photo-fair-mobile@2x.webp 2x">
+          </div>
+          <div class="gallery-post__wrapper">
+            <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication">
+              <ul class="gallery-post__controls">
+                <li class="gallery-post__control-item">
+                  <svg class="gallery-post__option" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" fill="#d22856" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path fill="none" d="M0,0h48v48H0V0z"></path>
+                    <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"></path>
+                  </svg>
+                </li>
+                <li class="gallery-post__control-item">
+                  <svg class="gallery-post__option" id="Layer_2" fill="#d22856" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="45px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                    <path fill="none" d="M0,0h48v48H0V0z"></path>
+                    <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"></path>
+                    <rect y="40" width="48" height="3"></rect>
+                  </svg>
+                </li>
+                <li class="gallery-post__control-item">
+                  <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="#d22856" viewBox="-35.422 -7.96 31.92 31.92"><path d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"></path><path d="M-19.462 16.331c4.706 0 8.52-3.813 8.52-8.52 0-4.705-3.813-8.519-8.52-8.519"></path></svg>
+                </li>
+              </ul>
 
-              <source media="(min-width: 940px)" srcset="img/gallery-page/photo-fair-desktop@1x.jpg 1x, img/gallery-page/photo-fair-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-fair-tablet@1x.jpg 1x, img/gallery-page/photo-fair-tablet@2x.jpg 2x">
-              <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" srcset="img/gallery-page/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
-            </picture>
-          </a>
-          <h3 class="users-gallery__title">Сергей</h3>
-          <p class="users-gallery__message">Самая кубанская в мире!</p>
-            <button class="users-gallery__like" type="button">нравится: 4</button>
-        </li>
-        <li class="users-gallery__item">
-          <a class="users-gallery__link" href="#">
-            <picture>
-              <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-pov-desktop@1x.webp 1x, img/gallery-page/photo-pov-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-pov-tablet@1x.webp 1x, img/gallery-page/photo-pov-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gallery-page/photo-pov-mobile@1x.webp 1x, img/gallery-page/photo-pov-mobile@2x.webp 2x">
-
-              <source media="(min-width: 940px)" srcset="img/gallery-page/photo-pov-desktop@1x.jpg 1x, img/gallery-page/photo-pov-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-pov-tablet@1x.jpg 1x, img/gallery-page/photo-pov-tablet@2x.jpg 2x">
-              <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" srcset="img/gallery-page/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
-            </picture>
-          </a>
-          <h3 class="users-gallery__title">Максим</h3>
-          <p class="users-gallery__message">Где снег-то?</p>
-            <button class="users-gallery__like" type="button">нравится: 150</button>
-        </li>
-        <li class="users-gallery__item">
-          <a class="users-gallery__link" href="#">
-            <picture>
-              <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-page/photo-wing-desktop@1x.webp 1x, img/gallery-page/photo-wing-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-page/photo-wing-tablet@1x.webp 1x, img/gallery-page/photo-wing-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/gallery-page/photo-wing-mobile@1x.webp 1x, img/gallery-page/photo-wing-mobile@2x.webp 2x">
-
-              <source media="(min-width: 940px)" srcset="img/gallery-page/photo-wing-desktop@1x.jpg 1x, img/gallery-page/photo-wing-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/gallery-page/photo-wing-tablet@1x.jpg 1x, img/gallery-page/photo-wing-tablet@2x.jpg 2x">
-              <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" srcset="img/gallery-page/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
-            </picture>
-          </a>
-          <h3 class="users-gallery__title">Надежда</h3>
-          <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
-            <button class="users-gallery__like" type="button">нравится: 2560</button>
-        </li>
-      </ul>
-      <p class="gallery-page__last-description">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-      </div>
-
-      <section class="gallery-post">
-        <h2 class="visually-hidden">Cделайте свой пост</h2>
-        <div class="gallery-post__photo-for-post">
-          <picture>
-            <source type="image/webp" media="(min-width: 940px)" srcset="img/gallery-post/photo-road-desktop@1x.webp 1x, img/gallery-post/photo-road-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/gallery-post/photo-road-tablet@1x.webp 1x, img/gallery-post/photo-road-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/gallery-post/photo-road-mobile@1x.webp 1x, img/gallery-post/photo-road-mobile@2x.webp 2x">
-
-            <source media="(min-width: 940px)" srcset="img/gallery-post/photo-road-desktop@1x.jpg 1x, img/gallery-page/photo-road-desktop@2x.jpg 2x">
-            <source media="(min-width: 660px)" srcset="img/gallery-post/photo-road-tablet@1x.jpg 1x, img/gallery-page/photo-road-tablet@2x.jpg 2x">
-            <img class="gallery-post__photo" src="img/gallery-post/photo-road-mobile@1x.jpg" srcset="img/gallery-post/photo-road-mobile@2x.jpg 2x" alt="фото для поста">
-          </picture>
-        </div>
-        <div class="gallery-post__wrapper">
-          <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication">
-            <ul class="gallery-post__controls">
-              <li class="gallery-post__control-item">
-                <svg class="gallery-post__option" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" fill="#d22856" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                  <path fill="none" d="M0,0h48v48H0V0z"></path>
-                  <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"></path>
-                </svg>
-              </li>
-              <li class="gallery-post__control-item">
-                <svg class="gallery-post__option" id="Layer_2" fill="#d22856" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="45px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-                  <path fill="none" d="M0,0h48v48H0V0z"></path>
-                  <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"></path>
-                  <rect y="40" width="48" height="3"></rect>
-                </svg>
-              </li>
-              <li class="gallery-post__control-item">
-                <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="#d22856" viewBox="-35.422 -7.96 31.92 31.92"><path d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"></path><path d="M-19.462 16.331c4.706 0 8.52-3.813 8.52-8.52 0-4.705-3.813-8.519-8.52-8.519"></path></svg>
-              </li>
-            </ul>
-            <div class="gallery-post__wrapper-range">
-              <div class="gallery-post__range gallery-post__range--one">
-                <div class="gallery-post__range-controls">
-                  <div class="gallery-post__scale">
-                    <div class="gallery-post__bar">
+              <div class="gallery-post__wrapper-range">
+                <div class="gallery-post__range gallery-post__range--one">
+                  <div class="gallery-post__range-controls">
+                    <div class="gallery-post__scale">
+                      <div class="gallery-post__bar">
+                      </div>
                     </div>
-                  </div>
                     <div class="gallery-post__toggle">
                     </div>
-                </div>
-              </div>
-
-              <div class="gallery-post__range gallery-post__range--two">
-                <div class="gallery-post__range-controls">
-                  <div class="gallery-post__scale">
-                    <div class="gallery-post__bar">
-                    </div>
-                  </div>
-                  <div class="gallery-post__toggle">
                   </div>
                 </div>
-              </div>
 
-              <div class="gallery-post__range gallery-post__range--three">
-                <div class="gallery-post__range-controls">
-                  <div class="gallery-post__scale">
-                    <div class="gallery-post__bar">
+                <div class="gallery-post__range gallery-post__range--two">
+                  <div class="gallery-post__range-controls">
+                    <div class="gallery-post__scale">
+                      <div class="gallery-post__bar">
+                      </div>
                     </div>
-                  </div>
                     <div class="gallery-post__toggle">
                     </div>
+                  </div>
+                </div>
+
+                <div class="gallery-post__range gallery-post__range--three">
+                  <div class="gallery-post__range-controls">
+                    <div class="gallery-post__scale">
+                      <div class="gallery-post__bar">
+                      </div>
+                    </div>
+                    <div class="gallery-post__toggle">
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+
             <button class="gallery-post__btn gallery-post__btn--submit" type="submit" value="Запостить">Запостить</button>
             <button class="gallery-post__btn gallery-post__btn--cancel" type="reset" value="Отмена">Отмена</button>
-          </form></div>
-
-
-      </section>
-
+            </form>
+          </div>
+        </section>
     </main>
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <a class="" href="#">
-          <svg  width="146.3" height="40.38">
-            <use class="footer__logo footer__logo-tablet" xlink:href="#footer__logo-tablet"></use>
+        <a class="footer__link-icon" href="#">
+          <svg width="146.3" height="40.38">
             <use class="footer__logo footer__logo-desktop" xlink:href="#footer__logo-desktop"></use>
           </svg>
         </a>

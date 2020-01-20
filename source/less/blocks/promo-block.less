@@ -41,9 +41,13 @@
   width: 320px;
 }
 
+.promo-block__title--index {
+  padding-top: 35px;
+}
+
 .promo-block--lead {
   background: url("../img/promo-block/iphone-hand-mobile@1x.png"), url("../img/promo-block/bg-back-tablet@1x.jpg") #1d2631;
-  background-position: 50% 190px, center 25px;
+  background-position: 50% 180px, center 25px;
   background-repeat: no-repeat;
   background-size: 258px 286px, 85vh 440px;
 
@@ -51,7 +55,7 @@
     background: url("../img/promo-block/iphone-hand-mobile@2x.png"), url("../img/promo-block/bg-back-tablet@2x.jpg") #1d2631;
     background-repeat: no-repeat;
     background-size: 258px 286px, 1000px 600px;
-    background-position: center 220px, top -100px center;
+    background-position: 50% 180px, top -100px center;
   }
 }
 
@@ -60,7 +64,6 @@
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;
-
   box-sizing: border-box;
   display: block;
   width: 280px;
@@ -69,7 +72,7 @@
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 15px;
-  margin-top: 320px;
+  margin-top: 315px;
 
   &:hover {
     color: #d22856;
@@ -86,11 +89,9 @@
   text-align: center;
   line-height: 24px;
   color: #c3c5c8;
-
   display: block;
   min-width: 300px;
   margin: 20px 0 30px 10px;
-
   width: auto;
   margin-top: 0;
   margin-left: 0;
@@ -100,23 +101,10 @@
   list-style: none;
   padding-left: 0;
   margin-top: 30px;
-
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   width: 80%;
-}
-
-.promo-block__link--apple::before {
-  content: url("../img/promo-block/icon-logo-apple.svg");
-}
-
-.promo-block__link--android::before {
-  content: url("../img/promo-block/icon-logo-android.svg");
-}
-
-.promo-block__link--winphone::before {
-  content: url("../img/promo-block/icon-logo-microsoft.svg");
 }
 
 .promo-block__wrapper {
@@ -151,10 +139,10 @@
   }
 
   .promo-block__title--gallery {
-    padding-top: 140px;
+    padding-top: 150px;
     padding-bottom: 140px;
     margin-top: 0;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     font-size: 50px;
     width: 450px;
     line-height: 60px;
@@ -172,9 +160,8 @@
 
   .promo-block__wrapper {
     .container(@tablet-width);
-    padding: 70px 360px 80px 0;
+    padding: 70px 330px 80px 0;
     margin: 0 auto 0 auto;
-
     background: url("../img/promo-block/iphone-hand-tablet@1x.png");
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -225,15 +212,14 @@
   }
 
   .promo-block--lead {
-      background: url("../img/promo-block/bg-back-desktop@1x.jpg") #1d2631;
-      background-repeat: no-repeat;
-      background-position: center 100px;
+    background: url("../img/promo-block/bg-back-desktop@1x.jpg") #1d2631;
+    background-repeat: no-repeat;
+    background-position: center 100px;
   }
 
   .promo-block__wrapper {
     .container(@desktop-width);
     padding: 100px 600px 120px 0;
-
     background: url("../img/promo-block/iphone-hand-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 20px 310px;
@@ -271,16 +257,19 @@
 
   .promo-block__title--index {
     max-width: 300px;
-    margin-top: 180px;
+    margin-top: 170px;
   }
 
   .promo-block__main-link {
     margin: 25px 20px 0 0;
+    font-size: 21px;
+    padding-left: 30px;
   }
 
   .promo-block__download-list {
     margin: 65px 20px 0 0;
     width: 60%;
+    justify-content: space-between;
   }
 
   .promo-block__description {

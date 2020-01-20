@@ -237,6 +237,7 @@
 /* ----------------- container text-area ------------------*/
 .contest__area {
   box-sizing: border-box;
+  font-size: 18px;
   width: 88%;
   min-height: 200px;
   resize: none;

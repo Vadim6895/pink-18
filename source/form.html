@@ -7,27 +7,35 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
   </head>
-  <body>
+  <body class="common-body">
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <svg class="page-header__icon" width="146.3" height="40.38">
-            <use class="page-header__logo--icon-mobile" xlink:href="#logo--icon-mobile"></use>
-            <use class="page-header__logo--icon-tablet" xlink:href="#logo--icon-tablet"></use>
-            <use class="page-header__logo--icon-desktop" xlink:href="#logo--icon-desktop" width="146.3px" height="40.38px" ></use>
+            <use class="page-header__use page-header__use--icon-desktop" xlink:href="#logo--icon-desktop"></use>
           </svg>
         </a>
         <nav class="main-nav main-nav--closed main-nav--no-js">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">фотографии</a></li>
-              <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="form.html">конкурс</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a></li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="gallery.html">фотографии</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a class="main-nav__link" href="form.html">конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -40,7 +48,8 @@
       </div>
       <div class="form-page__block">
         <p class="form-page__contest-description">
-          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!<span class="form-page__contest-description-tablet">Пожалуйста заполните форму ниже:</span>
+          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          <span class="form-page__contest-description-tablet">Пожалуйста заполните форму ниже:</span>
         </p>
 
         <form action="https://echo.htmlacademy.ru" method="post" class="form-page__form contest">
@@ -140,14 +149,29 @@
             <p class="contest__required-fields">* — Обязательные <span class="contest__required-fields--tablet">для заполнения</span> поля</p>
           </div>
         </form>
+
+          <div class="contest__modal modal modal--ok">
+            <p class="modal__title">Что то пошло не так!</p>
+            <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <div class="modal__wrapper-ok">
+              <button class="modal__button" type="button">ок</button>
+            </div>
+          </div>
+
+          <div class="contest__modal modal modal-error">
+            <p class="modal__title">Ваша заявка отправлена</p>
+            <p class="modal__description">Спасибо за ваше участие, ваша заявка уже поступила к нам в ближайшее время мы рассмотрим ее и оповестим вас</p>
+            <div class="modal__wrapper">
+              <button class="modal__button" type="button">закрыть окно</button>
+            </div>
+          </div>
       </div>
     </main>
 
     <footer class="footer">
       <div class="footer__wrapper">
-        <a class="" href="#">
+        <a class="footer__link-icon" href="#">
           <svg width="146.3" height="40.38">
-            <use class="footer__logo footer__logo-tablet" xlink:href="#footer__logo-tablet"></use>
             <use class="footer__logo footer__logo-desktop" xlink:href="#footer__logo-desktop"></use>
           </svg>
         </a>
