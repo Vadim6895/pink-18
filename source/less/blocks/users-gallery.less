@@ -56,10 +56,12 @@
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
+  text-align: center;
   background-color: #d22856;
   padding: 10px;
   position: absolute;
-  left: 55%;
+  left: 54%;
+  width: 140px;
 }
 
 .users-gallery__message {
@@ -81,19 +83,19 @@
   font-weight: 400;
   font-size: 12px;
   padding: 0;
-  padding-left: 30px;
+  padding-left: 0;
   padding-bottom: 25px;
   border: none;
   cursor: pointer;
   color: #d22856;
   background-color: transparent;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 0 0 20px 15px;
 }
 
 .users-gallery__like::before {
   content: url("../img/users-gallery/icon-heart.svg");
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .users-gallery__timepost {
@@ -117,10 +119,16 @@
   .users-gallery__item {
     width: 300px;
     max-width: 300px;
+    height: 455px;
     margin-right: 10px;
     flex-grow: 1;
     margin-left: 0;
     margin-bottom: 0;
+    position: relative;
+  }
+
+  .users-gallery__item-main {
+    position: relative;
   }
 
   .users-gallery__like {
@@ -131,15 +139,18 @@
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 0;
-    order: -1;
+    position: absolute;
+    top: 415px;
+    left: -5px;
 
     &::before {
-      margin-left: 160px;
+      margin-left: 140px;
     }
   }
 
   .users-gallery__panorama-title {
-    left: 70%;
+    left: 76%;
+    top: 55px;
   }
 
   .users-gallery__item--wrapper {
@@ -148,12 +159,13 @@
     padding-top: 25px;
     justify-content: space-between;
     flex-direction: row;
+    padding-left: 25px;
   }
 
   .users-gallery__title-main {
-    order: -2;
-    padding-left: 5px;
+    padding-left: 0;
     padding-top: 0;
+    padding-bottom: 20px;
   }
 
   .users-gallery__message-main {
@@ -169,7 +181,8 @@
   .users-gallery__message {
     text-align: left;
     padding: 0 0 0 25px;
-    line-height: 30px;
+    line-height: 26px;
+    margin-top: 3px;
   }
 
   .users-gallery__img {
@@ -183,7 +196,10 @@
 
   .users-gallery__like--main {
     margin: 0;
-    margin-right: 15px;
+    margin-right: 10px;
+    position: absolute;
+    top: 540px;
+    left: 71%;
 
     &::before {
       margin-left: 20px;
@@ -194,8 +210,8 @@
 @media (min-width: @desktop-width) {
   .users-gallery {
     width: 100%;
-    max-width: 960px;
-    margin-top: 25px;
+    max-width: 970px;
+    margin-top: 30px;
   }
 
   .users-gallery__item {
@@ -204,30 +220,47 @@
     margin-left: 0;
     margin-right: 0;
     max-width: 300px;
+    display: block;
     min-height: 555px;
     margin-bottom: 35px;
   }
 
   .users-gallery__panorama-title {
-    left: 70%;
+    left: 79%;
+    width: 135px;
+    position: relative;
+    padding: 10px 20px;
+    top: 80px;
   }
 
   .users-gallery__item--wrapper {
     margin: 0 auto;
     padding-top: 0;
+    padding-left: 35px;
+    max-height: 90px;
   }
 
   .users-gallery__title-main {
-    margin-top: 25px;
+    margin-top: 20px;
+    padding-bottom: 0;
   }
 
   .users-gallery__message-main {
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .users-gallery__like {
+    top: 515px;
+    left: 5px;
   }
 
   .users-gallery__like--main {
     padding-bottom: 0;
     padding-top: 20px;
+    left: 750px;
+    position: relative;
+    top: -62px;
   }
 }

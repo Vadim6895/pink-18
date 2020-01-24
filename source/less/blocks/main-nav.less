@@ -7,8 +7,8 @@
   width: 60px;
   height: 50px;
   position: absolute;
-  top: 15px;
-  right: 0;
+  top: 55px;
+  right: 15px;
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -20,13 +20,14 @@
 
 .main-nav--closed {
   position: relative;
-  margin-top: -80px;
+  margin-top: -120px;
   z-index: 2;
 }
 
 .main-nav--opened {
-  margin-bottom: -70px;
-  background-color: #182029;
+  margin-bottom: -100px;
+  background-color: #283645;
+  margin-top: 10px;
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -59,8 +60,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 20px;
-    left: 6px;
+    top: 10px;
+    left: 15px;
     width: 28px;
     height: 4px;
     background-color: #ffffff;
@@ -96,6 +97,7 @@
 
 .main-nav__item {
   text-align: center;
+  max-height: 64px;
 }
 
 .main-nav__item:nth-child(1) {
@@ -108,9 +110,9 @@
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 17px 0;
+  padding: 20px 0;
+  padding-bottom: 20px;
   display: block;
-  padding-top: 24px;
   border-bottom: 1px solid #000000;
   box-shadow: 0 1px 0 #485461;
 
@@ -139,11 +141,17 @@
 
 @media (min-width: @tablet-width) {
   .main-nav__toggle {
-    top: 0;
+    top: 22px;
   }
 
   .main-nav--opened .main-nav__toggle {
     top: -60px;
+
+    &::before,
+    &::after {
+      left: 30px;
+      top: 5px;
+    }
   }
 
   .main-nav--opened {
@@ -178,5 +186,10 @@
   .main-nav__item--active {
     border-bottom: 2px solid white;
     padding-bottom: 5px;
+  }
+
+  .main-nav--opened {
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0, 3);
   }
 }

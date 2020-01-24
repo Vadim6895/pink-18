@@ -9,14 +9,14 @@
   </head>
   <body class="common-body">
 
-    <div style="display: none;">
+    <span style="display: none;">
       <include src="build/img/sprite.svg"></include>
-    </div>
+    </span>
 
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <svg class="page-header__icon" width="146.3" height="50.38">
+          <svg class="page-header__icon" width="146.3" height="55.38">
             <use class="page-header__use page-header__use--icon-desktop" xlink:href="#logo--icon-desktop"></use>
           </svg>
         </a>
@@ -36,7 +36,7 @@
                 <a class="main-nav__link" href="form.html">конкурс</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML academy</a>
               </li>
             </ul>
           </div>
@@ -87,7 +87,7 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-car-mobile@1x.jpg" srcset="img/gallery-page/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-            <h3 class="users-gallery__title">Левон</h3>
+            <h3 class="users-gallery__title">Левон<span class="users-gallery__timepost"> (5 часов назад)</span></h3>
             <p class="users-gallery__message">Вчера на луну летал, сегодня в руки к нам попал</p>
               <button class="users-gallery__like" type="button">НРАВИТСЯ: 356</button>
           </li>
@@ -103,7 +103,7 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-drumset-mobile@1x.jpg" srcset="img/gallery-page/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-            <h3 class="users-gallery__title">Антон</h3>
+            <h3 class="users-gallery__title">Антон<span class="users-gallery__timepost"> (12 часов назад)</span></h3>
             <p class="users-gallery__message">Соседи будут рады!</p>
               <button class="users-gallery__like" type="button">нравится: 666</button>
           </li>
@@ -119,7 +119,7 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-window-mobile@1x.jpg" srcset="img/gallery-page/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-            <h3 class="users-gallery__title">Борис</h3>
+            <h3 class="users-gallery__title">Борис<span class="users-gallery__timepost"> (20 часов назад)</span></h3>
             <p class="users-gallery__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <button class="users-gallery__like" type="button">нравится: 215</button>
           </li>
@@ -135,7 +135,7 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-fair-mobile@1x.jpg" srcset="img/gallery-page/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-            <h3 class="users-gallery__title">Сергей</h3>
+            <h3 class="users-gallery__title">Сергей<span class="users-gallery__timepost"> (25 часов назад)</span></h3>
             <p class="users-gallery__message">Самая кубанская в мире!</p>
               <button class="users-gallery__like" type="button">нравится: 4</button>
           </li>
@@ -151,7 +151,7 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-pov-mobile@1x.jpg" srcset="img/gallery-page/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-            <h3 class="users-gallery__title">Максим</h3>
+            <h3 class="users-gallery__title">Максим<span class="users-gallery__timepost"> (40 часов назад)</span></h3>
             <p class="users-gallery__message">Где снег-то?</p>
               <button class="users-gallery__like" type="button">нравится: 150</button>
           </li>
@@ -167,7 +167,7 @@
                 <img class="users-gallery__img" src="img/gallery-page/photo-wing-mobile@1x.jpg" srcset="img/gallery-page/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
             </a>
-            <h3 class="users-gallery__title">Надежда</h3>
+            <h3 class="users-gallery__title">Надежда<span class="users-gallery__timepost"> (45 часов назад)</span></h3>
             <p class="users-gallery__message">Всем GM и взаимные лайки!</p>
               <button class="users-gallery__like" type="button">нравится: 2560</button>
           </li>
@@ -191,7 +191,7 @@
             <form action="https://echo.htmlacademy.ru" method="post" class="gallery-post__publication">
               <ul class="gallery-post__controls">
                 <li class="gallery-post__control-item">
-                  <svg class="gallery-post__option" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" fill="#d22856" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                  <svg class="gallery-post__option gallery-post__option--active" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" fill="#d22856" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                     <path fill="none" d="M0,0h48v48H0V0z"></path>
                     <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"></path>
                   </svg>
@@ -204,7 +204,7 @@
                   </svg>
                 </li>
                 <li class="gallery-post__control-item">
-                  <svg class="gallery-post__option" xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="#d22856" viewBox="-35.422 -7.96 31.92 31.92"><path d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"></path><path d="M-19.462 16.331c4.706 0 8.52-3.813 8.52-8.52 0-4.705-3.813-8.519-8.52-8.519"></path></svg>
+                  <svg class="gallery-post__option gallery-post__option--circle" xmlns="http://www.w3.org/2000/svg" width="34" height="46" fill="#d22856" viewBox="-35.422 -7.96 31.92 31.92"><path d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"></path><path d="M-19.462 16.331c4.706 0 8.52-3.813 8.52-8.52 0-4.705-3.813-8.519-8.52-8.519"></path></svg>
                 </li>
               </ul>
 
