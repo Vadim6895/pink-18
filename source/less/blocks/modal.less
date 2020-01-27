@@ -1,20 +1,25 @@
-.modal {
-  position: relative;
+.modal__ok,
+.modal__error {
+  position: absolute;
+  top: 1900px;
+  z-index: 99;
+  left: 50%;
   width: 320px;
-  margin: 0 auto;
+  margin-left: -160px;
   background-color: #ffffff;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  display: none;
 }
 
-.modal__title {
+.modal__ok-title,
+.modal__error-title {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
   margin-top: 40px;
 }
 
-.modal__description {
+.modal__ok-description,
+.modal__error-description {
   font-size: 14px;
   line-height: 24px;
   color: #283645;
@@ -23,7 +28,8 @@
   margin-bottom: 40px;
 }
 
-.modal__button {
+.modal__ok-button,
+.modal__error-button {
   width: 280px;
   margin: 0 auto;
   display: block;
@@ -46,33 +52,37 @@
   }
 }
 
-.modal-error {
-  position: relative;
-
-  .modal__description {
-    margin-bottom: 30px;
-  }
+.modal__ok-description,
+.modal__error-description {
+  margin-bottom: 30px;
 }
 
-.modal__wrapper {
+
+.modal__ok-wrapper,
+.modal__error-wrapper {
   background-color: #f2f2f2;
   padding: 10px 0;
   padding-top: 50px;
 }
 
 @media (min-width: @tablet-width) {
-  .modal {
+  .modal__ok,
+  .modal__error {
     width: 460px;
+    top: 2200px;
+    margin-left: -230px;
   }
 
-  .modal__title {
+  .modal__ok-title,
+  .modal__error-title {
     font-size: 30px;
     line-height: 40px;
     width: 250px;
     margin: 40px auto 30px auto;
   }
 
-  .modal__description {
+  .modal__ok-description,
+  .modal__error-description {
     width: 300px;
     text-align: center;
     font-size: 18px;
@@ -80,28 +90,35 @@
     margin: 0 auto 30px auto;
   }
 
-  .modal__button {
+  .modal__ok-button,
+  .modal__error-button {
     width: 300px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .modal__wrapper-ok {
+  .modal__ok-wrapper,
+  .modal__error-wrapper {
     background-color: #f2f2f2;
     padding: 10px 0;
     padding-top: 40px;
   }
 
-  .modal {
+  .modal__ok,
+  .modal__error {
     width: 780px;
+    margin-left: -390px;
+    top: 1300px;
   }
 
-  .modal__title {
+  .modal__ok-title,
+  .modal__error-title {
     font-size: 30px;
     width: 420px;
   }
 
-  .modal__description {
+  .modal__ok-description,
+  .modal__error-description {
     width: 400px;
   }
 }

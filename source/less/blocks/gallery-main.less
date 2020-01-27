@@ -1,0 +1,162 @@
+.gallery-main__item-main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-main__link-main {
+  background-color: #f2f2f2;
+  width: 100%;
+  display: block;
+}
+
+.gallery-main__img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.gallery-main__item-wrapper {
+  max-width: @desktop-width;
+  margin: 0 20px;
+  padding: 0 20px;
+  padding-right: 0;
+  background-color: #f2f2f2;
+  min-width: 280px;
+}
+
+.gallery-main__title-main {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+}
+
+.gallery-main__panorama-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  background-color: #d22856;
+  padding: 10px;
+  position: absolute;
+  left: 54%;
+  width: 140px;
+}
+
+.gallery-main__message-main {
+  font-size: 14px;
+  line-height: 25px;
+  margin-top: 0;
+}
+
+.gallery-main__timepost {
+  font-size: 14px;
+  color: #515a64;
+  font-weight: 300;
+}
+
+.gallery-main__like {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 0;
+  padding-left: 0;
+  padding-bottom: 25px;
+  border: none;
+  cursor: pointer;
+  color: #d22856;
+  background-color: transparent;
+  display: block;
+  margin: 0 0 20px 15px;
+}
+
+.gallery-main__like::before {
+  content: url("../img/users-gallery/icon-heart.svg");
+  margin-right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery-main__item-main {
+    position: relative;
+  }
+
+  .gallery-main__panorama-title {
+    left: 76%;
+    top: 55px;
+  }
+
+  .gallery-main__item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 25px;
+  }
+
+  .gallery-main__title-main {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .gallery-main__message-main {
+    margin: -20px auto 24px auto;
+  }
+
+  .gallery-main__img--main {
+    min-height: 510px;
+    margin: 0 auto;
+  }
+
+  .gallery-main__like--main {
+    margin: 0;
+    margin-right: 10px;
+    position: absolute;
+    top: 540px;
+    left: 71%;
+
+    &::before {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery-main__panorama-title {
+    left: 79%;
+    width: 135px;
+    position: relative;
+    padding: 10px 20px;
+    top: 80px;
+  }
+
+  .gallery-main__item-wrapper {
+    margin: 0 auto;
+    padding-top: 0;
+    padding-left: 35px;
+    max-height: 90px;
+  }
+
+  .gallery-main__title-main {
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .gallery-main__message-main {
+    margin-top: 5px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .gallery-main__like--main {
+    padding-bottom: 0;
+    padding-top: 20px;
+    left: 750px;
+    position: relative;
+    top: -62px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

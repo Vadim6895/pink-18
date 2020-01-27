@@ -20,7 +20,7 @@
             <use class="page-header__use page-header__use--icon-desktop" xlink:href="#logo--icon-desktop"></use>
           </svg>
         </a>
-        <nav class="main-nav main-nav--closed main-nav--no-js">
+        <nav class="main-nav main-nav--opened main-nav--no-js">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -59,15 +59,15 @@
             <ul class="contest__main-list">
               <li class="contest__main-item">
                 <label class="contest__text" for="surname">фамилия:</label>
-                <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="" required="">
+                <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *" value="">
               </li>
               <li class="contest__main-item">
                 <label class="contest__text" for="name">имя:</label>
-                <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="" required="">
+                <input class="contest__input" type="text" name="name" id="name" placeholder="Введите ваше имя *" value="">
               </li>
               <li class="contest__main-item">
                 <label class="contest__text" for="patronymic">отчество:</label>
-                <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="" required="">
+                <input class="contest__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже *" value="">
               </li>
             </ul>
           </fieldset>
@@ -148,25 +148,27 @@
 
           <div class="contest__submit">
             <button class="contest__button" type="submit">Отправить форму</button>
-            <p class="contest__required-fields">* — Обязательные <span class="contest__required-fields--tablet">для заполнения</span> поля</p>
+            <p class="contest__required-fields">* — Обязательные <span class="contest__required-fields-tablet">для заполнения</span> поля</p>
           </div>
         </form>
 
-          <div class="contest__modal modal modal--ok">
-            <p class="modal__title">Что то пошло не так!</p>
-            <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-            <div class="modal__wrapper-ok">
-              <button class="modal__button" type="button">ок</button>
+        <div class="modal">
+          <div class="modal__ok">
+            <p class="modal__ok-title">Ваша заявка отправлена</p>
+            <p class="modal__ok-description">Спасибо за ваше участие, ваша заявка уже поступила к нам в ближайшее время мы рассмотрим ее и оповестим</p>
+            <div class="modal__ok-wrapper">
+              <button class="modal__ok-button" type="button">закрыть окно</button>
             </div>
           </div>
 
-          <div class="contest__modal modal modal-error">
-            <p class="modal__title">Ваша заявка отправлена</p>
-            <p class="modal__description">Спасибо за ваше участие, ваша заявка уже поступила к нам в ближайшее время мы рассмотрим ее и оповестим вас</p>
-            <div class="modal__wrapper">
-              <button class="modal__button" type="button">закрыть окно</button>
+          <div class="modal__error visually-hidden">
+            <p class="modal__error-title">Что то пошло не так!</p>
+            <p class="modal__error-description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <div class="modal__error-wrapper">
+              <button class="modal__error-button" type="button">ок</button>
             </div>
           </div>
+        </div>
       </div>
     </main>
 
@@ -196,5 +198,6 @@
       </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>
