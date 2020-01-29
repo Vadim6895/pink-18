@@ -1,0 +1,32 @@
+.sprite__icon-tablet,
+.sprite__icon-desktop {
+  display: none;
+}
+
+.sprite__footer-icon-desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .sprite__icon-tablet {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sprite__icon-tablet {
+    display: none;
+  }
+
+  .sprite__icon-desktop {
+    display: inline;
+  }
+
+  .sprite__footer-icon-tablet {
+    display: none;
+  }
+
+  .sprite__footer-icon-desktop {
+    display: inline;
+  }
+}
